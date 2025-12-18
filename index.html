@@ -1,0 +1,1754 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>The Syke House – Choose Your Own Adventure</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Georgia, serif;
+  background: #1b1b1b;
+  color: #f2f2f2;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#main {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+#image-box {
+   background: #2a2a2a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+#image-box img {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+#text {
+  line-height: 1.6;
+  white-space: pre-wrap;
+  font-size: 1.1em;
+}
+
+#audio {
+  margin: 20px 0;
+}
+
+#choices {
+  position: sticky;
+  bottom: 0;
+  background: #111;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  border-top: 2px solid #333;
+}
+
+button {
+  background: #444;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+button:hover {
+  background: #666;
+}
+</style>
+</head>
+
+<body>
+
+<div id="main">
+  <div id="image-box">
+    <img id="scene-image" src="">
+  </div>
+
+  <div id="text"></div>
+
+  <div id="audio">
+    <audio id="scene-audio" controls>
+      <source src="" type="audio/mp4">
+    </audio>
+  </div>
+</div>
+
+<div id="choices"></div>
+
+<script>
+const scenes = {
+
+
+title: {
+  text: `ALICE’S ADVENTURES IN THE WORLD OF PSYCHOLOGY
+
+
+A Choose Your Own Adventure Story
+
+Follow Alice, a curious house cat, as she steps beyond her home
+and into a forest full of minds, choices, and consequences.
+`,
+  image: "images/title.png",
+  audio: "audio/filler.m4a",
+    choices: [
+    { label: "Start Adventure", next: "chapter1" }
+  ]
+},
+
+chapter1: {
+text: `CHAPTER ONE – THE SYKE HOUSE
+
+On the outskirts of a city, there’s a quiet neighborhood, and in this neighborhood, there’s a cozy brick house with a forest behind it and other houses nearby. Out of all these houses, the brick house is the most important, because it is the home of Mr. and Mrs. Syke. Mr. and Mrs. Syke are psychologists studying the human mind, and they love to work together and share the knowledge they’ve gained with one another. They read books about psychology, they watch shows about psychology, and they talk to all kinds of people who know about psychology. Their whole home is filled with psychology, and sometimes, it feels like it’s all they eat and breathe. Mr. and Mrs. Syke are very important because of their interest in psychology. However, they are not the focus of this story. The real subject of interest is their cat, Alice.
+
+ Alice is a house cat who has an almost scientist-like curiosity. She loves learning about how minds work because of how much she has learned from her humans, and she would love to meet other animals to see what they’re like.
+
+	Alice has heard about human minds all her life, but she wants to know how animals’ minds work, since she’s a very curious cat. The only problem is that she has no other animals to talk to, because she lives with only her two humans.
+Recently, Alice has started watching the forest in her backyard, trying to see the animals there and how they act. She’s been able to observe squirrels, birds, bunnies, and dogs in her yard for years now, but she’s never been in the forest. She thinks there must be fascinating animals there.
+	Speaking of fascinating animals…what’s happening with that bunny currently outside Alice’s window?
+
+	Alice hops up onto the windowsill so she can see him better. There’s a dog, escaped from his human, that’s chasing a bunny across her front yard. Normally bunnies run and hide as quickly as they can, but not this one. This bunny starts yelling at the top of his lungs, and as Alice is watching, he actually kicks the dog across the nose.
+	“DON’T CHASE ME, YOU BIRD-BRAINED CANINE!” the bunny yells, and real smoke pours out of his ears. Alice has to cover her mouth with a paw so the two animals can’t hear her laughing as the bunny shouts, “GET OUT OF MY YARD.”
+	The dog turns and runs back to his human before the bunny can do anything else. “I was just trying to have a little fun!” he wails.
+	Alice leans toward the window so she can see the dog and bunny better, and as her head bumps the window, it slides open by a few inches.
+	Is the window…unlocked?
+	Alice shoves it with her paw, and the whole window opens, letting the smells and sounds of outside blow in. The front yard is right there, just a small jump down into the grass that she’s never even touched before.
+	This is it! This is her chance!
+	Alice leaps gracefully from the window, and her paws land in the soft dirt. Grass tickles her legs, and she grins and bounds across her yard, faster than any butterfly or squirrel or robin can chase her. This is amazing! This is freedom!
+
+	“What are you so excited about, house cat?” grumbles a voice from behind her. Alice turns to see the bunny. He has an angry scowl drawn across his face, and his ears are still smoking a little.
+	“I’ve never been outside before,” she replies, beaming. The bunny’s scowl fades when he sees how happy she is. “My name is Alice, what’s yours? I’ve never actually met a bunny.”
+	“Rabbit,” he corrects. “Not bunny.”
+	“Oh, your name is Rabbit?”
+	“No!” he splutters. “My name is Maurice.”
+
+Maurice is a rabbit who won’t let others control him. His anger can sometimes get the best of him, but deep down he actually cares a lot about others—even if he doesn’t know it yet.
+
+	Alice smiles at him and reaches out to shake his paw like she’s seen her humans do. “Nice to meet you, Maurice.”
+	When all he does is stare at her paw, she quickly pulls it back.
+“Anyway,” she says, “I saw you out the window. And I just thought you were very interesting—you’re not like any other bunny I’ve seen before.”
+“Rabbit,” says Maurice.
+“Like any rabbit I’ve seen before?” Alice’s tail twitches in irritation. “But now I want to go into the forest. Because if you’re special like that, I can’t even imagine what must be in the forest.”
+Maurice backs away a few steps. “I don’t like the forest. You shouldn’t go in there.”
+	“Why not?” Alice tilts her head curiously. “Are you scared?”
+“I—I—of course I’m not scared!” Maurice exclaims. A little more smoke puffs out of his ears. “Fine, I’ll come with you. Maybe I can get some good food while we’re there. And since I’ll be with you, don’t worry, nothing will hurt us.”
+“It’s a deal,” Alice says, smiling down at the fierce rabbit next to her. “Let’s go!”
+
+And together the cat and the rabbit enter the forest without looking back.`,
+image: "images/chapter1.png",
+audio: "audio/start.m4a",
+choices: [
+  { label: "Enter the forest", next: "chapter2" }
+]
+},
+
+chapter2: {
+text: `CHAPTER TWO – THE BEEHIVE
+
+The forest is so bright and colorful that it almost hurts Alice’s eyes. Maurice bounds along beside her, and she realizes with excitement that she’s made her first real friend in the outside world.
+
+	They walk by some robins and a few butterflies. When the robins watch them pass by, Maurice shouts, “Hey! Stop looking at us!” and they turn away, laughing. Alice sees squirrels chasing one another and a hawk taking flight from one of the tallest trees. This is the most amazing place she’s ever been.
+
+	Her eyes land on two creatures in the distance, and she gasps. “Are those deer?”
+Maurice looks too. “Yeah. They’re nothing scary.”
+“I didn’t think they would be—oh, can we go meet them? Please?”
+“If you can catch them,” Maurice says.
+
+	Alice darts toward the deer to say hello, but before she can reach them, they see her, flick up their white tails, and go leaping off into the trees. She sighs and slows to a stop.
+When Maurice catches up to her, he says, “Don’t worry about it. They run from anyone or anything that’s weird. And you’re pretty weird.”
+Alice doesn’t hear the last words, because she’s noticed something else in the distance—something even more unusual. There’s a yellow structure hanging from a tree branch a little ways away, and she’s never seen anything like it before.
+“What’s that?” she asks the rabbit, pointing with her paw at the yellow thing.
+He shakes his head and backs up. “That’s a beehive. That’s where bees make their honey. You don’t want to go over there—they’ll get mad and sting you.”
+“Honey?” Alice echoes, her eyes lighting up. “I’ve only tried honey once before. It would be fun to try it again.”
+“That is a terrible idea.”
+
+	But Alice has come here to learn, not to avoid other animals based on a rabbit’s advice. “They won’t mind if I ask nicely,” she says, looking back at Maurice. “I’m going to try.”
+“This is a terrible idea,” the rabbit repeats, skirting past the beehive while staying far away from it. He ducks behind a tree beyond the hive and calls, “I’m not helping you out if it goes badly.”
+Alice walks over to the tree and looks up at the bees. “Would you be okay with it if I tried a little of your honey?” she asks politely.
+The bees buzz once, loudly.
+
+	“I think that’s a yes!” Alice exclaims to Maurice. She latches onto the tree trunk and climbs up the tree to the low branch where the beehive is. The bees buzz again as she gets closer, and then she reaches out to the hive to take some honey.
+As one, all the bees swarm into the air and hover above their beehive. They’re now buzzing so angrily it’s like they’re shouting at her. Alice watches them in alarm, then looks to Maurice.
+“What are they doing?” she calls.
+“They’re really, really mad!” he yells. “Run!”
+
+	Alice leaps to the ground as Maurice bounds out from behind his tree. The two of them dart forward and sprint deeper into the forest with the bees directly behind them.
+“What do we do?” Alice cries, jumping gracefully over a fallen branch.
+“Not try to take their honey is what we do!” Maurice says back.
+Alice swerves around a tree and almost slams into him. “I didn’t think this would happen! They seemed nice!”
+“Bees are not nice!” Maurice shouts, and a few puffs of smoke come out of his ears. “Just—just don’t get stung, okay? If one of them catches you, the rest will, too.”
+“And what if that happens?”
+“Well, don’t find out,” he says.
+
+	Alice can’t think of anything else to say, so she keeps running in silence. She and Maurice scurry through tall grass, dodge around trees and fallen branches, and leap over uneven patches in the ground. Her heart is racing like it never has before, from the strain of so much running, from fear, and from…excitement? Is this exciting?
+Oh, Maurice would kill her if he had any idea she’s enjoying this.
+“Are they ever going to give up?” she asks as the bees’ buzzing swells louder.
+“It sure doesn’t seem like it,” he yells.
+She turns to see how close they are, and it makes her gasp. They’re terrifyingly close—if she trips or stumbles, the bees will catch her.
+Alice faces forward again, and when she does, she notices something in the distance. There’s a new animal standing there watching them, and she and Maurice are getting closer to her every second. Maurice must notice her too, because he exclaims, “It’s a fox!”
+
+	Bees chasing them and a fox in front of them? Where can they even go?
+“Follow me,” the fox calls from up ahead as Alice and Maurice draw nearer. “I can help you!”
+“Never trust a fox,” Maurice pants.
+Alice looks at the fox and considers the bees behind her. What should she do? In an instant, she’s made up her mind.
+She chooses to…
+ 
+
+What will you do…`,
+
+image: "images/bees.png",
+audio: "audio/bees.m4a",
+choices: [
+  { label: "Trust the fox", next: "A_trustFox" },
+  { label: "Run past the fox", next: "B_runPastFox" }
+]
+},
+
+A_trustFox: {
+text: `CHAPTER THREE – THE GARDEN
+TRUST THE FOX
+
+	“Go with her!” Alice says.
+“What? Are you crazy?” Maurice demands.
+Alice heads toward the fox. “She can’t be worse than the bees—just go!”
+She and Maurice barrel forward, and as they get closer, the fox turns and runs into a small hole in the ground—this must be her den. Alice and Maurice sprint past the fox, who stands against the wall until they’ve passed and then leaps forward and shoves an enormous rock in front of her den’s opening.
+The whole den gets dark, and Alice, Maurice, and the fox stand there breathing heavily for a moment. Once Alice’s eyes adjust, she looks around curiously. The walls look like they’re made of dirt and tree roots, and there’s another smaller tunnel besides the bigger one they came through. It smells clean and cool in here, like dirt, and Alice breathes it all in deeply. The smell calms her down a little.
+
+	“Alice, what are you smelling? It’s just a hole made of dirt,” Maurice says.
+“It smells nice, like being outside,” Alice tells him. Then she looks at the fox and smiles nervously. “Thank you for getting us away from the bees—I don’t know what we would’ve done without you.”
+“She’s a fox. She probably tricked us into coming in here so she could eat us both for dinner or something. You shouldn’t be thanking her.”
+“If you would excuse me,” the fox says, shaking her head slowly, “I’m not going to eat you for dinner. I was trying to help you get away from the bees—that’s all.”
+Maurice steps closer to Alice, his ears flattening against his head. “I don’t trust you.”
+“Of course you don’t. I’m a fox,” she says.
+“Maurice, give her a chance. She just saved our lives,” Alice tells him with a frown.
+“Thank you.” The fox bends down so she’s closer to eye level with Alice, but as soon as she takes her attention away from Maurice, the rabbit pounces.
+“Alice—run! I’ll hold her off!” he yells, leaping at the fox’s head and slamming into it. He drops to the ground and lunges at one of her legs, seizing it with his front two paws to yank her down. The fox shakes him off, so he dives for her leg again with a battle cry.
+
+	The fox jumps back and grabs Maurice by the scruff of his neck, and then she holds him up to her eye level with such a stern expression that even Alice feels ashamed.
+“You have two ears,” the fox says, “so use them. I’m not here to hurt you. I’m not here to eat you. I just wanted to help you get away from the bees.”
+Maurice squirms in her grip. “Let—me—go!”
+“Only if you promise not to try that again,” she tells him.
+“Fine,” he huffs. “I promise.”
+“Do you really mean it?”
+“Yes,” Maurice says. “Now put me down!”
+The fox lowers him to the ground, and he leaps back and shakes his head like a dog would. Then he stands there, glaring at her.
+“Um. Well. Thank you again for saving us,” Alice says.
+“It was no problem, really,” the fox responds, still watching Maurice carefully.
+
+	He scowls.
+“I’m Alice, by the way,” the cat adds, “and this is Maurice.”
+“I’m Bluebell,” the fox replies. “It’s nice to meet you.”
+
+Bluebell is a fox, but unlike most foxes, she uses her cleverness to help others. She can be shy at times and doesn’t like to intrude, but she loves doing what she can to help everyone around her.
+
+	“Hmph,” says Maurice a second time.
+They stand there in silence for several seconds. Bluebell and Maurice seem unwilling to look away from each other, but Alice can’t stand the tension any longer. She may not have had any animal friends before, but even she can tell that this is uncomfortable.
+“So…do you have any snacks or anything?” she finally asks. “I know Maurice wanted to get some food from the forest while we were here.”
+“I do, actually,” Bluebell answers.
+	
+	Maurice glares at her. “Like what? Rabbits?”
+“No. I have some berries, and some hazelnuts, and some mushrooms. Do you like any of those?”
+“I like mushrooms,” Alice says eagerly. Her humans hardly ever give her food that isn’t cat food.
+“Are the berries from the forest?” Maurice asks reluctantly.
+“Yes, they’re some of the best wild ones I’ve found.”
+Maurice starts to look interested, but he quickly covers it up with a glare instead.
+Alice notices Bluebell smile a little at this as she heads toward the smaller tunnel. “I’ll be back in a moment.”
+“I never said I wanted any!” Maurice calls, but she doesn’t respond.
+“Hey, Maurice—thank you for helping me with the bees,” Alice says while they wait. “At least for coming with me so I didn’t run off by myself.”
+“It wasn’t a big deal,” he mutters.
+“It was, though. I would’ve gotten lost all alone.”
+
+	Maurice hunches over. “We’re still lost. And you would’ve ended up here anyway.”
+“No—I—” Alice sighs. He’s just going to keep arguing with her, isn’t he? “Never mind.”
+“I brought snacks,” Bluebell declares, marching back into the room. She’s pushing two small piles of dried grass along the floor with her nose, and one stack of grass has different berries on it while the other has mushrooms. “I hope you like them—I gathered them myself yesterday.”
+Alice tries one of the mushrooms and beams. It’s so much better than the cat food she’s used to. “This is amazing! Thank you!”
+“I’m glad you like it,” Bluebell says.
+Maurice watches Alice carefully, but when all she does is reach for another mushroom—instead of falling over poisoned, like he probably expects—he approaches the pile of berries and sniffs it. Then he eats one.
+And then he eats another, and another, and another. His mouth gets stained different colors from how many he devours.
+“I’m glad to see you like those too,” Bluebell tells him.
+He sits back and looks at her. “Yeah…they’re okay.”
+Bluebell tilts her head in the same way a human might raise one eyebrow. “You could say thank you. That was my food you just ate, you know.”
+“Thank you,” Maurice mutters.
+
+	“So, anyway,” Bluebell says, turning toward Alice, “what are you doing in the forest? I know he came for food.”
+“And to protect her from dangerous animals,” Maurice adds.
+“I want to learn more about the animals here because my humans are psychologists, and I’ve learned a lot from them about humans but nothing about animals,” Alice responds once he’s finished.
+“Sorry, your humans are what, exactly?” Bluebell asks.
+“Psychologists. They’re scientists who study other people’s minds and behavior. It’s really fascinating, actually,” says Alice. “So I was hoping I could see what the psychology of forest animals is like, and Maurice seemed like a very interesting example.”
+“Did he?” Bluebell says.
+“Yeah! Did you know he can make sparks and smoke come out of his ears? Isn’t that fascinating?”
+“I’m right here,” Maurice interrupts. “And I don’t believe you that you think it’s cool, because no matter what, it really isn’t.”
+“It seems cool to me,” Bluebell says.
+“It’s not.”
+“Okay, but―” she tries.
+
+	Maurice shakes his head hard. “It. Is. Not.”
+“—but did you know that smoke puts bees to sleep? Maybe you could have stopped them on your own without even needing to run away,” Bluebell finally says.
+Maurice’s ears perk up. “Really?”
+“Yup,” says Bluebell, nodding.
+“That’s really neat.” Alice studies Maurice in interest. “Imagine if Bluebell had been here to tell us that before—maybe we wouldn’t have run so far out of our way.”
+“Out of your way of what?” Bluebell asks.
+“Well, we were just exploring the forest, and I think we might have been closer to the most interesting places before,” Alice explains. “Though I guess I wouldn’t have any idea. Maurice, did you know where the best places to visit were?”
+“Kind of,” he says.
+“Kind of?” Bluebell asks.
+Maurice huffs. “Not really.”
+“Well, if you need a guide, I could show you both around the forest,” the fox offers. “I know where pretty much everything is, and I don’t know many other animals well, but I think I could introduce you to some.”
+Alice says, “That would be great!” at the same time Maurice says, “We don’t need a guide!”
+They turn and stare at each other for a moment.
+“She’s been so helpful so far,” Alice says finally. “You really think it would be a bad idea for her to come along?”
+“We don’t need her to,” he answers, shaking his head. “I used to live here—it’ll come back to me.”
+“Have you ever been to the garden run by the squirrels and deer?” Bluebell asks.
+Maurice frowns. “No.”
+	
+	“I think you would like it there, Alice. There’s a lot of animals you could talk to,” Bluebell says. “And it’s beautiful too.”
+Maurice considers this, then stands closer to Alice so the two of them are facing Bluebell together, almost like they’re teaming up against her. “We don’t need another tour guide,” he tells the fox. “Alice will do just fine with me.”
+Alice stares at him in surprise. “Maurice, wait…”
+“Why don’t you want me to help you?” Bluebell asks, studying him. Her eyes are so deep in these shadows that it almost seems like she can see right through him. “I’m not going to replace you, you know.”
+“I’m not worried about—about being replaced!” Maurice sputters.
+Bluebell looks like she doesn’t believe him.
+“It doesn’t hurt to add another animal,” Alice chimes in. “You can still be our fearless leader, and she can be the guide, right?”
+Maurice looks away. “I guess so.”
+“Well…should we go now, then?” Bluebell asks a little uncertainly.
+“Yes, if that’s okay!” Alice says eagerly.
+“Definitely. I guess I’ll just clean up first.”
+
+	Bluebell leans down and pushes the stacks of grass back to the tunnel where she got them. There are a few mushrooms left on one, but the one that had fruit is completely empty.
+“I hope the bees are gone,” Alice says to fill the silence after Bluebell leaves.
+“Yeah.” Maurice stares at the ground.
+Before Alice can come to with anything else to say, Bluebell emerges from the tunnel, smiling. “Okay! Everyone ready?” she asks.
+“Yes,” says Alice, turning away from Maurice. There are so many animals out there for her to meet that she can’t get herself to wait any longer. “Let’s go!”
+The three of them march up to the den’s entrance, and Bluebell shoves away the rock that’s covering it. The rock topples to the ground, and they step over its flat surface and head into the forest.
+Thankfully, there are no bees in sight as Alice and Maurice follow Bluebell. Instead, there’s just beautiful flowers, trees, and clouds, and Alice looks at everything as she walks.
+“So, Bluebell…why are you different from most foxes?” she asks. It seems like a good psychology question to ask.
+“Hmm. I think it’s because of the way my family raised me,” the fox answers thoughtfully. “They’re the ones who taught me to help other animals instead of tricking them.”
+“Or you could have inherited that from them genetically,” Alice says. “Like with gene and environment interactions, or nature versus nurture.”
+“What kind of a language are you speaking?” Maurice asks.
+“They’re psychology things. It means that the way you were raised and how your family acted could have affected how you act now, but also that the way you act might have been inherited from your family. It’s hard to know for sure. And you can change your family and they can change you, so really, it goes both ways.”
+“I’m not sure if they taught it to me or if I inherited it,” Bluebell says.
+“You wouldn’t really be able to tell. It might be some of both.” Alice pauses to sniff a pretty pink flower, which smells way better than any candle her humans ever used, and it takes a moment for her to catch back up to Bluebell and Maurice.
+
+	“I wonder why everyone thinks foxes are mean, though,” Bluebell is saying. “Even though I live here and they should know that I’m not.”
+“You make prototypes of things without realizing or planning it,” Alice says. “You pretty much take the knowledge you have of something and make one representation of it for your brain, and that’s what you think of when you think of that thing. So if I imagined foxes before now, I probably would have pictured someone clever and tricky. But now I can accommodate that prototype and update it to match the things I’ve learned now.”
+“And what do you imagine now?” Bluebell asks.
+“I don’t know,” Alice answers. “Someone more like you, I think.”
+“I’m imagining food,” Maurice says. “Lots and lots of forest food like those berries I ate. Are we ever going to get to this garden?”
+	Bluebell looks around as she walks, seeming to notice every tree, every flower, and every blade of grass near them. “Actually…we’re here.”
+“Here? I don’t see anything,” Maurice says.
+
+	“That’s because you’re not looking hard enough.” Bluebell ducks under some low branches and then vanishes to the other side of them.
+“Oh. I see,” says the rabbit, hopping along just behind her.
+Alice follows them under the branches, and when she emerges, there’s a garden on the other side. There are patches of dirt with all kinds of plants growing out of them and paths running between the plants so no one steps on them. There’s even an old, falling-down fence surrounding the whole area, and Alice breathes in all the new scents and looks at the whole scene with a grin growing on her face. It’s just so beautiful here.
+There are squirrels moving among the plants and deer talking to one another just outside the fence, but as soon as they see Alice, Maurice, and Bluebell, all of them freeze.
+“There’s a fox!” one cries out.
+“And a cat!” says another.
+“What, don’t they know you?” Maurice asks Bluebell.
+“Not really,” she says, and then she looks at the squirrels and deer. “I brought these two here because they’ve never visited the forest before, and I thought they would like to see your garden. We’re not here to steal anything or hurt you, I promise.”
+Two of the squirrels exchange a look, and then one bounces forward. “We can help you if you promise not to take anything from us that we don’t offer to give you. We work hard to maintain this garden, and we can’t afford to have anyone steal from it.”
+
+	“We won’t steal,” Bluebell says solemnly. “I swear it.”
+“We don’t even need to come in the garden,” Alice adds. “I just want to see what it’s like, and from the outside would be fine.”
+“Um, no. I want to go in,” Maurice argues. “I’m looking for a snack, remember?”
+The squirrels glance at each other again. “I suppose we can let you in. We’ll probably watch you closely, though,” says the same one who spoke before.
+“Thank you,” Alice tells them gratefully, and Bluebell nods in agreement.
+The five of them step into the garden, Maurice bounding ahead to see all the produce growing there. Most of the squirrels and deer wander into the forest after that, but a few scatter around the rest of the garden to water and prune plants and to watch carefully from a distance.
+The two squirrels stay to keep talking, though, and a deer even comes into the garden to join them.
+“Do all of you…know each other?” asks the same squirrel who spoke before. She looks from Maurice to Alice to Bluebell, and then back to Alice.
+“No,” Alice says. “Well, yes. I met Maurice when we decided to come into the forest, and then Bluebell helped us escape a bunch of bees.”
+“Bees?” asks the other squirrel.
+
+	“I was trying to take some honey from the bees near the edge of the forest, and they chased Maurice and me until Bluebell took us into her den to help us,” Alice says.
+“You tried to take their honey?” The three animals frown at her, and suddenly the few animals still around the garden seem to be watching much more closely.
+“She asked them first,” Bluebell explains quickly. “And since she’s never been in the forest before, she didn’t understand that they weren’t okay with it, and she thought they said yes.”
+One of the squirrels peers at Alice curiously. He looks like he’s the oldest of all of them, and he also seems the most interested in hearing what the cat, rabbit, and fox have to say. “Where are you from, then?”
+“I live in a house right outside the forest,” she says. “But my humans have never let me leave before. I ran off today while they were at work.”
+“At work. Hmmm.” The old squirrel studies Alice, Maurice, and Bluebell. “What are all of your names? Where did the rest of you come from? Tell me.”
+“You can go if you have places you need to be,” says the deer.
+	
+	Alice shakes her head. “My humans won’t be back until later, so I have plenty of time. And it’s beautiful here—I don’t want to leave so soon.”
+“Well, if you’re staying, then I’m going to see if there’s food around here,” Maurice declares. He bounds off deeper into the garden, and Alice and Bluebell and the squirrels watch him go.
+Should he be left to wander alone? Alice feels bad not going with him—he is the one who brought her into the forest to begin with, after all.
+“This is Alice, I’m Bluebell, and that’s Maurice,” Bluebell says. “Alice is trying to learn more about forest animals, since she’s never been in the forest before. Alice, why don’t you talk to these animals about their garden?”
+Alice is still watching Maurice hop away. She doesn’t want to leave him alone, but she also wants to speak more with the garden animals.
+
+
+
+What will you do…`,
+
+image: "images/trustfox.png",
+audio: "audio/filler.m4a",
+choices: [
+  { label: "Follow Maurice", next: "AC_followMaurice" },
+  { label: "Stay with the animals", next: "AD_stayAnimals" }
+]
+},
+
+B_runPastFox: {
+text: `CHAPTER THREE – THE GARDEN
+RUN PAST THE FOX
+
+	“Keep running!” Alice says. She and Maurice dart past the fox, who leaps into her den just before the swarm of bees flies past. “Is there anywhere we can go? Do you have any ideas at all?”
+“Well, I—no, I can’t think of anything,” he answers in frustration. “You know, you really should have just listened to me in the first place!”
+She looks to him so she can apologize, but at that moment, Maurice trips on a tree root, and with a horrified expression, he’s flung to the ground.
+“Maurice!” she cries, stopping in her tracks to run back to him. But before she can start toward him, another voice shouts from a short distance away.
+“LEAVE THEM BEE!”
+Alice whips her head around to see the same fox from before.
+
+	“Sorry, I couldn’t help myself,” the fox says with a bashful grin toward Alice. Then she faces the bees and continues, “If you leave these two alone, I promise, I’ll help you protect your hive from now on. I don’t think they know how rude it is to try to take your honey like that, but I’ll make sure they understand.”
+“I know it’s rude,” says Maurice, his voice muffled because he’s laying with his face in the dirt.
+Alice and the fox watch the bees as they lift up and soar off through the trees, apparently agreeing with the fox’s suggestion. Then the two of them look at each other, and Alice grins.
+“Thank you for getting us out of that,” she says. “How did you get them to go away so fast?”
+The fox smiles back a little more shyly. “It wasn’t hard. I just know what to say sometimes, especially if I understand someone.”
+“Oh, would you say you understand the forest animals?” Alice asks. If the fox knows other animals well, that could help her so much!
+Right as the fox opens her mouth to respond, Maurice calls from the ground, “Yeah, don’t mind me—I just got a bee sting over here, but that’s okay! You keep on talking!”
+“Oh no, you did?” Alice exclaims.
+The fox bounds over to him, her tail swishing gracefully behind her. “I’m so sorry, I didn’t know! Where is it?”
+“My leg,” Maurice says.
+“I know exactly the place to fix that,” the fox tells him. “It’s a little garden where some squirrels and deer grow plants, and I bet there’s something there that can help you. If you can get on my back, I’ll carry you there and let your friend here follow us.”
+
+	“Get on your back?” Maurice repeats. “I can walk myself, thank you!”
+He stands up carefully, but the moment he puts weight on his stung leg, he falls back to the ground. He lays there, glaring around him, but doesn’t try to get back up.
+The fox lays down too, so she’s at eye level with Maurice. “I bet that hurts,” she says sadly. “Are you sure I can’t help you?”
+“Yes, I’m sure!”
+“Alright, then.” The fox looks to Alice. “Well, while he lets that pain fade a little, how did you both end up being chased by bees anyway?”
+“I wanted to try their honey,” Alice explains, but her reasons seem so foolish now, especially since Maurice was stung because of her. “And I asked them for permission, and I thought they said yes, so I went up to their hive to take a little.”
+The fox tilts her head in interest. “You asked them for permission?”
+“Yes, it would’ve been rude otherwise, wouldn’t it?” Alice says. “And once I tried to take the honey, they chased me, and then Maurice joined me and we both ran away.”
+“I told her not to take it,” Maurice chimes in from the ground.
+“Hmm,” the fox says. “You must have been pretty brave to run with her even though the bees weren’t going after you.”
+Maurice looks impressed by this. “Yeah, I guess so.”
+
+	“I think the squirrels and deer who take care of the garden would like to hear about this. We don’t have visitors from outside the forest very often, and usually not interesting ones like you,” adds the fox.
+“We should go to the garden,” Maurice says.
+Wait—did the fox just get on Maurice’s good side that easily?
+“What do you think about letting me carry you? It would be faster, and I’m sure your leg is really bothering you,” the fox says. “The sooner we get to the forest, the sooner we can cure that sting.”
+“I suppose,” Maurice sighs. “Just remember, this isn’t because I need to be carried. It’s because I’m choosing it.”
+“Of course.” The fox moves in front of Maurice and lowers to the ground again. He gets up slowly and climbs onto her back, and then she stands up, careful to make sure he doesn’t fall. “Okay, great! And you—” she looks at Alice— “wait, what’s your name?”
+
+	“I’m Alice,” says the cat. She doesn’t try to shake paws this time.
+“And I’m Maurice,” says the rabbit.
+The fox beams at them. “Nice to meet you both! I’m Bluebell.”
+
+Bluebell is a fox, but unlike most foxes, she uses her cleverness to help others. She can be shy at times and doesn’t like to intrude, but she loves doing what she can to help everyone around her.
+
+	“Anyway, Alice, will you be okay to follow me to the garden?” Bluebell asks.
+Alice nods. “Yeah. And then I can explore more on the way!”
+“Yes! What is it you’re here to explore? How did a cat and a rabbit end up in the forest?” Bluebell asks as they begin to walk.
+Alice catches a small smile from Maurice when Bluebell says rabbit instead of bunny. When he notices Alice watching, he scowls and looks away, and Alice has to try not to giggle.
+“Alice decided she needed to come meet the animals here,” Maurice explains, his voice a little annoyed, “and I said I would come with her to help keep her safe.”
+Alice watches a pair of cardinals fly around a tree and then take off into the sky. “Yes…pretty much. I want to learn more about the animals here because my humans are psychologists, and I’ve learned a lot from them about humans but nothing about animals.”
+“Sorry, your humans are what, exactly?” Bluebell asks.
+“Psychologists. They’re scientists who study other people’s minds and behavior. It’s really fascinating, actually,” says Alice. “So I was hoping I could see what the psychology of forest animals is like, and Maurice seemed like a very interesting example.”
+
+	“Did he?” Bluebell says.
+“Yeah! Did you know he can make sparks and smoke come out of his ears? Isn’t that fascinating?”
+“I’m RIGHT HERE,” Maurice interrupts, and his ears have started smoking a little. “You don’t need to talk about me like that. I can speak for myself, thank you very much.”
+“Oh—sorry. I just thought it was interesting, that’s all,” Alice says, and she has to look away. She’s never had friends before, and it’s definitely a bad sign that Maurice was shouting at her.
+But it was a bad idea to talk about him right in front of him like that, wasn’t it?
+“That is interesting!” Bluebell says. “Maurice, I’ve never met anyone like that before. That’s really cool.”
+“No, it’s not.”
+“It is—” she says.
+
+	Maurice shakes his head violently. “It. Is. Not.”
+“—because for one thing, smoke will put bees to sleep. Did you know that? Maybe you could have protected yourself and Alice just like that.”
+“Really?” Maurice asks, and he seems interested now.
+Bluebell nods. “Yep!”
+“Well, I still think it’s stupid. But it’s too bad I didn’t know that before,” he says.
+“I wish you were here with us before, Bluebell.” Alice scurries forward so she’s directly beside the fox and can look at her while they walk. “You could have helped us a lot with everything you know. How do you know so much about the forest animals, anyway?”
+“I’ve lived here my whole life. There’s a lot you can learn just from watching,” Bluebell replies. “Not everyone wants to talk to me, though. Most of the animals here don’t trust me because I’m a fox.”
+“We didn’t either,” says Maurice.
+Alice tilts her head. “Are you unusual for a fox, or is everyone just wrong about foxes?”
+“I think I’m unusual, or at least, my family is—they’re the ones who taught me to help other animals instead of tricking them.”
+“Or you could have inherited that from them genetically,” Alice says. “Like with gene and environment interactions, or nature versus nurture.”
+“What kind of nonsense is that?” Maurice asks.
+
+	“They’re psychology things. It means that the way you were raised and how your family acted could have affected how you act now, but also that the way you act might have been inherited from your family. It’s hard to know for sure. And you can change your family and they can change you, so really, it goes both ways.”
+“My family sure didn’t learn anything from me,” Maurice grumbles.
+“I’m not sure if they taught it to me or if I inherited it,” Bluebell says.
+“You wouldn’t really be able to tell. It might be some of both.” Alice pauses to sniff a pretty pink flower, which smells way better than any candle her humans ever used, and it takes a moment for her to catch back up to Bluebell and Maurice.
+“I wonder why everyone thinks foxes are mean, though,” Bluebell is saying. “Even though I live here and they should know that I’m not.”
+“You make prototypes of things without realizing or planning it,” Alice says. “You pretty much take the knowledge you have of something and make one representation of it for your brain, and that’s what you think of when you think of that thing. So if I imagined foxes before now, I probably would have pictured someone clever and tricky. But now I can accommodate that prototype and update it to match the things I’ve learned now.”
+“And what do you imagine now?” Bluebell asks.
+“I don’t know,” Alice answers. “Someone more like you, I think.”
+“I imagine this pain in my leg that’s getting worse and worse every minute,” says Maurice. He’s slumped over Bluebell’s back, and Alice thinks that he really does look like he’s badly in pain. “How close are we?”
+Bluebell looks around as she walks, seeming to notice every tree, every flower, and every blade of grass near them. “Actually…we’re here.”
+“Here? I don’t see anything,” Maurice groans.
+“That’s because you’re not looking hard enough.” Bluebell ducks under some low branches, but she’s careful enough that Maurice doesn’t fall, and then she vanishes to the other side of them.
+“Oh. I see,” says the rabbit.
+
+	Alice follows them under the branches, and when she emerges, there’s a garden on the other side. There are patches of dirt with all kinds of plants growing out of them and paths running between the plants so no one steps on them. There’s even an old, falling-down fence surrounding the whole area, and Alice breathes in all the new scents and looks at the whole scene with a grin growing on her face. It’s just so beautiful here.
+There are squirrels moving among the plants and deer talking to one another just outside the fence, but as soon as they see Alice, Maurice, and Bluebell, all of them freeze.
+“There’s a fox!” one cries out.
+“And a cat!” says another.
+“What, don’t they know you?” Maurice asks, looking down at Bluebell.
+“Not really,” she says, and then she looks at the squirrels and deer. “We’re just here to try to help. This rabbit has a bee sting, and I don’t have any way to fix it on my own. Do you have any plants that will make it less painful for him?”
+Two of the squirrels exchange a look, and then one bounces forward. “We can help you if you promise not to take anything else from us. We work hard to maintain this garden, and we can’t afford to have anyone steal from it.”
+“We won’t steal, I swear it,” Bluebell answers solemnly.
+“We just came here to help Maurice,” Alice chimes in. “If not for Bluebell, he and I would be in big trouble right now. She’s helped us a lot, and we only just met her.”
+All the squirrels seem surprised by this, but the one that spoke waves Bluebell forward. “The plant you need is over here. It’s called aloe vera. We can put it on the bunny’s leg if you bring him over.”
+“I’m a rabbit, thank you,” Maurice says, but his voice is quiet.
+A few of the squirrels lead Bluebell over to the aloe vera, and she lowers Maurice carefully to the ground. Alice follows so she can watch as the squirrels pull a leaf from the plant, squeeze it, and then spread the paste from it onto Maurice’s sting.
+
+	“Did that help?” one of the squirrels asks.
+Maurice tests out his leg, and this time, it holds steady when he stands on it. Something almost like a smile crosses his face. “It did. It doesn’t hurt at all anymore.” 
+“Thank you,” says Bluebell.
+“Oh—yes. Thank you,” Maurice echoes. He leaps into the air twice like he’s testing to make sure the plant really worked, and it seems like it did, because his smile gets a little bigger. Alice can’t help smiling herself.
+Most of the squirrels and deer wander into the forest after that, but a few scatter around the rest of the garden to water and prune plants and to watch carefully from a distance.
+Two squirrels stay to keep talking, though, and a deer even comes into the garden to join them.
+“How did you end up with a bee sting?” asks the squirrel who spoke to them the most earlier. She’s been holding the aloe vera leaf, but now she sets it down to focus more on the conversation.
+“I was trying to take some honey from the bees near the edge of the forest, and they chased Maurice and me until he got stung,” Alice says. “But Bluebell came at that point and asked the bees to leave us alone.”
+“You tried to take their honey?” The three animals frown at her, and suddenly the few animals still around the garden seem to be watching much more closely.
+“She asked them first,” Bluebell explains quickly. “And since she’s never been in the forest before, she didn’t understand that they weren’t okay with it, and she thought they said yes.”
+One of the squirrels peers at Alice curiously. He looks like he’s the oldest of all of them, and he also seems the most interested in hearing what the cat, rabbit, and fox have to say. “Where are you from, then?”
+“I live in a house right outside the forest,” she says. “But my humans have never let me leave before. I ran off today while they were at work.”
+“At work. Hmmm.” The old squirrel studies Alice, Maurice, and Bluebell. “What are all of your names? Where did the rest of you come from? Tell me.”
+“You can go if you have places you need to be,” says the deer.
+
+	Alice shakes her head. “My humans won’t be back until later, so I have plenty of time. And it’s beautiful here—I don’t want to leave so soon.”
+“Well, if you’re staying, then I’m going to see if there’s food around here,” Maurice declares. He bounds off deeper into the garden, and Alice and Bluebell and the squirrels watch him go.
+Should he be left to wander alone? Alice feels bad not going with him—he is the one who brought her into the forest to begin with, after all.
+“This is Alice, I’m Bluebell, and that’s Maurice,” Bluebell says. “Alice is trying to learn more about forest animals, since she’s never been in the forest before. Alice, why don’t you talk to these animals about their garden?”
+Alice is still watching Maurice hop away. She doesn’t want to leave him alone, but she also wants to speak more with the garden animals.
+
+What will you do…`,
+
+
+image: "images/runpast.png",
+audio: "audio/bees.m4a",
+choices: [
+  { label: "Follow Maurice", next: "BC_followMaurice" },
+  { label: "Stay with the animals", next: "BD_stayAnimals" }
+]
+},
+
+
+
+
+AC_followMaurice: {
+text: `CHAPTER FOUR – FOLLOW MAURICE
+
+	“I’m sorry, but I’d like to follow Maurice,” Alice says. “You should stay and talk with them, though!”
+“Oh, okay,” Bluebell responds, looking slightly confused. She gives the fox equivalent of a shrug and turns back to the squirrels and deer as Alice heads into the garden in pursuit of Maurice.
+She finds him chewing on some leaves toward the middle of the garden. A few animals are watching from outside the fence, but none have actually come up to him, and he looks quite content.
+“Hi, Maurice,” Alice says. “What are you eating?”
+He looks up in surprise, his mouth stuffed full of the leaves. “Dnnobschgrd,” he replies.
+Alice stares.
+He chews the leaves quickly and swallows, then says, “I don’t know, but it’s good.”
+She peers at the plant, which, as far as she can see, is just a lot of leaves. And she may know psychology, but she definitely doesn’t know plants.
+“What do you think of it here?” she asks Maurice as he hops to the next patch of plants.
+“It’s great. The food is great. That was the third plant I’ve tried, and they’ve all been tasty,” he answers. “Plus there’s no rabb—there’s no bees here.”
+Alice tilts her head at his change in words, but she doesn’t press him. Instead, she says, “Are you enjoying being in the forest too?”
+“Oh, yes. Aside from running from bees, it’s really nice to be here. As long as we stay out of the deepest part of the woods, I’m happy being here.”
+“What’s wrong with the deepest part of the woods?” Alice asks curiously.
+“From what I remember, it’s the most dangerous. All kinds of animals that will try to eat you for dinner,” Maurice says, and he makes his voice sound spooky like a human reading a scary story to a child would. “Not worth even trying to go there.”
+
+	“Oh. Let’s not go there, then,” Alice agrees.
+A squirrel pops out of some leaves in front of them and shakes his head. “There’s no dangerous part of this forest. The only dangerous thing is the city.”
+“Oh. Hi.” Alice waves uncertainly at him. “Who are you?”
+“My name’s Braxton,” the squirrel responds proudly. “I don’t run this garden—that’s Colin, Gina, and Asher—but I help out here.”
+“And what would you know about the forest?” Maurice grumbles.
+“He lives here,” Alice reminds him.
+“Well, when I was here before, there were scary animals in the middle of the forest,” Maurice says.
+“There never have been,” Braxton responds blankly. “There’s only foxes, snakes, and hawks that are dangerous here.”
+“Hmph,” Maurice says. Alice sees one puff of smoke come out from his ears.
+“Let’s keep going,” she tells him quickly, nudging him forward. “Thanks for—uh—your help,” she adds to Braxton.
+“Anytime,” he replies, diving back into the pile of plants he had been in before.
+“So…what did you come here for in the past?” Alice asks Maurice, pausing to sniff some herb they walk past.
+“Nothing. Just exploring. And food.”
+
+	“Right.” Alice watches him reach for some vegetable that’s buried in the dirt, lift it to his mouth, and take a bite. He smiles and stuffs the rest of it into his mouth. This is one of the first times she’s seen him really smile, isn’t it?
+“You know, my humans really only let me eat cat food before,” she tells him. “Maybe I should try something here too. Those mushrooms Bluebell gave me earlier were really good.”
+“They were. You know, I do really like it here. It’s so much better than running around the city yelling at dogs.”
+Alice feels the curiosity burn inside her, but she doesn’t want to be rude and ask too many questions. So she decides to ask just one. “Why don’t you live here, then?”
+He huffs. “Certain…other animals. They like to antagonize me when they see me.”
+“Oh.”
+“So I avoid the whole forest. They’re the animals in the deepest part of the forest. I’m sorry. I just—don’t want to go there because of them, not because there’s dangerous animals there.”
+“No, that makes sense,” Alice tells him. “You could have just said as much, you know.”
+He shakes his head. “No. Nobody likes sharing personal things about themselves.”
+“I’ve never had a chance to share something personal before,” Alice says, “but actually, I don’t think I mind. Here goes—I talk to myself a lot because I don’t have anyone else to talk to. Also, one time I fell off the top of the fridge because I got too curious about the dust bunnies up there and started chasing them. Curiosity kills the cat, you know.”
+He studies her. “Are those the worst things you can share about yourself?”
+“Oh, I don’t know…probably.”
+He scoffs.
+
+	“I’ve lived a boring life as a house cat! There’s not much for me to do!” Alice tells him. “Listen—I like taking risks and learning things. If I could have done more, I would have. Like coming here today.”
+“I guess so,” he mumbles.
+“So…what about this plant?” Alice asks, pointing to a small bundle of leaves poking up out of the dirt. Maurice leans down and yanks it up by the stem using his teeth, and Alice gasps in surprise when she sees what it is.
+“It’s a carrot!” she exclaims.
+“I’ve never tried one of those before,” Maurice says, studying it.
+“Rabbits really love those,” she tells him.
+“Okay. I’ll try it, then.” He chomps a large bite out of the carrot, chews, and then spits it onto the ground.
+He immediately spits it out. “What is this—disgusting―blecchh! Whoever told you that rabbits like carrots was the worst liar I ever heard of!”
+Alice has to turn away so he can’t see her laughing.
+“Come on. We’re going back to one of the plants I liked, and I’m going to eat that to get this taste out of my mouth,” he says with a scowl.
+She follows him back to the first plant she found him eating, and he takes another huge mouthful of it. As he’s chewing, Bluebell comes up to them with the squirrels and deer.
+“So that’s where you are!” she says. “We were wondering where you got to.”
+Maurice finishes his bite and slumps to the ground. “You know what…I think I might be going into a food coma.”
+“Alice, would you like to talk to them some?” Bluebell asks, nodding toward the garden animals she’s with. “I think you’d be interested in what they have to say.”
+“These are Colin, Gina, and Asher that I told you about earlier,” Braxton announces, his head popping out of some vegetables a few feet away.
+“What―” one of the squirrels says. “I mean, thank you, Braxton.”
+“You’re welcome,” he replies, ducking back down again.
+“What a character,” the deer whispers.
+
+	Maurice groans, still laying on the ground. “I need a more comfortable place to lay down. I want to take a nap.”
+Bluebell smiles apologetically at the garden animals. “I think we should probably go. I have a great idea of somewhere he can rest.”
+They all nod to her.
+“It was nice to…kind of meet you,” Alice tells them. “Maybe we can come back later. I’d like to actually talk to you.”
+One of the squirrels nods. “Yes. I’d be interested to meet a house cat, too.”
+“I know just the place for Maurice to take a nap,” Bluebell says. “Alice, there’s some geese there that you could meet if you’d like.”
+“That would be nice!” Alice agrees.
+Maurice nods slowly. “Yes. That would be.”
+“Okay,” Bluebell says, nudging him with her paw. “Then you’re going to have to get up. We’re going to the lake.”
+Maurice stands up, shaking his head like a dog would. He twitches his ears and then turns to Alice and Bluebell.
+“I’m ready,” he says.
+“Yay! Lake, here we come,” Alice cheers.
+The squirrels and deer wave as the three of them leave the garden, waving back—well, Maurice doesn’t wave, but Alice and Bluebell do. They march into the trees and the heavier shadows beneath them, and the cat and rabbit follow the fox to the lake.`,
+
+image: "images/followA.png",
+audio: "audio/filler.m4a",
+choices: [
+  { label: "Go to the lake", next: "chapter5" }
+]
+},
+
+AD_stayAnimals: {
+text: `CHAPTER FOUR – STAY WITH THE ANIMALS
+
+	“Yes, I want to hear more about these animals!” Alice says. “Please, tell me about your garden and what it’s like to live here.”
+“First, actually, what are your names?” Bluebell asks them.
+Alice nods quickly. “Yes. That too.”
+“I’m Gina,” says the younger squirrel. “This is Colin—” she gestures to the older squirrel— “and this is Asher,” she finishes, waving toward the deer.
+“It’s nice to meet all of you,” Alice replies.
+“You too,” say Gina and Asher together.
+
+	Colin leans forward and pokes at Alice’s tail. “That’s a bushy tail you have there. Are you part squirrel?”
+Alice flicks her tail behind herself, surprised. “No, I’m just a cat.”
+“Colin, stop teasing her. She wants to know more about us, not have you telling her she’s a squirrel,” Gina says.
+“Yes, but I had to ask that first. Anyway. The three of us are in charge of this garden, and while the work is split up between all the squirrels and deer, we three give everyone else jobs and keep it running smoothly. We also make sure no one is stealing from our plants or coming into the garden without our permission. And when it comes to food, we divide it all up equally for all the animals who want or need it. Speaking of food, where did that bunny go? Wasn’t he looking for something to eat?”
+
+	“Yes, he went to find food. I can’t see him,” Asher says, craning his head to look around the garden, “but I’m sure the others are keeping an eye on him and helping him out.”
+“He can’t get lost here or anything, right?” Bluebell asks, now trying to spot him herself.
+“No, all the other animals will help him,” Gina says. “He should be okay.”
+Bluebell nods. “That’s good.”
+“So then, what else do the two of you want to know about our garden?” Gina asks, plucking a blade of grass from the ground and twisting it in her paws.
+Alice thinks for a moment about what to say, and she finally decides to ask them…
+`,
+image: "images/stayA.png",
+audio: "audio/filler.m4a",
+choices: [
+  { label: "What's it like to live in the forest?", next: "ADE_forest" },
+  { label: "Do you get along with other animals?", next: "ADF_animals" }
+]
+},
+
+ADE_forest: {
+text: ` WHAT'S IT LIKE TO LIVE IN THE FOREST?
+
+	Alice looks at Gina, Colin, and Asher. “What’s it like to live in the forest?”
+“Well, you know…like living in a forest,” answers Gina.
+“You can do better than that,” Asher says. “It’s peaceful here. The birds say that the city is loud and busy and has too many humans. But here, you get to know all the other animals, and you can live pretty much wherever you want and be friends with all kinds of animals.”
+“And you like that?” Alice asks.
+
+	“The forest is our home,” says Gina. “It’s animals with animals, and we all take care of ourselves and each other. We won’t be going anywhere anytime soon.”
+“When you live in the forest, you wake up with the sun on your face every day. You can wander through the trees if you want, or go rest in a patch of flowers, or spend all day burying acorns. It doesn’t matter. We all live and thrive here, and the forest will support us with whatever we want to do,” Colin answers.
+"Cheesy old man,” Asher laughs, shaking his head.
+“Don’t you ‘cheesy old man’ me!” Colin retorts, his tail standing on end. “Or I’ll have to make you taste-test the onions again.”
+“Not the onions.” Asher shakes his head even harder. “Don’t make me eat the onions.”
+“So you all get along here? Do you work together or fend for yourselves?” Alice feels like she’s interviewing them like a human on television would do. This is fun.
+“All of us who run this garden get along well. We provide food for the other animals who need it, too,” says Colin. “I’m not as sure about the other animals. But here at least, we support each other and all live in peace.”
+“I used to live in the rest of the forest before my friends introduced me to the squirrels who ran this garden,” Asher adds. “It was quieter outside of the garden because there’s more of a community here, but I could wander as much of the forest as I wanted back then. That was before I got busy caring for our plants here. And as long as I avoided the more dangerous animals, I would be fine. My friends and I would travel most of the forest every day, just because we could.”
+
+	“It’s beautiful out there,” Bluebell agrees with a smile. “It feels like it’s the whole world even though the city is right outside.”
+Gina frowns thoughtfully. “Why haven’t I seen you before? Do you live in this forest?”
+“Yeah,” Bluebell answers, ducking her head. “I just…don’t stay around animals a lot.”
+“Why not?” Asher asks.
+“Well, you know, they tend to ask me to go away if I come near them. No one trusts me much even if I don’t do anything wrong.”
+“That’s representative bias,” Alice blurts out.
+All four other animals turn to stare at her.
+“Um. It’s something I learned from my humans. It pretty much means that you judge every fox based on what you already think of them, not on what they’re actually like. You use the mental representation you already have of foxes and then see every fox like that.”
+
+	“Interesting human knowledge,” Colin decides.
+“I’ve never thought of it that way,” Gina says, studying Bluebell. “I’m sorry if I did that to you.”
+“Yeah, you seem nice—a lot less of a trickster than I thought a fox would be,” Asher adds. “I’ll think about that next time.”
+“Oh…thanks.” Bluebell seems like she might be smiling. “I’m at least glad you were all willing to let me in now.”
+Colin opens his mouth to respond, but at that moment, a voice bursts out from some plants a few feet away.
+“What is this—disgusting―blecchh!”
+Maurice leaps out of the plants, spitting something out of his mouth and then glaring at it. Alice doesn’t think it should be funny, but she has to fight to not start laughing.
+“Did you eat a carrot?” Asher asks, peering at the patch of plants Maurice came from.
+“Is that what that was? Absolutely disgusting,” Maurice huffs.
+“Wait,” Alice says, and now she can’t help but laugh a little, “aren’t rabbits supposed to love carrots?”
+“Alice, that sounds like your prototype of rabbits is wrong,” Bluebell tells her, smiling.
+Maurice gives one last glare at the carrot he spit out and then comes to stand near everyone else. “Oh, don’t I make every part of your prototype wrong? Whatever. I’m never eating carrots again.”
+
+	“Did you find anything you did like?” Gina asks.
+“Yeah, there were a few things,” Maurice answers. “I might have to go eat one of those again to get this taste out of my mouth.”
+He hops away again, and as soon as he’s out of earshot, Colin says, “That is quite some rabbit.”
+“He’s not what I was expecting,” Alice agrees, “but he’s been helpful. And friendly, in a way?”
+Gina gives a shrug, or the squirrel equivalent of one. “Sure…if you say so.”
+Bluebell frowns a little at this, but she doesn’t respond to it. Instead, she says, “Hey, Alice, I know you wanted to learn the forest animals’ psychology—”
+“Our what?” Colin interrupts.
+
+	“Your psychology. It’s the ways you think and behave,” Alice explains.
+“—so how would you feel about going on a tour of the forest with me?” Bluebell finishes. “I can show you around and help you meet some of the other animals if you want. I know the forest pretty well.”
+“Yeah, that would be amazing!” Alice exclaims.
+“Great,” says Bluebell, beaming.
+“Should we start now?” Alice asks. She turns to Gina, Colin, and Asher. “I’ve enjoyed talking to all of you a lot, but I have a limited amount of time before I have to be back at my house so I don’t worry my humans. Thanks for everything you shared with me!”
+“It was nice to meet you, too,” Gina says. Asher nods in agreement.
+“Enjoy the rest of the forest,” Colin tells them. “Don’t get chased by any more bees!”
+“We won’t,” Alice assures him.
+
+	“Okay, Alice,” Bluebell says, “let’s go find Maurice!”
+The two of them leave Colin, Gina, and Asher behind, wandering deeper into the garden in search of Maurice. Alice breathes in all the smells around her with a grin. It really is so beautiful—and all of the food must be amazing, but she’s so eager to meet more animals that she doesn’t stop to try any.
+Finally, they find Maurice sitting beside a patch of plants that Alice doesn’t recognize, chewing absentmindedly on some leaves in the plants.
+“I think I’m in a food coma,” he groans when he sees them.
+Bluebell laughs, and to Alice’s surprise, Maurice doesn’t scold her for it. “I know just the place for you to take a nap if you want to,” she says. “Alice, there’s some geese there that you could meet if you’d like.”
+“That would be nice!” Alice agrees.
+Maurice nods slowly. “Yes. That would be.”
+“Okay,” Bluebell says, nudging him with her paw. “Then you’re going to have to get up. We’re going to the lake.”
+Maurice stands up, shaking his head like a dog would. He twitches his ears and then turns to Alice and Bluebell.
+“I’m ready,” he says.
+“Yay! Lake, here we come,” Alice cheers.
+The three of them leave the garden, waving to every animal they pass—well, Maurice doesn’t wave, but Alice and Bluebell do. They march into the trees and the heavier shadows beneath them, and the cat and rabbit follow the fox to the lake
+
+`,
+image: "images/stayA.png",
+audio: "audio/filler.m4a",
+choices: [
+  { label: "Go to the lake", next: "chapter5" }
+]
+},
+
+ADF_animals: {
+text: ` DO YOU GET ALONG WITH OTHER ANIMALS?
+
+	Alice looks at Gina, Colin, and Asher. “Do you get along well with all the other animals?”
+“We do,” Asher answers. “We give them food if they need it, and sometimes they even help us out. It’s very peaceful here, and we all get along very well for the most part.”
+“What about predator animals? Is it still peaceful with them here—and what do you do about them?” Alice feels like she’s interviewing them like a human on television would do. This is fun.
+Colin’s tail twitches. “There’s enough of us that we can keep them out. And we have a warning system to keep everyone safe, especially the kids.”
+“If a predator animal asks for food, we usually deliver it to them but don’t let them in. You both seemed nice, though,” Gina adds. “I mean, you were helping out a bunny with a bee sting.”
+“It’s so nice that you have a place like this, to provide for everyone else in the forest,” Bluebell says. “I try to help out where I can, but most animals won’t trust a fox.”
+Asher sighs. “Sneaky animals like foxes and snakes usually try to steal from us. We turn those animals away, and I feel bad doing it, but they’re just so suspicious. None of the other animals are like that.”
+“That’s a fundamental attribution error,” Alice blurts out.
+All four other animals turn to stare at her.
+
+	“Um. It’s something I learned from my humans. You assume that the animals are suspicious and trying to steal because they’re foxes and snakes, so they’re just like that—but you don’t think about what other circumstances they might have going on. And you never know, they might not be trying to steal at all.”
+Everyone except Bluebell looks surprised at this. Bluebell instead seems happy.
+“We’ve never tried asking them, have we?” Gina says thoughtfully.
+“Not after that time two snakes came and ruined half our plants.” Asher’s expression is dark. “It might not seem right, but there’s a reason we do it this way.”
+“Interesting thoughts,” Colin says. “Very, very interesting. You say your humans taught you this?”
+Alice nods. “They didn’t mean for me to learn it, but they talked about it enough that I did.”
+Colin opens his mouth to respond, but at that moment, a voice bursts out from some plants a few feet away.
+“What is this—disgusting―blecchh!”
+Maurice leaps out of the plants, spitting something out of his mouth and then glaring at it. Alice doesn’t think it should be funny, but she has to fight to not start laughing.
+“Did you eat a carrot?” Asher asks, peering at the patch of plants Maurice came from.
+“Is that what that was? Absolutely disgusting,” Maurice huffs.
+“Wait,” Alice says, and now she can’t help but laugh a little, “aren’t rabbits supposed to love carrots?”
+“Alice, that sounds like your prototype of rabbits is wrong,” Bluebell tells her, smiling.
+Maurice gives one last glare at the carrot he spit out and then comes to stand near everyone else. “Oh, don’t I make every part of your prototype wrong? Whatever. I’m never eating carrots again.”
+“Did you find anything you did like?” Gina asks.
+
+	“Yeah, there were a few things,” Maurice answers. “I might have to go eat one of those again to get this taste out of my mouth.”
+He hops away again, and as soon as he’s out of earshot, Colin says, “That is quite some rabbit.”
+“He’s not what I was expecting,” Alice agrees, “but he’s been helpful. And friendly, in a way?”
+Gina gives a shrug, or the squirrel equivalent of one. “Sure…if you say so.”
+Bluebell frowns a little at this, but she doesn’t respond to it. Instead, she says, “Hey, Alice, I know you wanted to learn the forest animals’ psychology—”
+“Our what?” Colin interrupts.
+“Your psychology. It’s the ways you think and behave,” Alice explains.
+“—so how would you feel about going on a tour of the forest with me?” Bluebell finishes. “I can show you around and help you meet some of the other animals if you want. I know the forest pretty well.”
+“Yeah, that would be amazing!” Alice exclaims.
+“Great,” says Bluebell, beaming.
+“Should we start now?” Alice asks. She turns to Gina, Colin, and Asher. “I’ve enjoyed talking to all of you a lot, but I have a limited amount of time before I have to be back at my house so I don’t worry my humans. Thanks for everything you shared with me!”
+
+	“It was nice to meet you, too,” Gina says. Asher nods in agreement.
+“Enjoy the rest of the forest,” Colin tells them. “Don’t get chased by any more bees!”
+“We won’t,” Alice assures him.
+“Okay, Alice,” Bluebell says, “let’s go find Maurice!”
+The two of them leave Colin, Gina, and Asher behind, wandering deeper into the garden in search of Maurice. Alice breathes in all the smells around her with a grin. It really is so beautiful—and all of the food must be amazing, but she’s so eager to meet more animals that she doesn’t stop to try any.
+Finally, they find Maurice sitting beside a patch of plants that Alice doesn’t recognize, chewing absentmindedly on some leaves in the plants.
+“I think I’m in a food coma,” he groans when he sees them.
+Bluebell laughs, and to Alice’s surprise, Maurice doesn’t scold her for it. “I know just the place for you to take a nap if you want to,” she says. “Alice, there’s some geese there that you could meet if you’d like.”
+“That would be nice!” Alice agrees.
+Maurice nods slowly. “Yes. That would be.”
+“Okay,” Bluebell says, nudging him with her paw. “Then you’re going to have to get up. We’re going to the lake.”
+Maurice stands up, shaking his head like a dog would. He twitches his ears and then turns to Alice and Bluebell.
+“I’m ready,” he says.
+
+	“Yay! Lake, here we come,” Alice cheers.
+The three of them leave the garden, waving to every animal they pass—well, Maurice doesn’t wave, but Alice and Bluebell do. They march into the trees and the heavier shadows beneath them, and the cat and rabbit follow the fox to the lake.
+`,
+image: "images/stayA.png",
+audio: "audio/filler.m4a",
+choices: [
+  { label: "Go to the lake", next: "chapter5" }
+]
+},
+
+BC_followMaurice: {
+text: `CHAPTER FOUR – FOLLOW MAURICE 
+
+	“I’m sorry, but I’d like to follow Maurice,” Alice says. “You should stay and talk with them, though!”
+“Oh, okay,” Bluebell responds, looking slightly confused. She gives the fox equivalent of a shrug and turns back to the squirrels and deer as Alice heads into the garden in pursuit of Maurice.
+She finds him chewing on some leaves toward the middle of the garden. A few animals are watching from outside the fence, but none have actually come up to him, and he looks quite content.
+“Hi, Maurice,” Alice says. “What are you eating?”
+He looks up in surprise, his mouth stuffed full of the leaves. “Dnnobschgrd,” he replies.
+Alice stares.
+
+	He chews the leaves quickly and swallows, then says, “I don’t know, but it’s good.”
+She peers at the plant, which, as far as she can see, is just a lot of leaves. And she may know psychology, but she definitely doesn’t know plants.
+“What do you think of it here?” she asks Maurice as he hops to the next patch of plants.
+“It’s great. The food is great. That was the third plant I’ve tried, and they’ve all been tasty. Also, my sting doesn’t hurt at all anymore,” he answers. “Plus there’s no rabb—there’s no bees here.”
+Alice tilts her head at his change in words, but she doesn’t press him. Instead, she says, “Are you enjoying being in the forest too?”
+“Oh, yes. Aside from running from bees, it’s really nice to be here. As long as we stay out of the deepest part of the woods, I’m happy being here.”
+“What’s wrong with the deepest part of the woods?” Alice asks curiously.
+“From what I remember, it’s the most dangerous. All kinds of animals that will try to eat you for dinner,” Maurice says, and he makes his voice sound spooky like a human reading a scary story to a child would. “Not worth even trying to go there.”
+
+	“Oh. Let’s not go there, then,” Alice agrees.
+A squirrel pops out of some leaves in front of them and shakes his head. “There’s no dangerous part of this forest. The only dangerous thing is the city.”
+“Oh. Hi.” Alice waves uncertainly at him. “Who are you?”
+“My name’s Braxton,” the squirrel responds proudly. “I don’t run this garden—that’s Colin, Gina, and Asher—but I help out here.”
+“And what would you know about the forest?” Maurice grumbles.
+“He lives here,” Alice reminds him.
+“Well, when I was here before, there were scary animals in the middle of the forest,” Maurice says.
+“There never have been,” Braxton responds blankly. “There’s only foxes, snakes, and hawks that are dangerous here.”
+“Hmph,” Maurice says. Alice sees one puff of smoke come out from his ears.
+“Let’s keep going,” she tells him quickly, nudging him forward. “Thanks for—uh—your help,” she adds to Braxton.
+“Anytime,” he replies, diving back into the pile of plants he had been in before.
+“So…what did you come here for in the past?” Alice asks Maurice, pausing to sniff some herb they walk past.
+“Nothing. Just exploring. And food.”
+“Right.” Alice watches him reach for some vegetable that’s buried in the dirt, lift it to his mouth, and take a bite. He smiles and stuffs the rest of it into his mouth. This is one of the first times she’s seen him really smile, isn’t t?
+	“You know, my humans really only let me eat cat food before,” she tells him. “Maybe I should try something here too. Those mushrooms Bluebell gave me earlier were really good.”
+“They were. You know, I do really like it here. It’s so much better than running around the city yelling at dogs.”
+Alice feels the curiosity burn inside her, but she doesn’t want to be rude and ask too many questions. So she decides to ask just one. “Why don’t you live here, then?”
+He huffs. “Certain…other animals. They like to antagonize me when they see me.”
+“Oh.”
+
+	“So I avoid the whole forest. They’re the animals in the deepest part of the forest. I’m sorry. I just—don’t want to go there because of them, not because there’s dangerous animals there.”
+“No, that makes sense,” Alice tells him. “You could have just said as much, you know.”
+He shakes his head. “No. Nobody likes sharing personal things about themselves.”
+“I’ve never had a chance to share something personal before,” Alice says, “but actually, I don’t think I mind. Here goes—I talk to myself a lot because I don’t have anyone else to talk to. Also, one time I fell off the top of the fridge ecause I got too curious about the dust bunnies up there and started chasing them. Curiosity kills the cat, you know.”
+He studies her. “Are those the worst things you can share about yourself?”
+“Oh, I don’t know…probably.”
+He scoffs.
+
+	“I’ve lived a boring life as a house cat! There’s not much for me to do!” Alice tells him. “Listen—I like taking risks and learning things. If I could have done more, I would have. Like coming here today.”
+“I guess so,” he mumbles.
+“So…what about this plant?” Alice asks, pointing to a small bundle of leaves poking up out of the dirt. Maurice leans down and yanks it up by the stem using his teeth, and Alice gasps in surprise when she sees what it is.
+“It’s a carrot!” she exclaims.
+“I’ve never tried one of those before,” Maurice says, studying it.
+“Rabbits really love those,” she tells him.
+“Okay. I’ll try it, then.” He chomps a large bite out of the carrot, chews, and then spits it onto the ground.
+He immediately spits it out. “What is this—disgusting―blecchh! Whoever told you that rabbits like carrots was the worst liar I ever heard of!”
+Alice has to turn away so he can’t see her laughing.
+“Come on. We’re going back to one of the plants I liked, and I’m going to eat that to get this taste out of my mouth,” he says with a scowl.
+She follows him back to the first plant she found him eating, and he takes another huge mouthful of it. As he’s chewing, Bluebell comes up to them with the squirrels and deer.
+“So that’s where you are!” she says. “We were wondering where you got to.”
+Maurice finishes his bite and slumps to the ground. “You know what…I think I might be going into a food coma.”
+“Alice, would you like to talk to them some?” Bluebell asks, nodding toward the garden animals she’s with. “I think you’d be interested in what they have to say.”
+“These are Colin, Gina, and Asher that I told you about earlier,” Braxton announces, his head popping out of some vegetables a few feet away.
+“What―” one of the squirrels says. “I mean, thank you, Braxton.”
+“You’re welcome,” he replies, ducking back down again.
+“What a character,” the deer whispers.
+
+	Maurice groans, still laying on the ground. “I need a more comfortable place to lay down. I want to take a nap.”
+Bluebell smiles apologetically at the garden animals. “I think we should probably go. I have a great idea of somewhere he can rest.”
+They all nod to her.
+“It was nice to…kind of meet you,” Alice tells them. “Maybe we can come back later. I’d like to actually talk to you.”
+One of the squirrels nods. “Yes. I’d be interested to meet a house cat, too.”
+“I know just the place for Maurice to take a nap,” Bluebell says. “Alice, there’s some geese there that you could meet if you’d like.”
+“That would be nice!” Alice agrees.
+Maurice nods slowly. “Yes. That would be.”
+“Okay,” Bluebell says, nudging him with her paw. “Then you’re going to have to get up. We’re going to the lake.”
+Maurice stands up, shaking his head like a dog would. He twitches his ears and then turns to Alice and Bluebell.
+“I’m ready,” he says.
+“Yay! Lake, here we come,” Alice cheers.
+The squirrels and deer wave as the three of them leave the garden, waving back—well, Maurice doesn’t wave, but Alice and Bluebell do. They march into the trees and the heavier shadows beneath them, and the cat and rabbit follow the fox to the lake.
+`,
+image: "images/followA.png",
+audio: "audio/filler.m4a",
+choices: [
+  { label: "Go to the lake", next: "chapter5" }
+]
+},
+
+BD_stayAnimals: {
+text: `CHAPTER FOUR – STAY WITH THE ANIMALS 
+
+	“Yes, I want to hear more about these animals!” Alice says. “Please, tell me about your garden and what it’s like to live here.”
+“First, actually, what are your names?” Bluebell asks them.
+Alice nods quickly. “Yes. That too.”
+“I’m Gina,” says the younger squirrel. “This is Colin—” she gestures to the older squirrel— “and this is Asher,” she finishes, waving toward the deer.
+
+Gina, Colin, and Asher are the main caretakers of the forest garden. They are very proud of their work and love to share the plants they grow with the rest of the forest, though they also work hard to protect it from any dangerous animals.
+
+	“It’s nice to meet all of you,” Alice replies.
+“You too,” say Gina and Asher together.
+Colin leans forward and pokes at Alice’s tail. “That’s a bushy tail you have there. Are you part squirrel?”
+Alice flicks her tail behind herself, surprised. “No, I’m just a cat.”
+“Colin, stop teasing her. She wants to know more about us, not have you telling her she’s a squirrel,” Gina says.
+“Yes, but I had to ask that first. Anyway. The three of us are in charge of this garden, and while the work is split up between all the squirrels and deer, we three give everyone else jobs and keep it running smoothly. We also make sure no one is stealing from our plants or coming into the garden without our permission. And when it comes to food, we divide it all up equally for all the animals who want or need it. Speaking of food, where did that bunny go? Wasn’t he looking for something to eat?”
+
+	“Yes, he went to find food. I can’t see him,” Asher says, craning his head to look around the garden, “but I’m sure the others are keeping an eye on him and helping him out.”
+“He can’t get lost here or anything, right?” Bluebell asks, now trying to spot him herself.
+“No, all the other animals will help him,” Gina says. “He should be okay.”
+Bluebell nods. “That’s good.”
+“So then, what else do the two of you want to know about our garden?” Gina asks, picking up the aloe vera leaf again to turn it over in her paws.
+Alice thinks for a moment about what to say, and she finally decides to ask them…
+
+	
+`,
+image: "images/stayA.png",
+audio: "audio/filler.m4a",
+choices: [
+  { label: "What's it like to live in the forest?", next: "BDE_forest" },
+  { label: "Do you get along with other animals?", next: "BDF_animals" }
+]
+},
+
+
+BDE_forest: {
+text: `WHAT'S IT LIKE TO LIVE IN THE FOREST?
+
+	Alice looks at Gina, Colin, and Asher. “What’s it like to live in the forest?”
+“Well, you know…like living in a forest,” answers Gina.
+“You can do better than that,” Asher says. “It’s peaceful here. The birds say that the city is loud and busy and has too many humans. But here, you get to know all the other animals, and you can live pretty much wherever you want and be friends with all kinds of animals.”
+“And you like that?” Alice asks.
+
+	“The forest is our home,” says Gina. “It’s animals with animals, and we all take care of ourselves and each other. We won’t be going anywhere anytime soon.”
+“When you live in the forest, you wake up with the sun on your face every day. You can wander through the trees if you want, or go rest in a patch of flowers, or spend all day burying acorns. It doesn’t matter. We all live and thrive here, and the forest will support us with whatever we want to do,” Colin answers.
+“Cheesy old man,” Asher laughs, shaking his head.
+“Don’t you ‘cheesy old man’ me!” Colin retorts, his tail standing on end. “Or I’ll have to make you taste-test the onions again.”
+“Not the onions.” Asher shakes his head even harder. “Don’t make me eat the onions.”
+“So you all get along here? Do you work together or fend for yourselves?” Alice feels like she’s interviewing them like a human on television would do. This is fun.
+“All of us who run this garden get along well. We provide food for the other animals who need it, too,” says Colin. “I’m not as sure about the other animals. But here at least, we support each other and all live in peace.”
+“I used to live in the rest of the forest before my friends introduced me to the squirrels who ran this garden,” Asher adds. “It was quieter outside of the garden because there’s more of a community here, but I could wander as much of the forest as I wanted back then. That was before I got busy caring for our plants here. And as long as I avoided the more dangerous animals, I would be fine. My friends and I would travel most of the forest every day, just because we could.”
+
+	“It’s beautiful out there,” Bluebell agrees with a smile. “It feels like it’s the whole world even though the city is right outside.”
+Gina frowns thoughtfully. “Why haven’t I seen you before? Do you live in this forest?”
+“Yeah,” Bluebell answers, ducking her head. “I just…don’t stay around animals a lot.”
+“Why not?” Asher asks.
+“Well, you know, they tend to ask me to go away if I come near them. No one trusts me much even if I don’t do anything wrong.”
+“That’s representative bias,” Alice blurts out.
+All four other animals turn to stare at her.
+“Um. It’s something I learned from my humans. It pretty much means that you judge every fox based on what you already think of them, not on what they’re actually like. You use the mental representation you already have of foxes and then see every fox like that.”
+“Interesting human knowledge,” Colin decides.
+“I’ve never thought of it that way,” Gina says, studying Bluebell. “I’m sorry if I did that to you.”
+“Yeah, you seem nice—a lot less of a trickster than I thought a fox would be,” Asher adds. “I’ll think about that next time.”
+“Oh…thanks.” Bluebell seems like she might be smiling. “I’m at least glad you were all willing to let me in when Maurice needed help.”
+
+	Colin opens his mouth to respond, but at that moment, a voice bursts out from some plants a few feet away.
+“What is this—disgusting―blecchh!”
+Maurice leaps out of the plants, spitting something out of his mouth and then glaring at it. Alice doesn’t think it should be funny, but she has to fight to not start laughing.
+“Did you eat a carrot?” Asher asks, peering at the patch of plants Maurice came from.
+“Is that what that was? Absolutely disgusting,” Maurice huffs.
+“Wait,” Alice says, and now she can’t help but laugh a little, “aren’t rabbits supposed to love carrots?”
+“Alice, that sounds like your prototype of rabbits is wrong,” Bluebell tells her, smiling.
+Maurice gives one last glare at the carrot he spit out and then comes to stand near everyone else. “Oh, don’t I make every part of your prototype wrong? Whatever. I’m never eating carrots again.”
+“Did you find anything you did like?” Gina asks.
+“Yeah, there were a few things,” Maurice answers. “I might have to go eat one of those again to get this taste out of my mouth.”
+He hops away again, and as soon as he’s out of earshot, Colin says, “That is quite some rabbit.”
+“He’s not what I was expecting,” Alice agrees, “but he’s been helpful. And friendly, in a way?”
+Gina gives a shrug, or the squirrel equivalent of one. “Sure…if you say so.”
+Bluebell frowns a little at this, but she doesn’t respond to it. Instead, she says, “Hey, Alice, I know you wanted to learn the forest animals’ psychology—”
+“Our what?” Colin interrupts.
+
+	“Your psychology. It’s the ways you think and behave,” Alice explains.
+“—so how would you feel about going on a tour of the forest with me?” Bluebell finishes. “I can show you around and help you meet some of the other animals if you want. I know the forest pretty well.”
+“Yeah, that would be amazing!” Alice exclaims.
+“Great,” says Bluebell, beaming.
+“Should we start now?” Alice asks. She turns to Gina, Colin, and Asher. “I’ve enjoyed talking to all of you a lot, but I have a limited amount of time before I have to be back at my house so I don’t worry my humans. Thanks for everything you shared with me!”
+“It was nice to meet you, too,” Gina says. Asher nods in agreement.
+“Enjoy the rest of the forest,” Colin tells them. “Don’t get stung by any more bees!”
+“We won’t,” Alice assures him.
+“Okay, Alice,” Bluebell says, “let’s go find Maurice!”
+
+	The two of them leave Colin, Gina, and Asher behind, wandering deeper into the garden in search of Maurice. Alice breathes in all the smells around her with a grin. It really is so beautiful—and all of the food must be amazing, but she’s so eager to meet more animals that she doesn’t stop to try any.
+Finally, they find Maurice sitting beside a patch of plants that Alice doesn’t recognize, chewing absentmindedly on some leaves in the plants.
+“I think I’m in a food coma,” he groans when he sees them.
+Bluebell laughs, and to Alice’s surprise, Maurice doesn’t scold her for it. “I know just the place for you to take a nap if you want to,” she says. “Alice, there’s some geese there that you could meet if you’d like.”
+“That would be nice!” Alice agrees.
+Maurice nods slowly. “Yes. That would be.”
+“Okay,” Bluebell says, nudging him with her paw. “Then you’re going to have to get up. We’re going to the lake.”
+Maurice stands up, shaking his head like a dog would. He twitches his ears and then turns to Alice and Bluebell.
+“I’m ready,” he says.
+
+	“Yay! Lake, here we come,” Alice cheers.
+The three of them leave the garden, waving to every animal they pass—well, Maurice doesn’t wave, but Alice and Bluebell do. They march into the trees and the heavier shadows beneath them, and the cat and rabbit follow the fox to the lake.
+`,
+image: "images/stayA.png",
+audio: "audio/filler.m4a",
+choices: [
+  { label: "Go to the lake", next: "chapter5" }
+]
+},
+
+BDF_animals: {
+text: `DO YOU GET ALONG WITH OTHER ANIMALS?
+
+	Alice looks at Gina, Colin, and Asher. “Do you get along well with all the other animals?”
+“We do,” Asher answers. “We give them food if they need it, and sometimes they even help us out. It’s very peaceful here, and we all get along very well for the most part.”
+“What about predator animals? Is it still peaceful with them here—and what do you do about them?” Alice feels like she’s interviewing them like a human on television would do. This is fun.
+Colin’s tail twitches. “There’s enough of us that we can keep them out. And we have a warning system to keep everyone safe, especially the kids.”
+“If a predator animal asks for food, we usually deliver it to them but don’t let them in. You both seemed nice, though,” Gina adds. “I mean, you were helping out a bunny with a bee sting.”
+“It’s so nice that you have a place like this, to provide for everyone else in the forest,” Bluebell says. “I try to help out where I can, but most animals won’t trust a fox.”
+Asher sighs. “Sneaky animals like foxes and  snakes usually try to steal from us. We turn those animals away, and I feel bad doing it, but they’re just so suspicious. None of the other animals are like that.”
+“That’s a fundamental attribution error,” Alice blurts out.
+All four other animals turn to stare at her.
+
+	“Um. It’s something I learned from my humans. You assume that the animals are suspicious and trying to steal because they’re foxes and snakes, so they’re just like that—but you don’t think about what other circumstances they might have going on. And you never know, they might not be trying to steal at all.”
+Everyone except Bluebell looks surprised at this. Bluebell instead seems happy.
+“We’ve never tried asking them, have we?” Gina says thoughtfully.
+“Not after that time two snakes came and ruined half our plants.” Asher’s expression is dark. “It might not seem right, but there’s a reason we do it this way.”
+“Interesting thoughts,” Colin says. “Very, very interesting. You say your humans taught you this?”
+Alice nods. “They didn’t mean for me to learn it, but they talked about it enough that I did.”
+Colin opens his mouth to respond, but at that moment, a voice bursts out from some plants a few feet away.
+“What is this—disgusting―blecchh!”
+
+	Maurice leaps out of the plants, spitting something out of his mouth and then glaring at it. Alice doesn’t think it should be funny, but she has to fight to not start laughing.
+“Did you eat a carrot?” Asher asks, peering at the patch of plants Maurice came from.
+“Is that what that was? Absolutely disgusting,” Maurice huffs.
+“Wait,” Alice says, and now she can’t help but laugh a little, “aren’t rabbits supposed to love carrots?”
+“Alice, that sounds like your prototype of rabbits is wrong,” Bluebell tells her, smiling.
+Maurice gives one last glare at the carrot he spit out and then comes to stand near everyone else. “Oh, don’t I make every part of your prototype wrong? Whatever. I’m never eating carrots again.”
+“Did you find anything you did like?” Gina asks.
+“Yeah, there were a few things,” Maurice answers. “I might have to go eat one of those again to get this taste out of my mouth.”
+He hops away again, and as soon as he’s out of earshot, Colin says, “That is quite some rabbit.”
+“He’s not what I was expecting,” Alice agrees, “but he’s been helpful. And friendly, in a way?”
+Gina gives a shrug, or the squirrel equivalent of one. “Sure…if you say so.”
+Bluebell frowns a little at this, but she doesn’t respond to it. Instead, she says, “Hey, Alice, I know you wanted to learn the forest animals’ psychology—”
+“Our what?” Colin interrupts.
+
+	“Your psychology. It’s the ways you think and behave,” Alice explains.
+“—so how would you feel about going on a tour of the forest with me?” Bluebell finishes. “I can show you around and help you meet some of the other animals if you want. I know the forest pretty well.”
+“Yeah, that would be amazing!” Alice exclaims.
+“Great,” says Bluebell, beaming.
+“Should we start now?” Alice asks. She turns to Gina, Colin, and Asher. “I’ve enjoyed talking to all of you a lot, but I have a limited amount of time before I have to be back at my house so I don’t worry my humans. Thanks for verything you shared with me!”
+
+	“It was nice to meet you, too,” Gina says. Asher nods in agreement.
+“Enjoy the rest of the forest,” Colin tells them. “Don’t get stung by any more bees!”
+“We won’t,” Alice assures him.
+“Okay, Alice,” Bluebell says, “let’s go find Maurice!”
+The two of them leave Colin, Gina, and Asher behind, wandering deeper into the garden in search of Maurice. Alice breathes in all the smells around her with a grin. It really is so beautiful—and all of the food must be amazing, but she’s so eager to meet more animals that she doesn’t stop to try any.
+Finally, they find Maurice sitting beside a patch of plants that Alice doesn’t recognize, chewing absentmindedly on some leaves in the plants.
+“I think I’m in a food coma,” he groans when he sees them.
+Bluebell laughs, and to Alice’s surprise, Maurice doesn’t scold her for it. “I know just the place for you to take a nap if you want to,” she says. “Alice, there’s some geese there that you could meet if you’d like.”
+That would be nice!” Alice agrees.
+Maurice nods slowly. “Yes. That would be.”
+“Okay,” Bluebell says, nudging him with her paw. “Then you’re going to have to get up. We’re going to the lake.”
+Maurice stands up, shaking his head like a dog would. He twitches his ears and then turns to Alice and Bluebell.
+“I’m ready,” he says.
+
+	“Yay! Lake, here we come,” Alice cheers.
+The three of them leave the garden, waving to every animal they pass—well, Maurice doesn’t wave, but Alice and Bluebell do. They march into the trees and the heavier shadows beneath them, and the cat and rabbit follow the fox to the lake.
+`,
+image: "images/stayA.png",
+audio: "audio/filler.m4a",
+choices: [
+  { label: "Go to the lake", next: "chapter5" }
+]
+},
+
+chapter5: {
+text: `CHAPTER FIVE – THE LAKE
+
+	Alice is grinning as they get to the lake. Everyone is happy, they’re exploring the forest, and she feels so…alive.
+And the forest seems almost familiar somehow. Like it’s a home that she’s never known, but now that she’s here, she really belongs.
+The three of them emerge from the trees to find a wide, shining lake. Alice has to squint because the sun’s reflection on it is so bright. There are geese resting along the shore, and fish leap out of the water every so often. She’s never seen anything like it before.
+“Wow,” she whispers.
+
+	Bluebell grins at her expression, then turns to Maurice. “See that tree over there, Maurice? If you lay in the shade under it, that would be a good place for a nap.”
+Maurice nods and then heads to the tree. As he goes, Bluebell wanders toward the lake for a drink, and Alice walks toward the geese, her tail in the air from excitement. The geese watch sleepily as she approaches, only a few actually lifting their heads to see her, the rest observing with their heads tucked into their feathers.
+“Hello,” Alice says. “My name is Alice. I’m a cat from the city, and I’d love to talk to you about what it’s like to live in the forest, if that’s okay. I’m trying to learn about the psychology of animals here, and—”
+“We’re trying to sleep, can’t you see that?” interrupts one of the geese.
+“Oh, shut up, Ronald,” says another goose. “Go back to sleep if you care so much.” She stands up, stretching out her wings, and then comes to stand in front of Alice.
+“Hello,” Alice repeats uncertainly.
+The goose stares down her beak at Alice. “Hello. You were saying?”
+“Oh. I’m a cat from the city, and I want to meet the animals here so I can learn more about their psychology—the way their minds work—so I was wondering if you’d be willing to talk with me for a while?”
+“Sure.” The goose sits and fluffs her feathers, rearranging them with her beak without watching Alice. When Alice doesn’t say anything, she lifts her head up to look at the cat. “Is there something you were going to ask me?”
+“Sorry, I didn’t want to interrupt you,” Alice stammers. “Anyway, um…what’s  your name?”
+“I’m Beatrice,” the goose answers.
+
+	“It’s nice to meet you, Beatrice. I just wanted to ask…what’s it like to live here in the forest?”
+“It’s nice. Kind of boring, but nice. We only live here for part of the year, though, because otherwise we migrate south,” Beatrice says.
+“That’s an instinct,” Alice interrupts. “A behavior you all do and share without having to learn it—sorry. Carry on.”
+“We spend a lot of time laying around or swimming in the lake,” Beatrice continues like nothing happened. “We travel as a group, so I can’t do much outside of what the group decides to do—which, again, is mostly laying around and swimming.”
+“That’s interesting,” Alice replies. “Do you ever wish you weren’t stuck with everyone else?”
+Beatrice turns back to fluffing her feathers. “Not really. It’s better that way.” She pauses to straighten a couple of feathers, then adds, “There’s less responsibility if everyone has to do some of the work.”
+Alice nods. “That makes sense.”
+“You know, I’m kind of tired,” Beatrice says. “I might—”
+Before Beatrice can finish speaking, a cat comes barreling out of the forest, leaping toward Alice and all the geese. At the sound of the cat’s hurried footsteps, all the geese sit up in alarm and dash into the water with a flurrying of wings, leaving the entire shoreline bare. Beatrice, too, scrambles into the water, glaring at the cat as she goes.
+“Hey, what was that for?” Bluebell calls from where she’s been drinking from the lake.
+“Sorry,” the cat says quickly, turning and dashing back into the trees.
+
+	Alice frowns. The geese all swim farther away, and Beatrice isn’t even looking at her anymore, so she goes back to Bluebell.
+“That was rude of that cat,” Bluebell says.
+“Yeah. I’m not sure what that was all about.”
+“Sometimes animals like to chase the geese into the water for fun,” Bluebell explains. “That must be what just happened—only it was at a very bad time.”
+Alice turns to where Maurice is lying under the tree. “Well, at least he didn’t wake up from it all.”
+“He must’ve eaten a lot,” Bluebell laughs. “You know, I’m feeling kind of tired myself. I might lay under the tree too if you wouldn’t mind that.”
+Maurice seems so comfortable, and there’s a very warm, very cozy looking ray of sunlight on the tree branches above him. Alice realizes suddenly that she could use a nap, too.
+“Yes, that’s fine,” she says. “I’ll join you, actually.”
+They walk over to the tree quietly so they don’t disturb the rabbit sleeping beneath it, and Bluebell lays in the shade beside him while Alice clambers up into the tree branches above them. She curls up in a spot where two branches meet, and then she sets her head on her paws and closes her eyes.
+The sound of the lake water is so comforting, and the sun is so warm on her fur, that she drifts off into sleep almost immediately.
+
+	Then she begins to dream.
+First, she’s at her house watching television with her humans. They’re playing a comedy show and laughing at it, and suddenly a rabbit appears on the television, flames emitting from his ears. He reaches through the screen and pulls Alice into the forest.
+“You need to help me,” Alice says, realizing that she has a problem even though she hadn’t known it before. “There’s someone in this forest I’m looking for—someone I’m missing—”
+“No, you need to help me,” Maurice interrupts. “I’m running from the squirrels. I ate all the food in their garden, and you need to help me escape.”
+A hundred footsteps echo through the trees from all the squirrels in the forest approaching them. Gina, Asher, and Colin run toward Alice and Maurice breathlessly from a different direction.
+“You have to run, Maurice!” they say together. “We can’t stop the other squirrels—you need to stay safe!”
+Maurice seizes Alice by one of her front legs and pulls her into the trees. The squirrels’ footsteps in the distance fade, and the cat and rabbit emerge into a dimly lit clearing.
+In the middle of the clearing, there’s an old, abandoned house. Beneath it is a pile of dirt with a hole as an entrance—a burrow of some sort, maybe. Alice squints at it and tilts her head. She can smell it so clearly, and she thinks there’s someone inside, someone she needs to find—she imagines a mother cat inside with her children, but she doesn’t know her—
+Bluebell leaps onto the burrow and opens a plastic bag full of berries. “I brought snacks!” she announces, and suddenly the three of them are inside her den, watching a movie and eating berries and popcorn together. Alice has never eaten popcorn before, but it tastes so good, and Bluebell keeps offering her more.
+“Help!” someone in the movie screams. “Help, help me!”
+“It’s just a movie. They’ll be okay,” Maurice tells Alice.
+“Help me—help me!”
+Alice tears her eyes open and sits up in alarm.
+She’s awake now and laying on a tree branch over a lake. In the middle of the lake, there’s a cat—the same cat from before who chased away the geese. The cat is yelling for help and flailing in the water, their voice getting more distressed by the second.
+
+	“Someone help me!”
+Alice looks around desperately. Bluebell and Maurice are still sleeping beneath her, the geese are laughing from the other side of the lake, and someone needs to save the cat, but Alice hates water more than she’s ever hated anything.
+What should she do? What should she do?
+	
+Quickly, what do you do`,
+image: "images/lake.png",
+audio: "audio/lake.m4a",
+choices: [
+  { label: "Jump into the lake", next: "H_jump" },
+  { label: "Get Bluebell to save the cat", next: "I_bluebell" }
+]
+},
+
+H_jump: {
+text: `(H) JUMP INTO THE LAKE
+
+	[Alice runs to the edge of her tree branch and takes a flying leap off the end of it.
+She splashes into the water just beside the cat, her head going under and water closing in all around her. She bobs back up, breathless and gasping for air, then turns to the cat.
+“I’ll help you!” she says, holding out one of her back legs. “Grab on!”
+The cat latches onto her leg, and Alice struggles toward the shore. The other cat’s weight is dragging her back, but she flails and kicks until the two of them begin to move.
+The lake seems so much bigger than before. Alice’s head dips under the water again, and she comes back up, spluttering. Her fur is so heavy and the other cat is so heavy, but if she stops swimming now they’ll both go under. So she keeps paddling forward, slowly but surely, her whole body shaking from the effort.
+
+	Or maybe it’s the other cat that’s shaking. They seem even more terrified than Alice is.
+After what feels like hours, Alice’s paws finally touch solid ground. She wades out of the water and shakes the water off as hard as she can like a dog, then scrambles up to the grass so she can start cleaning the rest of the water off herself.
+The other cat does the same and lays down near her. “Thank you,” they tell her, still quivering.
+“I couldn’t just let you drown,” Alice says.
+“My name is Juniper,” the cat adds, but there’s no cheerfulness to the introduction. The poor cat really looks terrified.
+
+Juniper is a cat who’s also very curious. They have a strong fear of dangerous situations, but otherwise they love to learn about the forest and make friends there—as long as it doesn’t involve taking risks.
+
+	“I’m Alice,” Alice tells them. “Are you okay? Did you get hurt?”
+“No…no, I’m fine,” Juniper says. “I just need a moment to recover.”
+Behind Juniper, under the shaded tree, Bluebell sits up and spots the two cats. Her eyes widen when she notices that they’re both dripping wet and shaking despite the sun around them, and she leaps up and hurries over.
+“What happened here?” she asks.
+“I was struggling to swim in the middle of the lake, and she came to rescue me,” Juniper answers. “I don’t know what would’ve happened if she didn’t.”
+“This is Juniper,” Alice chimes in. “Juniper, this is Bluebell, who’s one of my new friends.”
+“It’s nice to meet you,” they say to each other.
+Maurice sits up at that moment, blinking sleepily, and startles when he sees Alice and Bluebell huddled around a strange cat. He, too, stands and comes over to them.
+“What—” he says.
+
+	“Hello,” says Juniper. “I’m Juniper. It’s nice to meet you.”
+“What were you doing in the lake?” Alice asks curiously.
+“Well, you know…I just kind of fell in,” they reply.
+Maurice snorts. “You fell into the lake? Don’t cats hate water?”
+“Remember the prototype isn’t always right,” Bluebell reminds him. “But from what I’ve seen, yes, most cats hate water.”
+Alice and Juniper turn to look at the lake and shiver in unison. It’s cloudier now, so the sun isn’t reflecting off its surface anymore, which makes it even more ominous than it seemed before.
+“I hate water,” Juniper says so forcefully that Alice almost laughs.
+“Maybe we should go somewhere else,” she says. “I don’t really want to stay here anymore.”
+“That’s fine with me,” Bluebell answers.
+“Oh, sure, interrupt my nap,” Maurice complains. “Well, I don’t care. We can go explore somewhere else too.”
+“I know just the place, actually!” Bluebell exclaims. “It’s this fallen tree that a bunch of mice live in. I’m really good friends with them, and I think you would like meeting them.”
+
+	Maurice stares at her for a second, then begins shaking his head so much that his ears flap. “No. Not the mouse tree. I—I hate mice.”
+“You don’t have to talk to them,” Bluebell says. “I just want to introduce Alice to them.”
+Maurice scowls but nods reluctantly. “Fine. I’ll come with.”
+“Can I come too?” Juniper asks, standing up and stretching. “I’d like an adventure. Just not one that involves any more water.”
+“Of course you can,” Bluebell tells them. She also stretches, and then she marches back toward the forest. Alice, Maurice, and Juniper follow behind her.
+“So, Alice, how are—why are you in the forest?” Juniper asks as they walk.
+“I came to meet the animals here,” she explains, yet again. “I live in the city, but my humans were at work and I decided to come explore. I met Maurice on the way, and then Bluebell saved us from some angry bees. It’s been quite an adventure so far.”
+
+	“That sounds like an adventure,” Juniper says.
+“I can’t imagine it’s more exciting than actually living in the forest,” Alice replies. “What is it like here?”
+Juniper looks thoughtful. They eye her for a moment, and to Alice it seems as if they’re assessing how much information they should reveal. But why?
+“Well, I live with my family in a little burrow beneath an abandoned house. It’s a little different from the trees and plants around us, but we don’t spend all our time there. My siblings don’t understand it, but I quite enjoy learning about the types of botanical life here,” they say.
+Alice’s ear twitches. A burrow?
+“You live with siblings? What are they like? I’ve never met another cat before you,” she admits.
+“They’re each very different. You could meet them yourself, if you wanted to.”
+Alice gasps. “Oh, I’d love to! Where’s your burrow?”
+
+	Juniper stops momentarily to look around and figure out the direction they need to go. “It should be this wa—”
+“Alice! Juniper!” Bluebell’s voice rings out. Alice startles, realizing she’s forgotten to keep up with her. Maurice has even gotten ahead. 
+“Another day,” she says apologetically to Juniper. They smile and nod, unoffended, and catch up to Bluebell and Maurice with her. 
+`,
+image: "images/jump.png",
+audio: "audio/lake.m4a",
+choices: [{ label: "Continue", next: "chapter6" }]
+},
+
+I_bluebell: {
+text: `(I) GET BLUEBELL TO SAVE THE CAT
+
+	“Bluebell!” Alice cries, leaping from her tree branch and landing just next to Bluebell. “Bluebell, help!”
+Bluebell blinks sleepily for a moment and then sees Alice in front of her. She scrambles to her feet. Maurice looks up from beside her.
+“There’s a cat stuck in the middle of the lake!” Alice shouts. “Please help them!”
+Bluebell turns to see the cat struggling to swim, and she bounds gracefully toward the water. She launches into the lake and then swims out toward the cat, only her head and the top of her back visible from where Alice is standing.
+The cat stops yelling when they see Bluebell approaching, and then they grab onto her tail once she’s within reach. Bluebell paddles back to shore, her heavy breathing audible across the water, and then she and the cat emerge from the lake soaking wet.
+
+	Both of them shake the water off as best they can, and then the cat hurries up to a patch of grass and begins to clean themself to get all the other water off their fur. The two of them are both shaking, but the cat seems much more terrified by everything than Bluebell does.
+“Thank you,” the cat says quietly, quivering.
+“Of course. I wasn’t going to just let you drown,” Bluebell answers.
+“And thank you, too, for waking her up,” the cat tells Alice. “I really appreciate it.”
+Alice nods. “I’m sorry I didn’t come rescue you myself. I just hate water, and I think Bluebell would have been faster anyway.” She thinks for a moment, and then a psychology term pops into her head. “You know, that was kind of like my secondary appraisal of the situation after I figured out how badly you were in trouble. I decided the better option was to get Bluebell’s help.”
+The other cat stares at her, confused.
+“Just go with it,” Bluebell tells the cat.
+
+	The cat nods slowly. “Yeah…okay. Well, I hate water too. That was terrible.”
+“Are you not the one who went in the middle of the lake?” Maurice asks, coming up beside them.
+“No…I am. But I didn’t mean to. I just kind of fell in.” The cat looks between all of them, their head swiveling to take everyone in. “Who are all of you?”
+“I’m Alice,” Alice says.
+“I’m Bluebell,” Bluebell says.
+“I’m Maurice,” Maurice says.
+“I’m Juniper,” says the cat.
+
+Juniper is a cat who’s also very curious. They have a strong fear of dangerous situations, but otherwise they love to learn about the forest and make friends there—as long as it doesn’t involve taking risks.
+
+	“It’s good to meet you, Juniper,” Bluebell replies. “I’m glad you’re okay. You didn’t get hurt, did you?”
+“No,” Juniper sighs, “just scared. I’m fine.”
+Alice nods in relief. “That’s good.”
+“Well, Alice…I don’t really want to stay here any longer,” Bluebell says, throwing a bothered look at the lake. “Would you want to keep exploring? I know just the place, actually—it’s this fallen tree that a bunch of mice live in. I’m really good friends with them, and I think you would like meeting them.”
+Maurice stares at her for a second, then begins shaking his head so much that his ears flap. “No. Not the mouse tree. I—I hate mice.”
+“You don’t have to talk to them,” Bluebell says. “I just want to introduce Alice to them.”
+Maurice scowls but nods reluctantly. “Fine. I’ll come with.”
+“Can I come too?” Juniper asks, standing up and stretching. “I’d like an adventure. Just not one that involves any more water.”
+“Of course you can,” Bluebell tells them. She also stretches, and then she marches back toward the forest. Alice, Maurice, and Juniper follow behind her.
+“So, Alice, how are—why are you in the forest?” Juniper asks.
+“I came to meet the animals here,” she explains, yet again. “I live in the city, but my humans were at work and I decided to come explore. I met Maurice on the way, and then Bluebell saved us from some angry bees. It’s been quite an adventure so far.”
+
+	“That does sound like an adventure,” Juniper says.
+“I can’t imagine it’s more exciting than actually living in the forest,” Alice replies.
+“Perhaps, but it isn’t every day you help save someone’s life,” Juniper says.
+“Oh, that was all Bluebell. She’s lovely, isn’t she? I can’t believe there are so many different kinds of creatures here. Have you met many like her?”
+Juniper looks thoughtful. “I can’t say I have. Creatures in the forest are well-meaning, but there are definitely certain creatures who don’t feel as welcome here to really get to know everyone. My siblings and I try to keep an open mind, though.” 
+
+	“You live with siblings? What are they like? I’ve never met another cat before you,” she admits.
+“They’re each very different. We live in a burrow inside an abandoned house. You could meet them yourself, if you wanted to.”
+Alice gasps. “Oh, I’d love to! Where’s the burrow?”
+Juniper stops momentarily to look around and figure out the direction they need to go. “It should be this wa—”
+“Alice! Juniper!” Bluebell’s voice rings out. Alice startles, realizing she’s forgotten to keep up with her. Maurice has even gotten ahead. 
+“Another day,” she says apologetically to Juniper. They smile and nod, unoffended, and catch up to Bluebell and Maurice with her.
+`,
+image: "images/call.png",
+audio: "audio/lake.m4a",
+choices: [{ label: "Continue", next: "chapter6" }
+]
+
+},
+
+
+
+chapter6: {
+text: `CHAPTER SIX – THE MOUSE TREE
+
+	The four of them are walking along when Juniper sees a green plant with strange leaves and stops in their tracks.
+“It’s moonwort!” they exclaim. “I haven’t seen one of those in—probably in forever!”
+“Wow, what’s moonwort?” Bluebell asks, coming to stand next to Juniper and look at the plant.
+As Juniper begins to explain what moonwort is, Alice finds herself looking around instead of listening. Maybe there are some animals nearby she can talk to while they’re focused on that plant. Plus, Maurice seems almost twitchy, and he’s not listening to them either.
+
+	Some other plant in the distance catches Juniper’s eye, and they start running along the path towards it. Bluebell follows, fascinated. Alice is a curious creature, but this just isn’t in her range of interests—she knows psychology, not plants.
+She follows half-heartedly, but then she starts to wander towards a meadow full of white clover that she sees through the trees. What if there are some animals in there, or some birds? And it smells amazing…she’ll just take a little detour while Juniper shows Bluebell the plants. Then she’ll catch back up as soon as they’re done.
+As she steps into the meadow, a cool breeze rises up, rustling the leaves of the trees and creating a wave through the flowers. She looks up to the sky, which is a nearly blinding blue. Fluffy clouds are rolling in and she watches them, enraptured—maybe she could spot some shapes in them.
+As she’s staring at the clouds, there’s a deafening cry from the space above her. A blur swoops across the sky at the edge of her vision, and suddenly she feels sharp claws digging into her back.
+Panic floods Alice’s chest, and she freezes.
+
+	“GET OFF OF HER!” Maurice leaps from the outskirts of the meadow, the same rage in his eyes as when he chased off the dog before.
+Somehow, he manages to latch onto the hawk’s talons. The hawk wobbles in the air for a moment under the weight of both Alice and Maurice before letting the pair go. They crash onto the ground, and Alice lays in stunned silence as Maurice launches up and begins to scold her. 
+
+	“What were you thinking? I know it’s your first day in the forest, but you just acted like it’s your first day in existence!” Bluebell and Juniper come running up to them as Maurice continues, his ears letting off the faintest trails of smoke. “You have claws! Why didn’t you use them?”
+Bluebell steps between the two as Alice pulls herself to her feet. “Maurice—” Bluebell starts, but Alice interrupts.
+“It was a fight or flight response!” she replies indignantly. “Or, well, in my case, freeze, but—”
+“It was stupid!” Maurice spits out.
+
+	Bluebell places a paw on Alice’s shoulder and gives Maurice a stern look before she can open her mouth to respond. 
+“That’s no way to talk to Alice, Maurice.” She looks back to Alice. “He was concerned for your safety, Alice. You could have died.” She sighs. “It was partially my own fault for getting distracted. I’m sorry.”
+Alice lets her words sink in. She really could  have died. Maurice might not know how to show it, but…could he have just been scared for her? She looks to Maurice, who seems ashamed at his previous reaction.
+Despite how talkative Alice always is, she can’t seem to find the words to express her gratitude. “Thank you, Maurice,” she says when she can’t come up with anything else.
+Maurice scowls at her—trying not to reveal his previous concern, maybe? “Sorry for yelling,” he says, then sniffs and walks away.
+“I can’t imagine what kind of effort it took him to apologize,” Bluebell laughs. Alice smiles, and Juniper, silent during the whole exchange, seems relieved.
+“I’m glad you’re alright, Alice,” they say.
+
+	“Me too,” Alice says. “I guess it’s in the nature of science to experiment and make mistakes, but I need to learn from them too. And not always take such risky ones.”
+Juniper nods, but Alice thinks they still look confused.
+“I won’t do that again,” she clarifies. “Now, how far away are we from the mouse tree?”
+“It’s just up there,” Bluebell says, pointing. “I’m sure they’ll all be thrilled to meet you.”
+Maurice scowls at this, but Alice doesn’t know why. He really does seem upset, though…and not just from Alice’s attempted kidnap.
+
+	As the group draws closer to the tree and it comes into view, Alice sees that it’s an overturned log. She also notices an intriguing smell wafting through the air. It isn’t anything like she’s ever experienced before, but it makes her salivate.
+Surely it’s not the smell of the mice…right?
+Suddenly, she can hear squeaking coming from within the fallen tree on the forest floor. Several tiny creatures—mice—pop their heads out of the hollow in the tree. They see Bluebell and start waving at her, flooding out of the tree.
+“Everyone, this is the family of mice that lives here,” Bluebell announces. “I’ve been protecting them from hawks and other predators for a long time.”
+The mice crowd around the group, running underneath their feet and climbing up the log to get a better look at them. They’re squeaking Bluebell’s name and conversing with her. Alice looks at Maurice, who still seems a little upset but also amused by the mice.
+Maurice, amused?
+
+	Juniper is watching Bluebell as she speaks, so none of them notice the instincts at war inside of Alice. Something within her is telling her to capture them, to pounce, but she mentally shakes herself. The mice are friends, and if she wants to get to know every creature in the forest, she has to see them as friends.
+She tries to distract herself by paying attention to what Bluebell is saying.
+“I’ve had trouble with being accepted as a peaceful fox in this forest, but the mice have been so kind to me, even though most other animals haven’t,” Bluebell says. Maurice looks rueful at that, and he glances around in an almost suspicious way.
+“We were afraid of Bluebell at first, but she’s proven her kindness time and time again!” the mice squeak in a chorus. They’re a very excitable bunch—quite loud, too. But if they make Bluebell feel welcome, they’re alright to her.
+She wants to ask them some questions, but she’ll let Bluebell catch up with them first. She is their friend and protector, after all.
+As Alice is observing everything around her, she notices that Maurice is still looking around, seeming wary. Alice follows his gaze, confused.
+	
+	Five rabbits emerge from a burrow nearby, and they start picking at the grass around the burrow and chatting with one another. Alice watches them in excitement—there’s more animals for her to talk to!
+But why is Maurice watching them with that expression?
+
+	“Look who it is,” shouts one of the rabbits, pointing. “Maurice!”
+The other four rabbits spin around and spot Maurice there. At his name, Maurice glowers at the ground for a moment, then looks up and aims his glare at the rabbits. Alice takes a step back when she sees how fierce his expression is.
+“Leave me alone,” he says angrily.
+“Oh, I bet his ears start sparking,” laughs one of the rabbits. “You always were funny like that, weren’t you?”
+“Wait,” Juniper whispers to Alice. “Is this…his family?”
+Bluebell, meanwhile, is so focused on her conversation with the mice that she doesn’t notice anything is happening. 
+
+	“Son, come here! We’ve wanted to see you!” exclaims another rabbit. Juniper is right—this must be Maurice’s family. Alice didn’t know he had relatives in the forest.
+“I have not wanted to see you,” Maurice growls. His ears have started smoking, and he turns to storm away from them.
+“Speaking of family,” Juniper adds quietly to Alice as two of the bunnies follow Maurice. Alice turns to Juniper, who seems to think this conversation is very important. “There’s something I’ve been meaning to tell you, actually.”
+“Really? What is it?” Alice asks.
+Juniper breathes in deeply, then says quickly, “I think you and I are siblings.”
+“What? Really?” Alice exclaims.
+“Yes—I remember your scent, that’s why I found you. I followed you into that tree you were sleeping in and was trying to look at you when I fell into the lake. I didn’t want to tell you earlier in case I scared you off. But…” their talking slows down, and they look at Alice almost shyly, “do you remember me?”
+
+	“I…no,” she admits sadly. “I’m sorry, I don’t.” But then a thought strikes her—maybe she does. “Actually, wait! I had a dream, and I remembered this burrow in the ground…there was someone inside it I really wanted to see, and a mother cat, and there was a smell there too—maybe I smelled you! Maybe it made me remember that!”
+Juniper nods eagerly. “That burrow I mentioned earlier is where you used to live with us! Maybe you remember that!”
+“Wow, I just psychoanalyzed myself!” Alice says. “I must have forgotten living here because so much time went by, but with psychoanalysis you can look at dreams and find old memories! Or something like that, anyway. I think that’s what I just did!”
+Juniper grins. “I’m so glad you remember at least a little. I was really hoping—”
+“AND DON’T YOU EVER TALK TO ME EVER AGAIN! I LEFT THIS FOREST FOR A REASON, AND I WILL NOT BE COMING BACK!” Maurice bellows. There’s real sparks flying from his ears now, and his eyes are wild. This is the most upset Alice has ever seen him.
+
+	He turns and stomps into the forest, leaving everyone else behind. Alice and Juniper watch in shock, but somehow Bluebell doesn’t even notice because she’s so deep in conversation with the mice.
+Maurice shouldn’t be left alone right now. Or maybe he should—maybe he needs space. Alice watches him go, absolutely torn. But she thinks she knows the right answer.
+Do you follow Maurice? `,
+image: "images/mouse_tree.png",
+audio: "audio/filler.m4a",
+choices: [
+  { label: "Go talk to Maurice", next: "L_talkMaurice" },
+  { label: "Give Maurice space", next: "M_spaceMaurice" }
+]
+},
+
+
+L_talkMaurice: {
+text: `GO TALK TO MAURICE
+
+	Alice says quickly to Juniper, “I’ll be right back. Wait here.” Then she chases after Maurice into the dark forest.
+“Maurice, wait,” she says desperately once she’s caught up to him. “I’m sure they didn’t mean anything by it.”
+“DON’T!” Maurice shouts, whirling on her, sparks emitting from his ears. “You can tell me lots of things and I’ll agree with you, Alice, but don’t tell me what to think about this.”
+“Okay,” Alice says, backing up. “Do you want me to give you space, or―”
+At that moment, one of the embers from Maurice’s ears lands on the ground and doesn’t burn out. They both stare at it in concern.
+Then it lights into a small flame, which swells into a larger fire. Maurice and Alice scramble away.
+“FIRE!!” Maurice screams. “THERE’S A FIRE!”
+
+	“We need to go warn everyone!” Alice shouts. The heat is blazing, and she can feel it reaching her fur already. “Let’s go!”
+The two of them sprint back to the mouse tree as fast as they can. Juniper, Bluebell, and the mice there—Maurice’s family has disappeared back into their burrow—all turn in alarm.
+“There’s a fire in the forest!” Alice tells them all urgently. “We need to warn everyone—and try to stop it!”
+There’s an uproar among everyone, and they all come to crowd around Alice and Maurice.
+“What can we do? How can we help?” they ask quickly.
+“I don’t know,” Alice says, “but we have to figure it out!”
+`,
+image: "images/talk.png",
+audio: "audio/finale.m4a",
+choices: [
+  { label: "Continue", next: "chapter7" }
+]
+},
+
+
+
+M_spaceMaurice: {
+text: `(M) GIVE MAURICE SPACE
+
+	“I think I’ll leave him alone for a minute and then go check on him,” Alice tells Juniper, who nods. Then she goes over to Bluebell, who pauses her conversation with the mice to listen to her.
+“That’s Maurice’s family over there,” Alice whispers urgently. “They just teased him about his ears and made him really angry until he stormed off. I think we should give him space for now, but I wanted to let you know.”
+Bluebell frowns at them. “Those rabbits? Over there?”
+“Yeah.”
+
+	The fox lifts her head up and marches over to the rabbits, who stand closer together when they see her approaching. Then she demands, “Which one of you made that rabbit mad?”
+They look at each other and laugh nervously.
+“I mean it,” she says, more serious and angry than Alice has ever heard her. “Which one of you did it?”
+“It was all of us,” one of the younger ones answers. “But we were just teasing him a little…you know, he’s our family…”
+
+	Bluebell glowers at them. “You have no reason to treat him that way, family or not. I’ve seen him angry and I’ve seen him happy, and if you’re the ones who made him that upset, you should be ashamed of yourselves.”
+“It was just a little bit of fun―”
+“Yeah, to you, maybe,” Bluebell interrupts. “He’s going to come back here, and I want all of you to apologize. Immediately. You have no reason to treat him that way.”
+“I can go get him,” Alice offers. Maybe he doesn’t need space—maybe if they really apologize, that will help him.
+“Sure,” Bluebell says.
+Alice hurries off in the direction she saw Maurice go. She doesn’t see him nearby, though, so she puts her nose to the ground and sniffs out his trail. Then she follows his scent until she emerges in the same flower field as before—though this time, she stays around the edge where no hawks will see her.
+
+	Maurice is toward the middle of the field, his pink fur blending into the flowers there. And Alice startles when she sees that he’s surrounded by a cloud of bees.
+“GET OUT OF MY WAY!” he yells. “DON’T MAKE ME TELL YOU TWICE.”
+They don’t sting him, but they seem to be—wait. Are they forming a shape in the air? Alice squints, and sure enough, it seems like they are. In fact…they seem to be in the shape of Maurice’s head. With clouds of bees spiraling out of the ears like smoke.
+“YOU—STOP—AARRGHH!” Maurice shrieks. “WHY CAN’T ANYONE JUST LEAVE ME ALONE?”
+Sparks fly out of his ears even faster than before until he’s surrounded by red. But then he glances down, and when Alice follows his gaze, she sees―
+Real fire. He started a real fire.
+
+	“MAURICE! GET OUT OF THERE!” Alice cries. The bees shoot off into the sky, leaving Maurice alone, surrounded by flames.
+“MAURICE!” she screams, running toward him.
+He leaps backward, staring at the fire in horror, and then dashes back to Alice. “I don’t know—I didn’t mean―”
+“Worry about it later! We need to warn the others!” she exclaims desperately.
+The two of them sprint back to the mouse tree as fast as they can. Juniper and the mice there turn in alarm, and Bluebell pauses midsentence where she’s still scolding Maurice’s family.
+“There’s a fire in the forest!” Alice tells them all urgently. “We need to warn everyone—and try to stop it!”
+There’s an uproar among everyone, and Maurice’s family flees while Bluebell is distracted. Then Bluebell, Juniper, and the mice crowd around Alice and Maurice.
+“What can we do? How can we help?” they ask quickly.
+“I don’t know,” Alice says, “but we have to figure it out!”
+`,
+image: "images/space.png",
+audio: "audio/bees.m4a",
+choices: [
+  { label: "Continue", next: "chapter7" }
+]
+},
+
+
+
+chapter7: {
+text: `CHAPTER SEVEN – THE FOREST
+
+	Alice knows that a medium level of stress is best when motivating someone to take action, but she is feeling a very high level of stress right now. Much more stressed than she’s ever been in her life, actually. But she needs to focus so she can figure out a plan.
+“How can we stop a fire?” Bluebell asks desperately.
+“Is there any water nearby?” Alice says.
+Juniper shakes their head. “No, only in the lake, and we can’t bring it over here.”
+“This is all my fault—I never should have—if I didn’t go in the forest―” Maurice stammers, his ears flat against his head as he looks wildly toward the fire.
+Alice is working her brain as quickly as she can, and a crazy idea suddenly falls into place. She gasps. “There’s a fire hydrant by my house—some firefighters used it the other day and something came up so they left their hose there! We could bring the hose into the forest and use it to stop the fire!”
+
+	“Does anyone else have any other ideas?” Bluebell asks. Everyone shakes their heads, so she says, “Okay, let’s go! Follow Alice!”
+The four of them hightail their way to Alice’s house as the mice scatter into the forest to warn other animals. As the group passes deer, squirrels, and birds, they shout out warnings to them and call for help. By the time they leave the forest, their group has swelled to be three times its original size.
+Together, they sprint out of the trees, and Alice leads them all to the fire hydrant she was talking about. There’s a hose coiled around it, left there for some unknown reason by the firefighters, and she rushes over and tries to lift part of it up.
+
+	It’s so heavy that she drops it immediately.
+“Okay, everyone,” she pants, “it looks like this will have to be a group effort. All of you pick up the hose! We’re bringing it into the forest to stop the fire!”
+“Where do we go in the forest?” Juniper asks.
+Alice peers toward the trees. She can’t tell where the fire is, exactly, but it’s big enough now that just about everywhere in the forest will be in danger. She hates to pick one place over another, but…someplace has to be saved. And she knows what she most wants to protect.
+Which place do you save from the fire?`,
+image: "images/forest_fire.png",
+audio: "audio/finale.m4a",
+choices: [
+  { label: "Save Juniper’s home", next: "N_juniperHome" },
+  { label: "Save the garden", next: "O_garden" },
+  { label: "Save the mouse tree", next: "P_mouseTree" }
+]
+},
+
+
+
+N_juniperHome: {
+text: ` SAVE JUNIPER’S HOME
+
+	“Juniper! Can you lead us to your burrow?” Alice shouts. She tries not to think of it as being selfish—she just wants to help Juniper save their burrow. But maybe it does have to do with it being her family, too.
+Juniper nods.
+“Okay,” Alice says. “Then…somehow, we need to open the fire hydrant to get the water to come out. I think there’s some kind of human tool they use to open the top, and it’s probably pretty difficult. Can anyone…?”
+“We can,” volunteers one of the squirrels. “We know a place to get human tools. Give us five minutes and we’ll be right back.”
+“I think it will take us more than that to get there,” Alice tells them. “But as soon as you see the hose stop moving, turn it on so we can use it, okay?”
+“Got it!” the squirrel says.
+Every animal but two squirrels hefts up the hose. Alice spots Maurice in line, but he’s staring at the fire with horror across his face, looking absolutely lost.
+“Maurice,” she says as the animals begin to move. “None of this is your fault, okay? With psychology, I learned about these things. Having your emotions get like that—it isn’t because of you. It happens because of how you grew up and things that happened to you when you were younger. Nothing you do could have changed that.”
+He nods blankly. The fire is reflected in his eyes.
+“Maurice, do you hear me? This is not your fault. We’re going to fix the fire, and everything will be okay,” she says.
+Then they march into the forest.
+
+	Juniper directs everyone to their burrow, and they hurry through the trees, all breathing heavily and shaking by the time they get there. The fire hose is stretched between them like a massive snake that’s ready to strike—but in a good way, Alice hopes. This has to work. It has to.
+The fire is massive in front of them, smoke billowing up in waves so strong Alice coughs even at her distance. Its heat swallows her up, and she feels like she could be melting.
+Then the abandoned house comes into view through the haze. It’s so familiar, yet so strange—and it is the house from her dream, yet even more fallen-apart than before. But she can’t focus on that now. She needs to get to work.
+“How are we going to aim the hose?” Bluebell calls.
+Alice thinks about it for a moment, then shouts back over the roaring of the flames, “We’re going to need the tallest animals up front! That’s the deer!”
+The deer helping them dart forward and lift the hose, aiming it upward toward the house and the trees. A flame alights on the roof of the house, and it races rapidly along the rest of the roof, but all they can do is wait.
+“Is it going to work?” Juniper cries.
+“The squirrels should have turned on the hose by now!” Bluebell says. “What are they waiting for?”
+The hose writhes like a living snake as she speaks, and then a huge gush of water sprays out of its mouth. The deer hold it steady, and all the animals cheer. The flames on the roof of the house vanish under the water, just like that.
+
+	Alice would smile at their success, but there’s still work to do. “Okay, everyone, great job!” she yells. “Now let’s get everything nearby!”
+They walk the hose to the trees burning around the burrow, dousing every flame they can reach. The trees are blackened, some crumbling, and the ground is covered with ash…but this is something. They’re still saving part of the forest.
+“There’s so much fire,” Maurice shouts. “Everywhere. It’s everywhere!”
+Alice sees Bluebell try to comfort him, but she seems like she’s crying. In fact, so many of the animals are crying as they watch the forest burn.
+Alice feels water on her own face. Oh, no, she’s crying too. But she can’t cry now—she has to focus! There’s still so much left to do!
+Then she realizes that the water is on her head, not just her face. It’s on her ears, her back, her tail…it’s everywhere. There’s water everywhere!
+The whole sky is covered in clouds as well as smoke, and now it’s raining, pouring so heavily that everything blurs around her. The fire hisses as the rain hits it, and soon everything is dark. There’s no glow left from the flames, only rain as far as Alice can see. The forest is safe. It’s really safe!
+She hates water, but this time, Alice is overjoyed to be soaking wet.
+All the animals cheer and hug each other. Maurice can’t seem to decide if he wants to smile or burst into tears, but Alice and Bluebell and Juniper hug him together, and then he collapses into sobs. They tell him together that everything will be okay, because it will be. It will all be okay.
+`,
+image: "images/forest_fire.png",
+audio: "audio/finale.m4a",
+choices: [
+  { label: "Continue", next: "chapter8_N" }
+]
+},
+
+
+O_garden: {
+text: ` SAVE THE GARDEN
+
+	“Gina, Colin, Asher? We need to save the garden,” Alice shouts.
+The trio emerges from the back of the group, looking slightly surprised at her eagerness to help them. But she’s determined. She may be a newcomer, but the garden helps the inhabitants of the forest—they have to save it!
+“Okay,” Alice says. “Now…somehow, we need to open the fire hydrant to get the water to come out. I think there’s some kind of human tool they use to open the top, and it’s probably pretty difficult. Can anyone…?”
+“We can,” volunteers one of the squirrels. “We know a place to get human tools. Give us five minutes and we’ll be right back.”
+“I think it will take us more than that to get there,” Alice tells them. “But as soon as you see the hose stop moving, turn it on so we can use it, okay?”
+“Got it!” the squirrel says.
+
+	Every animal but two squirrels hefts up the hose. Alice spots Maurice in line, but he’s staring at the fire with horror across his face, looking absolutely lost.
+“Maurice,” she says as the animals begin to move. “None of this is your fault, okay? With psychology, I learned about these things. Having your emotions get like that—it isn’t because of you. It happens because of how you grew up and things that happened to you when you were younger. Nothing you do could have changed that.”
+He nods blankly. The fire is reflected in his eyes.
+“Maurice, do you hear me? This is not your fault. We’re going to fix the fire, and everything will be okay,” she says.
+Then they march into the forest.
+Gina, Asher, and Colin don’t need to direct the forest inhabitants to the forest—everyone already knows the way. They hurry through the trees, all breathing heavily and shaking by the time they get there. The fire hose is stretched between them like a massive snake that’s ready to strike—but in a good way, Alice hopes. This has to work. It has to.
+
+	The fire is massive in front of them, smoke billowing up in waves so strong Alice coughs even at her distance. Its heat swallows her up, and she feels like she could be melting.
+Then the garden comes into view through the haze. It’s such a new place to her, but so important for the wellbeing of each forest creature. She can’t bear to watch the place burn.
+But she can’t focus on that now. She needs to get to work.
+“How are we going to aim the hose?” Bluebell calls.
+Alice thinks about it for a moment, then shouts back over the roaring of the flames, “We’re going to need the tallest animals up front! That’s the deer!”
+The deer helping them dart forward and lift the hose, trying to aim it at an angle to get the furthest reach across the garden bed. But flames rain down from the treetops onto the plants, so the deer aim the hose higher to quench the source of the fire spreading across the garden.
+“It might be too late,” Gina says solemnly.
+“The squirrels should have turned on the hose by now!” Bluebell says. “What are they waiting for?”
+The hose writhes like a living snake as she speaks, and then a huge gush of water sprays out of its mouth. The deer hold it steady, and all the animals cheer. The flames on the trees vanish under the water, just like that.
+Alice would smile at their success, but there’s still work to do. “Okay, everyone, great job!” she yells. “Now let’s get everything nearby!”
+They walk the hose across the garden bed, dousing every flame they can reach. Some plants are already blackened, some crumbling, and the ground is covered with ash…but this is something. They’re still saving part of the forest.
+“There’s so much fire,” Maurice shouts. “Everywhere. It’s everywhere!”
+
+	Alice sees Bluebell try to comfort him, but she seems like she’s crying. In fact, so many of the animals are crying as they watch the forest burn.
+Alice feels water on her own face. Oh, no, she’s crying too. But she can’t cry now—she has to focus! There’s still so much left to do!
+Then she realizes that the water is on her head, not just her face. It’s on her ears, her back, her tail…it’s everywhere. There’s water everywhere!
+The whole sky is covered in clouds as well as smoke, and now it’s raining, pouring so heavily that everything blurs around her. The fire hisses as the rain hits it, and soon everything is dark. There’s no glow left from the flames, only rain as far as Alice can see. The forest is safe. It’s really safe!
+She hates water, but this time, Alice is overjoyed to be soaking wet.
+All the animals cheer and hug each other. Maurice can’t seem to decide if he wants to smile or burst into tears, but Alice and Bluebell and Juniper hug him together, and then he collapses into sobs. They tell him together that everything will be okay, because it will be. It will all be okay.
+`,
+image: "images/forest_fire.png",
+audio: "audio/finale.m4a",
+choices: [
+  { label: "Continue", next: "chapter8_O" }
+]
+},
+
+
+P_mouseTree: {
+text: ` SAVE THE MOUSE TREE
+
+	“Bluebell! Can you take us back to the mouse tree?” Alice shouts. She feels guilty for thinking they looked like food earlier. Not to mention that if they don’t save the mice’s home, the whole family will be displaced.
+Bluebell nods, seeming to understand what’s at stake.
+“Okay,” Alice says. “Then…somehow, we need to open the fire hydrant to get the water to come out. I think there’s some kind of human tool they use to open the top, and it’s probably pretty difficult. Can anyone…?”
+“We can,” volunteers one of the squirrels. “We know a place to get human tools. Give us five minutes and we’ll be right back.”
+“I think it will take us more than that to get there,” Alice tells them. “But as soon as you see the hose stop moving, turn it on so we can use it, okay?”
+“Got it!” the squirrel says.
+
+	Every animal but two squirrels hefts up the hose. Alice spots Maurice in line, but he’s staring at the fire with horror across his face, looking absolutely lost.
+“Maurice,” she says as the animals begin to move. “None of this is your fault, okay? With psychology, I learned about these things. Having your emotions get like that—it isn’t because of you. It happens because of how you grew up and things that happened to you when you were younger. Nothing you do could have changed that.”
+He nods blankly. The fire is reflected in his eyes.
+“Maurice, do you hear me? This is not your fault. We’re going to fix the fire, and everything will be okay,” she says.
+Then they march into the forest.
+Bluebell directs everyone to the mouse tree, and they hurry through the forest, all breathing heavily and shaking by the time they get there. The fire hose is stretched between them like a massive snake that’s ready to strike—but in a good way, Alice hopes. This has to work. It has to.
+The fire is massive in front of them, smoke billowing up in waves so strong Alice coughs even at her distance. Its heat swallows her up, and she feels like she could be melting.
+Then the mouse tree comes into view through the haze. Only the edges are on fire, but it’s spreading fast. Mice are fleeing in waves, and every creature holding the hose has to take care to watch their feet. This family of mice made Bluebell feel like she belonged—they have to save their home!
+
+	“How are we going to aim the hose?” Bluebell calls.
+Alice thinks about it for a moment, then shouts back over the roaring of the flames, “We’re going to need the tallest animals up front! That’s the deer!”
+The deer helping them dart forward and lift the hose, aiming it upward towards the trees behind the log, from which flames are quickly spreading towards the mice’s home.
+“Is it going to work?” Bluebell cries.
+“The squirrels should have turned on the hose by now!” Juniper says. “What are they waiting for?”
+The hose writhes like a living snake as they speak, and then a huge gush of water sprays out of its mouth. The deer hold it steady, and all the animals cheer. The flames on the trees vanish under the water, just like that.
+Alice would smile at their success, but there’s still work to do. “Okay, everyone, great job!” she yells. “Now let’s get everything nearby!”
+They walk the hose to the edges of the fallen tree, dousing every flame they can reach. It’s blackened, some parts crumbling, and the ground is covered with ash…but this is something. They’re still saving part of the forest.
+“There’s so much fire,” Maurice shouts. “Everywhere. It’s everywhere!”
+
+	Alice sees Bluebell try to comfort him, but she seems like she’s crying. In fact, so many of the animals are crying as they watch the forest burn.
+Alice feels water on her own face. Oh, no, she’s crying too. But she can’t cry now—she has to focus! There’s still so much left to do!
+Then she realizes that the water is on her head, not just her face. It’s on her ears, her back, her tail…it’s everywhere. There’s water everywhere!
+The whole sky is covered in clouds as well as smoke, and now it’s raining, pouring so heavily that everything blurs around her. The fire hisses as the rain hits it, and soon everything is dark. There’s no glow left from the flames, only rain as far as Alice can see. The forest is safe. It’s really safe!
+She hates water, but this time, Alice is overjoyed to be soaking wet.
+All the animals cheer and hug each other. Maurice can’t seem to decide if he wants to smile or burst into tears, but Alice and Bluebell and Juniper hug him together, and then he collapses into sobs. They tell him together that everything will be okay, because it will be. It will all be okay.
+`,
+image: "images/forest_fire.png",
+audio: "audio/finale.m4a",
+choices: [
+  { label: "Continue", next: "chapter8_P" }
+]
+},
+
+
+
+
+
+
+
+
+
+
+
+chapter8_N: {
+text: `CHAPTER EIGHT – HOME (ROUTE N)
+
+	Most of the animals disperse back into the forest to see if everyone and everything is okay, but Alice, Juniper, Maurice, and Bluebell stay behind to try to recover from the shock of it all. Then Juniper pulls Alice aside.
+“Hey, that was amazing of you, saving my home—our home,” they say in a low voice. “I’ve been wondering, actually…what would you think of coming to live here again? You could be with our family. I can introduce all of you once our parents and siblings come back. They would love it—they’ve been looking for you for years.”
+“Oh—really?” Alice asks.
+
+	“Yes, but…well, if you would rather return to your human house, I would understand,” Juniper says. “That is your home. And I know this is a very sudden offer.”
+Alice stares at them with wide eyes. That was such a kind thing for them to do, and she could live here, could meet her whole family again! But what would her humans think? What would they do if she just vanished?
+She swallows, thinking hard, and looks at the abandoned house with a burrow underneath. What should she choose…what should she choose…? Finally, her mind is made up.
+Where will you go…
+`,
+image: "images/8.png",
+audio: "audio/filler.m4a",
+choices: [
+  { label: "Live with Juniper", next: "Q_noReturn" },
+  { label: "Stay with her humans", next: "R_returnSolo" }
+]
+},
+
+chapter8_O: {
+text: `CHAPTER EIGHT – HOME (ROUTE O)
+
+	Most of the animals disperse back into the forest to see if everyone and everything is okay, but Alice, Juniper, Maurice, Bluebell, Gina, Colin, and Asher stay behind. Then, to Alice’s surprise, the three garden keepers stand together and face everyone else.
+“We have a…proposition for you,” Asher says.
+“A bold idea,” Gina adds.
+“A grand plan that will blow your minds,” Asher finishes.
+Colin smacks both of them with his tail. “Stop being so dramatic. We wanted to ask if the four of you would like to come live in the garden with us. We’re incredibly grateful for all the help you gave us, and we would love to have you here.”
+
+	“You would get lots of food,” Gina tells Maurice, who is still crying a little but trying to hide it.
+“And all of you could help out here if you wanted to,” Asher says. “We wouldn’t make you, of course, but you’d have the chance if you’d like.”
+The four of them exchange a surprised glance.
+“I have a home in my burrow,” Juniper says apologetically. “I would love to come visit here, but I prefer to live with my family. Thank you for the offer!”
+“I would love to live here,” Bluebell exclaims. “If I can help out in the garden and bring food to different animals…that would be amazing!”
+The squirrels and deer beam at her.
+Maurice kicks at the ground with one of his back legs. “Well…I suppose…I like the forest better than the city. And if you’re living here, Bluebell…I think I would like to stay too. As long as you all will have me.”
+“Of course,” says Colin.
+“We’re trying to start accepting all animals,” Asher adds, “after you three came to visit. And you’re one of the most enthusiastic food lovers I’ve ever met—not for carrots, though, obviously—so of course we’ll let you stay.”
+They all turn to Alice, and her brain seems to pause in the weight of their stares.
+“Um…” she says, trying to make up her mind. If she doesn’t return home, her humans will be upset, maybe even terrified. But she loves it here in the forest, and it would be so fun to live with Bluebell and Maurice and the garden animals. She looks in the direction of her house, trying to let her heart decide.
+When she’s made up her mind, she turns back to the other animals. 
+Where will you go…
+
+`,
+image: "images/8.png",
+audio: "audio/filler.m4a",
+choices: [
+  { label: "Live in the garden", next: "Q_noReturn" },
+  { label: "Stay with her humans", next: "R_returnSolo" }
+]
+},
+
+
+
+
+
+
+chapter8_P: {
+text: `CHAPTER EIGHT – HOME (ROUTE P)
+
+	Most of the animals disperse back into the forest to see if everyone and everything is okay, but Alice, Juniper, Maurice, and Bluebell stay behind to try to recover from the shock of it all.
+As they’re sitting together, waves of mice stream back to their tree, staring at it in both sadness and acceptance. They gather around it in a circle and start humming a song in their squeaky voices.
+Then, when they’ve finished their song, the mice turn to the four animals behind them. “Thank you—thank you for saving our home!” they squeak together. “We heard from the other forest animals that it was you four who helped the most.”
+“Oh, it was nothing, really,” Bluebell says.
+“Yeah, we were just helping,” Alice tells them.
+“Either way, we want to thank you!” they answer in unison. “And since we have nothing substantial to thank you with, we would like to offer what we do have—a song!”
+Alice tries her hardest to smile at this.
+	“Here you are,” the mice say, and then they burst out into another song. Their little squeaky voices scratch at Alice’s ears, but the mice are all beaming and she really can’t help but be happy when she sees how happy they are.
+When they finish, the mice take a bow and then scurry back into their tree. Alice, Juniper, Maurice, and Bluebell applaud for them.
+But now…well, now what? Alice needs to return to her home, but she aches inside when she thinks that she might not see these three animals again. At least, not for quite some time.
+But maybe there’s some solution…
+Bluebell and Maurice can’t live with her, obviously, but perhaps Juniper can. They are another cat, and Alice doesn’t think her humans would mind—at least, she hopes they wouldn’t mind—having another cat in their house. But should she ask Juniper? Is that a strange offer to make to someone she just met today?
+She thinks hard for a moment,
+Where will you go…
+`,
+image: "images/8.png",
+audio: "audio/filler.m4a",
+choices: [
+  { label: "Invite Juniper to live with her", next: "T_returnWithJuniper" },
+  { label: "Keep things as they are", next: "R_returnSolo" }
+]
+},
+
+
+
+
+
+
+Q_noReturn: {
+text: `CHAPTER NINE – THE SYKE HOUSE
+
+	It’s quieter at the Syke house without Alice the cat around, and her humans are sad, but they still talk about psychology. They put up some missing cat signs, but she never reappears, and they don’t hear any word about her. They miss her deeply, but their lives go on.
+Then, one day, a book appears on their doorstep. Mrs. Syke finds it one morning and brings it inside to show Mr. Syke in confusion. The book is titled “Alice’s Adventures in the World of Psychology,” and on it is written in clumsy handwriting, “Thank you for teaching me so much about psychology. I would like to teach you some in return.”
+
+	The Sykes sit at their kitchen table to read the mysterious book. Mr. Syke flips open the first page and reads aloud, “On the outskirts of a city, there’s a quiet neighborhood, and in this neighborhood, there’s a cozy brick house with a forest behind it and other houses nearby…”
+Just outside the open kitchen window, a cat is watching with a rabbit, a fox, and another cat beside her. She turns to them and smiles.
+`,
+image: "images/end.png",
+audio: "audio/end.m4a",
+choices: []
+},
+
+
+
+
+R_returnSolo: {
+text: `CHAPTER NINE – THE SYKE HOUSE
+
+	Mr. and Mrs. Syke have no idea that anything happened that day in the forest. They live life with their cat, Alice, just as they did before. They watch television, they talk about psychology, and they go to work.
+Then, one day, a book appears on their kitchen table. On the cover is the title “Alice’s Adventures in the World of Psychology” and a note that says in clumsy handwriting, “Thank you for teaching me so much about psychology. I would like to teach you some in return.”
+
+	Mr. and Mrs. Syke sit down to read this mysterious book. Mr. Syke flips open the first page and reads aloud, “On the outskirts of a city, there’s a quiet neighborhood, and in this neighborhood, there’s a cozy brick house with a forest behind it and other houses nearby…”
+Just outside the open kitchen window, a cat is watching with a rabbit, a fox, and another cat beside her. She turns to them and smiles.
+`,
+image: "images/end.png",
+audio: "audio/end.m4a",
+choices: []
+},
+
+
+
+T_returnWithJuniper: {
+text: `CHAPTER NINE – THE SYKE HOUSE
+
+	Mr. and Mrs. Syke have no idea what happened that day in the forest, but they return home to find their cat, Alice, waiting with another cat. At first, they’re surprised and confused, but soon they welcome this cat into their home with open arms.
+Now, with their two cats, Mr. and Mrs. Syke live life just as they did before. They watch television, they talk about psychology, and they go to work.
+
+	Then, one day, a book appears on their kitchen table. On the cover is the title “Alice’s Adventures in the World of Psychology” and a note that says in clumsy handwriting, “Thank you for teaching me so much about psychology. I would like to teach you some in return.”
+Mr. and Mrs. Syke sit down to read this mysterious book. Mr. Syke flips open the first page and reads aloud, “On the outskirts of a city, there’s a quiet neighborhood, and in this neighborhood, there’s a cozy brick house with a forest behind it and other houses nearby…”
+Just outside the open kitchen window, a cat is watching with a rabbit, a fox, and another cat beside her. She turns to them and smiles.
+`,
+image: "images/end.png",
+audio: "audio/end.m4a",
+choices: []
+}
+
+};
+
+const textBox = document.getElementById("text");
+const image = document.getElementById("scene-image");
+const audio = document.getElementById("scene-audio");
+const choices = document.getElementById("choices");
+
+function loadScene(id) {
+  const scene = scenes[id];
+  textBox.textContent = scene.text;
+  image.src = scene.image;
+  audio.pause();
+  audio.src = scene.audio;
+  audio.load();
+
+  choices.innerHTML = "";
+  scene.choices.forEach(c => {
+    const btn = document.createElement("button");
+    btn.textContent = c.label;
+    btn.onclick = () => loadScene(c.next);
+    choices.appendChild(btn);
+  });
+}
+
+loadScene("title");
+</script>
+
+</body>
+</html>
