@@ -343,7 +343,7 @@ After a few minutes, Alice turns to see how close the bees are, and it makes her
 `,
 
 image: "images/dream.png",
-audio: "audio/filler.m4a",
+audio: "audio/bees.m4a",
 choices: [
   { image: "images/right.png", next: "dream5" },
 ]
@@ -361,7 +361,7 @@ She chooses to…
 `,
 
 image: "images/den.png",
-audio: "audio/filler.m4a",
+audio: "audio/bees.m4a",
 choices: [
  { label: "trust the fox", next: "BC" },
  { label: "run past the fox", next: "BX" }
@@ -379,7 +379,7 @@ Alice whips her head around to see the fox from before.
 `,
 
 image: "images/BX.png",
-audio: "audio/filler.m4a",
+audio: "audio/bees.m4a",
 choices: [
   { image: "images/right.png", next: "BX2" },
 ]
@@ -518,7 +518,7 @@ text: `“Go with her!” Alice says.
 `,
 
 image: "images/BC.png",
-audio: "audio/filler.m4a",
+audio: "audio/bees.m4a",
 choices: [
   { image: "images/right.png", next: "BC2" },
 ]
@@ -619,7 +619,7 @@ Bluebell heads toward the water, and Alice follows, inhaling the bright, fresh s
 `,
 
 image: "images/BCE.png",
-audio: "audio/filler.m4a",
+audio: "audio/lake.m4a",
 choices: [
   { image: "images/right.png", next: "BCE2" },
 ]
@@ -636,7 +636,7 @@ The tree he’s beneath looks very climb-able. And it seems like it would have a
 `,
 
 image: "images/BCE.png",
-audio: "audio/filler.m4a",
+audio: "audio/lake.m4a",
 choices: [
   { image: "images/right.png", next: "BCE3" },
 ]
@@ -652,7 +652,7 @@ Then she begins to dream.
 `,
 
 image: "images/BCE.png",
-audio: "audio/filler.m4a",
+audio: "audio/lake.m4a",
 choices: [
   { image: "images/right.png", next: "BCEdream" },
 ]
@@ -668,7 +668,7 @@ The trees open up to let out an enormous swarm of bees, but they block off all e
 `,
 
 image: "images/BCEdream.png",
-audio: "audio/filler.m4a",
+audio: "audio/lake.m4a",
 choices: [
   { image: "images/right.png", next: "BCEdrown" },
 ]
@@ -688,7 +688,7 @@ She’s laying on a tree branch over a lake, and in the middle of the lake, ther
 `,
 
 image: "images/drown.png",
-audio: "audio/filler.m4a",
+audio: "audio/lake.m4a",
 choices: [
  { label: "jump into the lake", next: "BCEG" },
  { label: "get bluebell to help", next: "BCEH"},
@@ -708,8 +708,8 @@ text: `“Bluebell!” Alice cries, leaping from her tree branch and landing jus
 	“Of course. I wasn’t going to just let you drown,” Bluebell answers, breathing heavily.
 `,
 
-image: "images/example.png",
-audio: "audio/filler.m4a",
+image: "images/foxsave.png",
+audio: "audio/lake.m4a",
 choices: [
   { image: "images/right.png", next: "BCEH2" },
 ]
@@ -725,8 +725,8 @@ text: `“And thank you, too, for waking her up,” the cat tells Alice. “I re
 	“It’s good to meet you too,” Bluebell replies. “I’m glad you’re okay. You didn’t get hurt, did you?”
 `,
 
-image: "images/example.png",
-audio: "audio/filler.m4a",
+image: "images/foxsave.png",
+audio: "audio/lake.m4a",
 choices: [
   { image: "images/right.png", next: "BCEH3" },
  ]
@@ -741,7 +741,7 @@ Maurice stares at her for a second, then begins shaking his head so much that hi
 Maurice scowls but nods reluctantly. “Fine. I’ll come with.”
 `,
 
-image: "images/example.png",
+image: "images/foxsave.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "BCEH4" },
@@ -759,7 +759,7 @@ And also…now that she thinks about it, that flower field was in her dream just
 “I wouldn’t go in there,” Bluebell warns her, seeing what she’s looking at. “There’s a hawk that likes to circle that field, and it might think you’re good prey.”
 `,
 
-image: "images/example.png",
+image: "images/BCEGwalk.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "BCEH5" },
@@ -776,7 +776,7 @@ Should she stay and be safe, or should she go explore the field while no one is 
 She…
 `,
 
-image: "images/example.png",
+image: "images/BCEGwalk.png",
 audio: "audio/filler.m4a",
 choices: [
   { label: "stays with the others", next: "BCEHI" },
@@ -784,7 +784,38 @@ choices: [
 ]
 },
 
-//current spot
+
+
+BCEHI: {
+text: `Alice trails back to the others. She doesn’t think it’s a good idea to explore the field when they specifically told her not to.
+Juniper and Bluebell are done investigating the plant, so the four of them head back onto the path they were following before. Then, out of nowhere, it begins to rain.
+Several drops of water hit the ground around the group, and soon the air fills with both the sound and the scent of rain. Maurice shrinks in like he’s trying to hide from it, and Bluebell’s fur twitches, but she continues walking.
+`,
+
+image: "images/BCEGwalk.png",
+audio: "audio/filler.m4a",
+choices: [
+  { image: "images/right.png", next: "BCEHI2" },
+]
+},
+
+BCEHI2: {
+text: `Alice, however, perks up in excitement when she sees the rain.
+She’s never been out in the rain before, and it’s such a funny sensation, being pelted with water like this. She leaps for a few raindrops, then sticks out her tongue to try to catch them like she sees human children do. Soon, she’s bouncing in circles, letting the feeling of the rain soak through her.
+She hated the water of the lake, but somehow this is different. This is more fun.
+When Alice takes a moment to catch her breath, she notices in surprise that Juniper is also chasing raindrops and beaming despite being soaking wet. Juniper pauses when they sense Alice watching.
+“Wait—are you enjoying this too?” they ask in surprise. “I’ve never met another cat who likes the rain.”
+	This seems almost important to Alice for some reason, though she can’t quite figure out why. She wants to ask Juniper a question about what they said so she can try to understand what’s caught her attention. She asks…
+`,
+
+image: "images/BCEGIM.png",
+audio: "audio/filler.m4a",
+choices: [
+  { label: "do you know a lot of cats who don't like the rain?", next: "BCEHIK" },
+  { label: "do you think that means something?", next: "BCEHIL" }
+]
+},
+
 
 BCEHJ: {
 text: `Alice ducks away while the others are distracted. All she can focus on is the smell of the flower field, and it’s growing on her, that magnet pull getting stronger with every step she takes. When she reaches the edge of the trees, she turns back to make sure no one is watching.
@@ -793,7 +824,7 @@ The smell is even stronger out here—lovely and sweet, just like she would expe
 She’s made it about halfway around the field before there’s a deafening cry from the space above her. A blur swoops across the sky at the edge of her vision, and suddenly she feels sharp claws digging into her back.
 `,
 
-image: "images/example.png",
+image: "images/walk.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "BCEHJ2" },
@@ -809,7 +840,7 @@ Bluebell places a paw on Alice’s shoulder and gives Maurice a stern look.
 “That’s no way to talk to Alice,” she tells him, then looks back to Alice. “And Alice, he was concerned for your safety.”
 `,
 
-image: "images/example.png",
+image: "images/hook.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "BCEHJ3" },
@@ -829,7 +860,7 @@ Alice looks at her in surprise. She doesn’t seem disturbed in the slightest.
 “You at least could have said something sooner,” Maurice grumbles.
 `,
 
-image: "images/example.png",
+image: "images/hook.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "BCEHJ4" },
@@ -848,7 +879,7 @@ She’s never been out in the rain before, and it’s such a funny sensation, be
 
 `,
 
-image: "images/example.png",
+image: "images/BCEGwalk.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "BCEHJ5" },
@@ -862,7 +893,7 @@ When Alice takes a moment to catch her breath, she notices in surprise that Juni
 	This seems almost important to Alice for some reason, though she can’t quite figure out why. She wants to ask Juniper a question about what they said so she can try to understand what’s caught her attention. She asks…
 `,
 
-image: "images/example.png",
+image: "images/BCEGIM.png",
 audio: "audio/filler.m4a",
 choices: [
   { label: "do you know a lot of cats who don't like the rain?", next: "BCEHIK" },
@@ -882,7 +913,7 @@ Finally, they arrive at a fallen tree, which must be the mouse tree. Alice notic
 
 `,
 
-image: "images/example.png",
+image: "images/BCEGIM2.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "BCEHIK2" },
@@ -899,7 +930,7 @@ Maurice, amused?
 Juniper is watching Bluebell as she speaks, so none of them notice the instincts at war inside of Alice. Something within her is telling her to capture them, to pounce, but she mentally shakes herself. The mice are friends. Just because she’s never been outside her house before doesn’t mean she can act this way.
 `,
 
-image: "images/example.png",
+image: "images/BCEGIM2.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "BCEHIK3" },
@@ -919,7 +950,7 @@ text: `She tries to distract herself by paying attention to what Bluebell is say
 	That’s when she notices how late it’s gotten.
 `,
 
-image: "images/example.png",
+image: "images/BCEGIM2.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "BCEHIK4" },
@@ -938,7 +969,7 @@ text: `“Bluebell,” Alice says, “I’m so sorry, but I think I should go ho
 	Everyone smiles, and then Maurice says, “Okay, enough with the long goodbyes. Get going if you say you’re going.”
 `,
 
-image: "images/example.png",
+image: "images/BCEGIM2.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "BCEHIK5" },
@@ -956,7 +987,7 @@ text: `They all head back toward the forest’s entrance. Alice makes sure to ta
 	“Okay, get back into your house,” Bluebell says. “We’ll see you around!”
 `,
 
-image: "images/example.png",
+image: "images/BCEGIM2.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "BCEHIK6" },
@@ -972,7 +1003,7 @@ text: `	Alice waves and leaps to the floor, then makes her way into the living r
 THE END
 `,
 
-image: "images/example.png",
+image: "images/stay.png",
 audio: "audio/filler.m4a",
 choices: [
 ]
@@ -989,7 +1020,7 @@ text: `	“Do you think that means something?”
 	Alice blurts out…
 `,
 
-image: "images/example.png",
+image: "images/BCEGIM.png",
 audio: "audio/filler.m4a",
 choices: [
   { label: "you and i were infuenced by shared genetics to like rain", next: "BCEHILM" },
@@ -1009,7 +1040,7 @@ Finally, they arrive at a fallen tree, which must be the mouse tree. Alice notic
 
 `,
 
-image: "images/example.png",
+image: "images/BCEGIM.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "BCEHILN2" },
@@ -1026,7 +1057,7 @@ Maurice, amused?
 Juniper is watching Bluebell as she speaks, so none of them notice the instincts at war inside of Alice. Something within her is telling her to capture them, to pounce, but she mentally shakes herself. The mice are friends. Just because she’s never been outside her house before doesn’t mean she can act this way.
 `,
 
-image: "images/example.png",
+image: "images/BCEGIM2.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "BCEHILN3" },
@@ -1045,7 +1076,7 @@ text: `She tries to distract herself by paying attention to what Bluebell is say
 	That’s when she notices how late it’s gotten.
 `,
 
-image: "images/example.png",
+image: "images/BCEGIM2.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "BCEHILN4" },
@@ -1063,7 +1094,7 @@ text: `“Bluebell,” Alice says, “I’m so sorry, but I think I should go ho
 	Everyone smiles, and then Maurice says, “Okay, enough with the long goodbyes. Get going if you say you’re going.”
 `,
 
-image: "images/example.png",
+image: "images/BCEGIM2.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "BCEHILN5" },
@@ -1081,7 +1112,7 @@ text: `They all head back toward the forest’s entrance. Alice makes sure to ta
 	“Okay, get back into your house,” Bluebell says. “We’ll see you around!”
 `,
 
-image: "images/example.png",
+image: "images/BCEGIM2.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "BCEHILN6" },
@@ -1096,7 +1127,7 @@ text: `Alice waves and leaps to the floor, then makes her way into the living ro
 THE END
 `,
 
-image: "images/example.png",
+image: "images/stay.png",
 audio: "audio/filler.m4a",
 choices: [
 
@@ -1115,7 +1146,7 @@ Juniper smiles almost shyly. “That’s what I thought I was crazy for thinking
 “That’s amazing!” Alice shouts. “I didn’t know I had any relatives at all!”
 `,
 
-image: "images/example.png",
+image: "images/BCEGIM.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "BCEHILM2" },
@@ -1129,7 +1160,7 @@ text: `“I used to have three sisters, and one of them went missing when I was 
 Alice can go to the mouse tree, go to the burrow, or continue past the flower field to the shaded area of the forest from her dream. She decides to…
 `,
 
-image: "images/example.png",
+image: "images/BCEGIM.png",
 audio: "audio/filler.m4a",
 choices: [
   { label: "go to the mouse tree", next: "BCEGILN" },
@@ -1170,7 +1201,7 @@ text: `Alice doesn’t hesitate after making her choice. She leaps as far as she
 `,
 
 image: "images/BCEG.png",
-audio: "audio/filler.m4a",
+audio: "audio/lake.m4a",
 choices: [
   { image: "images/right.png", next: "BCEG2" },
 ]
@@ -1191,7 +1222,7 @@ text: `“I couldn’t just let you drown,” Alice says.
 `,
 
 image: "images/BCEG.png",
-audio: "audio/filler.m4a",
+audio: "audio/lake.m4a",
 choices: [
   { image: "images/right.png", next: "BCEG3" },
 ]
@@ -1209,7 +1240,7 @@ text: `“I’m sorry, but I don’t think I recognize you,” she says. “I’
 `,
 
 image: "images/BCEG.png",
-audio: "audio/filler.m4a",
+audio: "audio/lake.m4a",
 choices: [
   { image: "images/right.png", next: "BCEG4" },
 ]
@@ -2005,7 +2036,7 @@ text: `“Actually, I think I would like to explore somewhere else,” Alice say
 	“I don’t think I’ve ever seen this part of the forest,” Bluebell remarks. “I thought I’d been everywhere.”
 `,
 
-image: "images/example.png",
+image: "images/BCEGwalk.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "BCEGJLR2" },
@@ -2021,7 +2052,7 @@ text: `“It’s fairly quiet,” Juniper says. “Not many animals visit here, 
 	Alice ponders this. She has two options now—she can either backtrack and try to find something familiar again, or she can follow Juniper to the burrow and see if that’s where her dream has been leading her. She…
 `,
 
-image: "images/example.png",
+image: "images/BCEGwalk.png",
 audio: "audio/filler.m4a",
 choices: [
   { label: "backtracks", next: "BCEGILPV" },
@@ -2165,7 +2196,7 @@ text: `Alice doesn’t hesitate after making her choice. She leaps as far as she
 	After what feels like hours, Alice’s paws finally touch solid ground. She wades out of the water and shakes the water off as hard as she can like a dog, then lays down in the grass so she can start drying herself the rest of the way.
 `,
 
-image: "images/example.png",
+image: "images/BCEG.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "BCDG2" },
@@ -2186,7 +2217,7 @@ text: `The other cat does the same and lays down near her. “Thank you,” they
 	Once she’s far enough away, Juniper turns back to Alice and lowers their voice. “The truth is, I fell into the lake because I was climbing in the tree to see you. This may seem strange, but you’re very familiar to me. I think I may recognize you from somewhere.”
 `,
 
-image: "images/example.png",
+image: "images/BCEG.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "BCDG3" },
@@ -2204,7 +2235,7 @@ text: `Alice tilts her head and studies Juniper. The cat doesn’t seem familiar
 	“Oh, cool,” Bluebell calls, coming back over.
 `,
 
-image: "images/example.png",
+image: "images/BCEGwalk.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "BCDG4" },
@@ -2224,7 +2255,7 @@ Maurice stares at her for a second, then begins shaking his head so much that hi
 Maurice scowls but nods reluctantly. “Fine. I’ll come with.”
 `,
 
-image: "images/example.png",
+image: "images/BCEGwalk.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "BCDG5" },
@@ -2241,7 +2272,7 @@ Alice nods, but she’s still staring out at the field. She wants to go there so
 The group trails away from the flower field to continue toward the mouse tree, but they don’t make it much farther, because Juniper stops in their tracks and brings the whole group to a halt.
 `,
 
-image: "images/example.png",
+image: "images/BCEGwalk.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "BCDG6" },
@@ -2255,7 +2286,7 @@ Should she stay and be safe, or should she go explore the field while no one is 
 She…
 `,
 
-image: "images/example.png",
+image: "images/BCEGwalk.png",
 audio: "audio/filler.m4a",
 choices: [
   { label: "stays with the others", next: "BCDGI" },
@@ -2270,7 +2301,7 @@ The smell is even stronger out here—lovely and sweet, just like she would expe
 She’s made it about halfway around the field before there’s a deafening cry from the space above her. A blur swoops across the sky at the edge of her vision, and suddenly she feels sharp claws digging into her back.
 `,
 
-image: "images/example.png",
+image: "images/walk.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "BCDGJ2" },
@@ -2285,7 +2316,7 @@ Somehow, he manages to latch onto the hawk’s talons. The hawk wobbles in the a
 Bluebell places a paw on Alice’s shoulder and gives Maurice a stern look. 
 `,
 
-image: "images/example.png",
+image: "images/hook.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "BCDGJ3" },
@@ -2302,7 +2333,7 @@ Alice sighs. She’s going to have to tell them now, isn’t she?
 “I’m going to sound crazy,” she says, “but I keep having dreams about the forest, like I’m going somewhere but can’t quite get there. I’ve been trying to find a familiar place from my dreams so I can figure out why I’m having them, but I haven’t recognized anything until we got to this field. I know I’ve smelled these flowers before.”
 `,
 
-image: "images/example.png",
+image: "images/BCEGwalk.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "BCDGJ4" },
@@ -2320,7 +2351,7 @@ Alice looks at her in surprise. She doesn’t seem disturbed in the slightest.
 “Hmph,” he says.
 `,
 
-image: "images/example.png",
+image: "images/BCEGwalk.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "BCDGJ5" },
@@ -2337,7 +2368,7 @@ She’s never been out in the rain before, and it’s such a funny sensation, be
 
 `,
 
-image: "images/example.png",
+image: "images/BCEGIM.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "BCDGJ6" },
@@ -2353,7 +2384,7 @@ At these words, Alice’s brain begins to work faster than it ever has. So many 
 Alice blurts out in response:
 `,
 
-image: "images/example.png",
+image: "images/BCEGIM.png",
 audio: "audio/filler.m4a",
 choices: [
   { label: "you and i were influenced by shared genetics", next: "BCDGIL" },
@@ -2370,7 +2401,7 @@ She’s never been out in the rain before, and it’s such a funny sensation, be
 
 `,
 
-image: "images/example.png",
+image: "images/BCEGwalk.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "BCDGI2" },
@@ -2385,7 +2416,7 @@ At these words, Alice’s brain begins to work faster than it ever has. So many 
 Alice blurts out in response:
 `,
 
-image: "images/example.png",
+image: "images/BCEGIM.png",
 audio: "audio/filler.m4a",
 choices: [
   { label: "you and i were influenced by shared genetics", next: "BCDGIL" },
@@ -2404,7 +2435,7 @@ Alice hurries to explain herself. “Okay. So. My humans are psychologists—”
 “So what I mean by that is…well, Juniper and I both like the rain. And they seemed to recognize me before.” Alice turns to Juniper, her heart pounding in preparation for what she’s about to say. “So, Juniper...does that mean we’re siblings?”
 `,
 
-image: "images/example.png",
+image: "images/BCEGIM.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "BCDGIL2" },
@@ -2420,7 +2451,7 @@ text: `Juniper stares at her in surprise. “I was wondering as much, but I thou
 Alice can go to the mouse tree, go to the burrow, or continue past the flower field to the shaded area of the forest from her dream. She decides to…
 `,
 
-image: "images/example.png",
+image: "images/BCEGIM.png",
 audio: "audio/filler.m4a",
 choices: [
   { label: "go to the mouse tree", next: "BCDGILN" },
@@ -2438,7 +2469,7 @@ Finally, they arrive at a fallen tree, which must be the mouse tree. Alice is al
 Surely it’s not the smell of the mice…right?
 `,
 
-image: "images/example.png",
+image: "images/BCEGIM2.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "BCDGILN2" },
@@ -2453,7 +2484,7 @@ Maurice, amused?
 Juniper is watching Bluebell as she speaks, so none of them notice the instincts at war inside of Alice. Something within her is telling her to capture them, to pounce, but she mentally shakes herself. The mice are friends. Just because she’s never been outside her house before doesn’t mean she can act this way.
 `,
 
-image: "images/example.png",
+image: "images/BCEGIM2.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "BCDGILN3" },
@@ -2471,7 +2502,7 @@ text: `She tries to distract herself by paying attention to what Bluebell is say
 	That’s when she notices how late it’s gotten.
 `,
 
-image: "images/example.png",
+image: "images/BCEGIM2.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "BCDGILN4" },
@@ -2489,7 +2520,7 @@ text: `“Hey, everyone,” Alice says, “I’m so sorry, but I think I should 
 	When they finally reach her house, she leaps up onto the windowsill, then turns to face her friends one last time.
 `,
 
-image: "images/example.png",
+image: "images/BCEGIM2.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "BCDGILN5" },
@@ -2509,7 +2540,7 @@ Then, from somewhere inside her house, one of her humans calls, “ALICE! ALICE,
 	Alice isn’t sure if her humans can read her expressions or not, so she tries not to look guilty. But she knows that she fails miserably because, the next morning, her family locks the house more securely than they ever have. They double check every window and even tape the kitchen window shut, because it’s always opened more easily than the other windows.
 `,
 
-image: "images/example.png",
+image: "images/house.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "BCDGILN6" },
@@ -2523,7 +2554,7 @@ text: `Alice goes and looks at the forest longingly as soon as they leave. She w
 	She picks up the pen with her paws and balances it with her tail, then sets it to the paper. She’s going to tell her humans everything she’s learned, especially about other animals. She’s always wanted to show them how much they’ve taught her, and this is the perfect way to do it.
 `,
 
-image: "images/example.png",
+image: "images/house.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "BCDGILN7" },
@@ -2536,7 +2567,7 @@ text: `Alice works on this project every day and every night while her humans ar
 She’s learned so, so much, and she can’t wait to share it with her family.
 `,
 
-image: "images/example.png",
+image: "images/house.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "epilogue" },
@@ -2557,7 +2588,7 @@ Everyone else stares at her blankly.
 	It is quiet. Plus, the rain is letting up, so she sees everything through a mysterious shroud of mist.
 `,
 
-image: "images/example.png",
+image: "images/BCEGwalk.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "BCDGILO2" },
@@ -2576,7 +2607,7 @@ text: `As the group passes into a clearing in the trees, Juniper announces, “W
 “I would love to meet them when they are,” Alice replies. She can’t stop admiring the burrow and breathing in the smell of it all.
 `,
 
-image: "images/example.png",
+image: "images/BCEGwalk.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "BCDGILO3" },
@@ -2594,7 +2625,7 @@ Alice nods, still thinking. It is a big decision. And she would be happy with bo
 Finally, she takes a deep breath to tell Juniper that she’s made up her mind. She’s going to…
 `,
 
-image: "images/example.png",
+image: "images/BCEGwalk.png",
 audio: "audio/filler.m4a",
 choices: [
   { label: "live with her humans", next: "livewithhumans" },
@@ -2610,7 +2641,7 @@ Alice and Juniper spend a few more minutes out in the rain, and then Bluebell la
 “Sure!” Alice replies.
 `,
 
-image: "images/example.png",
+image: "images/BCEGIM.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "BCDGIM2" },
@@ -2625,7 +2656,7 @@ Suddenly, she can hear squeaking coming from within the tree on the forest floor
 	“Everyone, this is the family of mice that lives here,” Bluebell announces. “I’ve been protecting them from hawks and other predators for a long time.”
 `,
 
-image: "images/example.png",
+image: "images/BCEGIM2.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "BCDGIM3" },
@@ -2641,7 +2672,7 @@ She tries to distract herself by paying attention to what Bluebell is saying.
 	“Hello!” the two mice call together.
 `,
 
-image: "images/example.png",
+image: "images/BCEGIM2.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "BCDGIM4" },
@@ -2660,7 +2691,7 @@ text: `“We’re so glad you met Bluebell,” Cynthia says. “She’s so helpf
 	Maurice nods. “Me too.”
 `,
 
-image: "images/example.png",
+image: "images/BCEGIM2.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "BCDGIM5" },
@@ -2677,7 +2708,7 @@ text: `Alice can’t interpret Juniper’s expression as they chime in, “I wis
 	“We will!” the three of them reply.
 `,
 
-image: "images/example.png",
+image: "images/stay.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "BCDGIM6" },
@@ -2696,7 +2727,7 @@ THE END
 
 `,
 
-image: "images/example.png",
+image: "images/stay.png",
 audio: "audio/filler.m4a",
 choices: [
 
@@ -2715,7 +2746,7 @@ text: `“Bluebell!” Alice cries, leaping from her tree branch and landing jus
 	“Thank you,” the cat says quietly as they step onto the grass.
 `,
 
-image: "images/example.png",
+image: "images/foxsave.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "BCDH2" },
@@ -2735,7 +2766,7 @@ text: `“Of course. I wasn’t going to just let you drown,” Bluebell answers
 	Alice nods in relief. “That’s good.”
 `,
 
-image: "images/example.png",
+image: "images/BCEGwalk.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "BCDH3" },
@@ -2753,7 +2784,7 @@ Maurice scowls but nods reluctantly. “Fine. I’ll come with.”
 
 `,
 
-image: "images/example.png",
+image: "images/BCEGwalk.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "BCDH4" },
@@ -2771,7 +2802,7 @@ Alice nods, but she’s still staring out at the field. She wants to go there so
 “Yes, it’s not safe to go in the field,” Juniper agrees. “Let’s stay over here.”
 `,
 
-image: "images/example.png",
+image: "images/BCEGwalk.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "BCDH5" },
@@ -2787,7 +2818,7 @@ Should she stay and be safe, or should she go explore the field while no one is 
 She…
 `,
 
-image: "images/example.png",
+image: "images/BCEGwalk.png",
 audio: "audio/filler.m4a",
 choices: [
   { label: "stays with the others", next: "BCDHI" },
@@ -2802,7 +2833,7 @@ The smell is even stronger out here—lovely and sweet, just like she would expe
 She’s made it about halfway around the field before there’s a deafening cry from the space above her. A blur swoops across the sky at the edge of her vision, and suddenly she feels sharp claws digging into her back.
 `,
 
-image: "images/example.png",
+image: "images/walk.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "BCDHJ2" },
@@ -2818,7 +2849,7 @@ Bluebell places a paw on Alice’s shoulder and gives Maurice a stern look.
 “That’s no way to talk to Alice,” she tells him, then looks back to Alice. “And Alice, he was concerned for your safety.”
 `,
 
-image: "images/example.png",
+image: "images/hook.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "BCDHJ3" },
@@ -2837,7 +2868,7 @@ Alice looks at her in surprise. She doesn’t seem disturbed in the slightest.
 “No, I don’t,” Alice answers. “I’d like to find out, though.”
 `,
 
-image: "images/example.png",
+image: "images/BCEGwalk.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "BCDHJ4" },
@@ -2852,7 +2883,7 @@ The four of them head away from the flower field and back onto the path they wer
 
 `,
 
-image: "images/example.png",
+image: "images/BCEGwalk.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "BCDHJ5" },
@@ -2867,7 +2898,7 @@ She’s never been out in the rain before, and it’s such a funny sensation, be
 
 `,
 
-image: "images/example.png",
+image: "images/BCEGwalk.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "BCDHJ6" },
@@ -2881,7 +2912,7 @@ When Alice takes a moment to catch her breath, she notices in surprise that Juni
 	This seems almost important to Alice for some reason, though she can’t quite figure out why. She wants to ask Juniper a question about what they said so she can try to understand what’s caught her attention. She asks…
 `,
 
-image: "images/example.png",
+image: "images/BCEGIM.png",
 audio: "audio/filler.m4a",
 choices: [
   { label: "do you know a lot of cats who don't like rain?", next: "BCDHJK" },
@@ -2900,7 +2931,7 @@ text: `“Do you think that means something?”
 	Alice blurts out…
 `,
 
-image: "images/example.png",
+image: "images/BCEGIM.png",
 audio: "audio/filler.m4a",
 choices: [
   { label: "you and i were influenced by shared genetics to like rain", next: "BCDHILM" },
@@ -2917,7 +2948,7 @@ She’s never been out in the rain before, and it’s such a funny sensation, be
 
 `,
 
-image: "images/example.png",
+image: "images/BCEGwalk.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "BCDHI2" },
@@ -2931,7 +2962,7 @@ When Alice takes a moment to catch her breath, she notices in surprise that Juni
 	This seems almost important to Alice for some reason, though she can’t quite figure out why. She wants to ask Juniper a question about what they said so she can try to understand what’s caught her attention. She asks…
 `,
 
-image: "images/example.png",
+image: "images/BCEGIM.png",
 audio: "audio/filler.m4a",
 choices: [
   { label: "do you know a lot of cats who don't like rain?", next: "BCDHIK" },
@@ -2950,7 +2981,7 @@ text: `“Do you think that means something?”
 	Alice blurts out…
 `,
 
-image: "images/example.png",
+image: "images/BCEGIM.png",
 audio: "audio/filler.m4a",
 choices: [
   { label: "you and i were influenced by shared genetics to like rain", next: "BCDHILM" },
@@ -2969,7 +3000,7 @@ Finally, they arrive at a fallen tree, which must be the mouse tree. Alice notic
 
 `,
 
-image: "images/example.png",
+image: "images/BCEGIM.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "BCDHILN2" },
@@ -2984,7 +3015,7 @@ The mice crowd around the group, running underneath their feet and climbing up t
 Maurice, amused?
 `,
 
-image: "images/example.png",
+image: "images/BCEGIM2.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "BCDHILN3" },
@@ -3001,7 +3032,7 @@ She tries to distract herself by paying attention to what Bluebell is saying.
 	“We were afraid of her at first, but she’s proven her kindness time and time again!” the mice squeak in a chorus. They’re a very excitable bunch—quite loud, too. But if they like Bluebell, they’re alright to Alice. And now that she’s spoken to them a little, she doesn’t feel like pouncing on them so much anymore.
 `,
 
-image: "images/example.png",
+image: "images/BCEGIM2.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "BCDHILN4" },
@@ -3020,7 +3051,7 @@ text: `But this isn’t her goal. She’s not here to study their psychology. Sh
 	Everyone smiles, and then Maurice says, “Okay, enough with the long goodbyes. Get going if you say you’re going.”
 `,
 
-image: "images/example.png",
+image: "images/BCEGIM2.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "BCDHILN5" },
@@ -3037,7 +3068,7 @@ text: `They all head back toward the forest’s entrance. Alice makes sure to ta
 	“Okay, get back into your house,” Bluebell says. “We’ll see you around!”
 `,
 
-image: "images/example.png",
+image: "images/stay.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "BCDHILN6" },
@@ -3052,7 +3083,7 @@ text: `Alice waves and leaps to the floor, then makes her way into the living ro
 THE END
 `,
 
-image: "images/example.png",
+image: "images/stay.png",
 audio: "audio/filler.m4a",
 choices: [
   
@@ -3071,7 +3102,7 @@ Juniper smiles almost shyly. “That’s what I thought I was crazy for thinking
 “That’s amazing!” Alice shouts. “I didn’t know I had any relatives at all!”
 `,
 
-image: "images/example.png",
+image: "images/BCEGIM.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "BCDHILM2" },
@@ -3086,7 +3117,7 @@ text: `“I used to have three sisters, and one of them went missing when I was 
 Alice can go to the mouse tree, go to the burrow, or continue past the flower field to the shaded area of the forest from her dream. She decides to…
 `,
 
-image: "images/example.png",
+image: "images/BCEGIM.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "go to the mouse tree", next: "BCEGILN" },
@@ -3110,7 +3141,7 @@ And not only that—but maybe if she learns something, she’ll teach it to her 
 “What’s that?” she asks the rabbit, pointing with her paw at the yellow thing. She knows she needs to go explore the forest, because nothing here matches her dreams, but she’s too curious about this to ignore it.
 `,
 
-image: "images/example.png",
+image: "images/dream.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "A2" },
@@ -3131,7 +3162,7 @@ As one, all the bees swarm into the air and hover above their beehive, buzzing s
 “They’re really, really mad!” he yells. “Run!”
 `,
 
-image: "images/example.png",
+image: "images/dream.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "A3" },
@@ -3148,7 +3179,7 @@ The two of them race through the forest, leaping over fallen branches and swervi
 After a few minutes, Alice turns to see how close the bees are, and it makes her gasp—if she slows down even a little, they will catch her. But she really doesn’t think she can run for much longer.
 `,
 
-image: "images/example.png",
+image: "images/den.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "A4" },
@@ -3165,7 +3196,7 @@ Alice looks at the fox and considers the bees behind her. What should she do? In
 She chooses to…
 `,
 
-image: "images/example.png",
+image: "images/den.png",
 audio: "audio/filler.m4a",
 choices: [
   { label: "trust the fox", next: "AC" },
@@ -3182,7 +3213,7 @@ text: `“Go with her!” Alice says.
 	“Alice, what are you smelling? It’s just a hole made of dirt,” Maurice says.
 `,
 
-image: "images/example.png",
+image: "images/BC.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "AC2" },
@@ -3199,7 +3230,7 @@ text: `“It smells nice, like being outside,” Alice tells him. Then she looks
 	“Thank you.” The fox bends down so she’s closer to eye level with Alice, but as soon as she takes her attention away from Maurice, the rabbit pounces.
 `,
 
-image: "images/example.png",
+image: "images/BC.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "AC3" },
@@ -3219,7 +3250,7 @@ text: `“Alice—run! I’ll hold her off!” he yells, leaping at the fox’s 
 	The fox lowers him to the ground, and he leaps back and shakes his head like a dog would. Then he stands there, glaring at her.
 `,
 
-image: "images/example.png",
+image: "images/BC.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "AC4" },
@@ -3240,7 +3271,7 @@ text: `“Um. Well. Thank you again for saving us,” Alice says.
 “Psychologists. They’re scientists who study other people’s minds and behavior. It’s really fascinating, actually,” says Alice. “So I was hoping I could see what the psychology of forest animals is like, since I know so much about the subject.”
 `,
 
-image: "images/example.png",
+image: "images/BC.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "AC5" },
@@ -3258,7 +3289,7 @@ Thankfully, there are no bees in sight as Alice and Maurice follow Bluebell. Ins
 “I’m not sure if they’re all like me or not. I know my whole family is, but I’m not sure about other foxes,” Bluebell answers. “In fact, I moved to this forest years ago, and it took a while for the other animals to trust me. I always wondered why.”
 `,
 
-image: "images/example.png",
+image: "images/BC.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "AC6" },
@@ -3279,7 +3310,7 @@ Bluebell looks around as she walks, then answers, “Actually…we’re here.”
 “Oh. I see,” says the rabbit, following behind her.
 `,
 
-image: "images/example.png",
+image: "images/fence.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "AC7" },
@@ -3297,7 +3328,7 @@ text: `Alice follows them, and when she emerges from beneath the branches, she g
 	“Would you like to talk to us, then?” Asher asks.
 `,
 
-image: "images/example.png",
+image: "images/fence.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "AC8" },
@@ -3313,7 +3344,7 @@ text: `Alice nods eagerly. “Yes, please! Although I don’t have too long to t
 	Alice chooses to…
 `,
 
-image: "images/example.png",
+image: "images/fence.png",
 audio: "audio/filler.m4a",
 choices: [
   { label: "stay with garden animals", next: "ACE" },
@@ -3332,7 +3363,7 @@ Alice whips her head around to see the fox from before.
 “I know it’s rude,” says Maurice, his voice muffled because he’s laying with his face in the dirt.
 `,
 
-image: "images/example.png",
+image: "images/BX.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "AD2" },
@@ -3351,7 +3382,7 @@ He stands up carefully, but the moment he puts weight on his stung leg, he falls
 “I don’t need help,” he huffs.
 `,
 
-image: "images/example.png",
+image: "images/BX.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "AD3" },
@@ -3373,7 +3404,7 @@ The fox beams at them. “Nice to meet you both! I’m Bluebell.”
 “It was no trouble, really,” Bluebell tells her. “How did a cat and a rabbit end up in the forest, anyway?”
 `,
 
-image: "images/example.png",
+image: "images/BX.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "AD4" },
@@ -3393,7 +3424,7 @@ Alice tilts her head. “That’s interesting. Are all foxes trusted here, or ar
 “I’m not sure if they’re all like me or not. I know my whole family is, but I’m not sure about other foxes,” Bluebell answers. “In fact, I moved to this forest years ago, and it took a while for the other animals to trust me. I always wondered why they didn’t trust me right away once I didn’t do anything to hurt them.”
 `,
 
-image: "images/example.png",
+image: "images/BX.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "AD5" },
@@ -3415,7 +3446,7 @@ Bluebell looks around as she walks, then answers, “Actually…we’re here.”
 “Oh. I see,” says the rabbit.
 `,
 
-image: "images/example.png",
+image: "images/fence.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "AD6" },
@@ -3435,7 +3466,7 @@ text: `Alice follows them, and when she emerges from beneath the branches, she g
 Bluebell carries him over to the aloe vera, and a few squirrels pull a leaf from the plant, squeeze it, then spread the paste from it onto Maurice’s sting.
 `,
 
-image: "images/example.png",
+image: "images/fence.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "AD7" },
@@ -3456,7 +3487,7 @@ Maurice tests out his leg, and this time, it holds steady when he stands on it. 
 	“Would you like to talk to us, then?” Asher asks.
 `,
 
-image: "images/example.png",
+image: "images/fence.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "AD8" },
@@ -3472,7 +3503,7 @@ text: `Alice nods eagerly. “Yes, please! Although I don’t have too long to t
 	Alice chooses to…
 `,
 
-image: "images/example.png",
+image: "images/fence.png",
 audio: "audio/filler.m4a",
 choices: [
   { label: "stay with the garden animals", next: "ACE" },
@@ -3488,7 +3519,7 @@ text: `Alice turns away from Maurice and back to the deer and squirrels in front
 	She can only think of two questions, so she chooses the one she thinks is most important and asks…
 `,
 
-image: "images/example.png",
+image: "images/deer.png",
 audio: "audio/filler.m4a",
 choices: [
   { label: "what's it like to live in the forest?", next: "ADG" },
@@ -3507,7 +3538,7 @@ text: `“What’s it like to live in the forest?” Alice asks.
 	“When you live in the forest, you wake up with the sun on your face every day. You can wander through the trees if you want, or go rest in a patch of flowers, or spend all day burying acorns. It doesn’t matter. We all live and thrive here, and the forest will support us with whatever we want to do,” Colin answers.
 	“So you all get along? Do you work together or fend for yourselves?” Alice feels like she’s interviewing them like a human on television would do. This is fun.`,
 
-image: "images/example.png",
+image: "images/deer.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "ADG2" },
@@ -3524,7 +3555,7 @@ text: `“All of us who run this garden get along well. We provide food for the 
 	“There are others like me who help keep the forest safe,” Bluebell chimes in. “We know what areas usually have predators, but for the most part, it’s all safe.”
 `,
 
-image: "images/example.png",
+image: "images/deer.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "ADG3" },
@@ -3544,7 +3575,7 @@ text: `“That sounds lovely,” Alice says.
 	“Did you find anything you did like?” Gina asks.
 `,
 
-image: "images/example.png",
+image: "images/deer.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "ADG4" },
@@ -3558,7 +3589,7 @@ text: `	“Yeah, there were a few things,” Maurice answers. “I might have to
 	She decides to…
 `,
 
-image: "images/example.png",
+image: "images/deer.png",
 audio: "audio/filler.m4a",
 choices: [
   { label: "continue on with bluebell", next: "ADGJ" },
@@ -3582,7 +3613,7 @@ text: `“Actually, Bluebell,” Alice replies, “I think I should go home soon
 	Bluebell smiles.
 `,
 
-image: "images/example.png",
+image: "images/deer.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "ADGK2" },
@@ -3601,7 +3632,7 @@ text: `“A lot of animals like our food, too. They say it tastes better than an
 	Gina, Colin, and Asher wave as Alice and Bluebell head back toward the entrance of the forest.
 `,
 
-image: "images/example.png",
+image: "images/deer.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "ADGK3" },
@@ -3618,7 +3649,7 @@ text: `“Thank you for everything you did today,” Alice says while they walk.
 	Well, now is the time.
 `,
 
-image: "images/example.png",
+image: "images/deer.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "ADGK4" },
@@ -3633,7 +3664,7 @@ text: `She picks up the pen with her paws and balances it with her tail. She nee
 	She thinks for a moment. What’s a good example of in groups to compare them to? Considering what she knows about in groups, she decides that a human version would be…
 `,
 
-image: "images/example.png",
+image: "images/deer.png",
 audio: "audio/filler.m4a",
 choices: [
   { label: "a sports team", next: "ADGKL" },
@@ -3653,7 +3684,7 @@ But for today, she heads to the living room, where she curls up in her favorite 
 THE END
 `,
 
-image: "images/example.png",
+image: "images/stay.png",
 audio: "audio/filler.m4a",
 choices: [
 ]
@@ -3666,7 +3697,7 @@ text: `Yes, that’s it.
 	She’s learned so, so much, and she can’t wait to share it with her family.
 `,
 
-image: "images/example.png",
+image: "images/home.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "epilogue" },
@@ -3686,7 +3717,7 @@ text: `	“Can you tell me about living in and running this garden?” Alice ask
 	Bluebell nods. “Yes, it’s not like that here, don’t worry. Oh, and someone should tell Alice about your system for giving out plants and food!”
 `,
 
-image: "images/example.png",
+image: "images/deer.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "ADI2" },
@@ -3706,7 +3737,7 @@ text: `“The plants go to any animals in the forest who want or need them,” G
 	“Wait,” Alice says, and now she can’t help but laugh a little, “aren’t rabbits supposed to love carrots?”
 `,
 
-image: "images/example.png",
+image: "images/deer.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "ADI3" },
@@ -3723,7 +3754,7 @@ text: `“Alice, that sounds like your prototype of rabbits is wrong,” Bluebel
 	She decides to…
 `,
 
-image: "images/example.png",
+image: "images/deer.png",
 audio: "audio/filler.m4a",
 choices: [
   { label: "continue on with bluebell", next: "ADGJ" },
@@ -3742,10 +3773,10 @@ text: `“Actually, Bluebell,” Alice replies, “I think I should go home soon
 	“If a predator animal asks for food, we usually deliver it to them but don’t let them in. You both seemed nice, though,” Gina adds. “I mean, you were helping out a bunny with a bee sting.”
 `,
 
-image: "images/example.png",
+image: "images/deer.png",
 audio: "audio/filler.m4a",
 choices: [
-  { image: "", next: "ADIK2" },
+  { image: "images/right.png", next: "ADIK2" },
   ]
 },
 
@@ -3758,10 +3789,10 @@ text: `Asher sighs. “Sneaky animals like foxes and snakes usually try to steal
 	“I will,” Maurice answers, waving to her. Then he leaps back into some plants and vanishes.
 `,
 
-image: "images/example.png",
+image: "images/deer.png",
 audio: "audio/filler.m4a",
 choices: [
-  { image: "", next: "ADIK3" },
+  { image: "images/right.png", next: "ADIK3" },
   ]
 },
 
@@ -3777,10 +3808,10 @@ text: `Gina, Colin, and Asher wave as Alice and Bluebell head back toward the en
 	She picks up the pen with her paws and balances it with her tail. She needs to start with something psychology related, and she has to get everything absolutely right to make her humans proud. She thinks about what she learned from all the animals she met today, and one thing stands out—they’re all so similar to humans. Her family would be surprised.
 `,
 
-image: "images/example.png",
+image: "images/deer.png",
 audio: "audio/filler.m4a",
 choices: [
-  { image: "", next: "ADIK4" },
+  { image: "images/right.png", next: "ADIK4" },
   ]
 },
 
@@ -3791,7 +3822,7 @@ text: `She can apply almost all the things she knows about psychology to the ani
 	She thinks for a moment. Would the forest animals all have the same prototypes as her, or would they be different? Do their backgrounds change them? Considering her knowledge on the topic, she decides…
 `,
 
-image: "images/example.png",
+image: "images/deer.png",
 audio: "audio/filler.m4a",
 choices: [
   { label: "they all have the same prototypes", next: "sameproto" },
@@ -3809,7 +3840,7 @@ But for today, she heads to the living room, where she curls up in her favorite 
 THE END
 `,
 
-image: "images/example.png",
+image: "images/stay.png",
 audio: "audio/filler.m4a",
 choices: [
 ]
@@ -3823,7 +3854,7 @@ text: `Yes, that’s it.
 	She’s learned so, so much, and she can’t wait to share it with her family.
 `,
 
-image: "images/example.png",
+image: "images/stay.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "epilogue" },
@@ -3839,7 +3870,7 @@ text: `Alice looks at Gina, Colin, and Asher. “Do you get along well with all 
 	Asher sighs. “Sneaky animals like foxes and  snakes usually try to steal from us. We turn those animals away, and I feel bad doing it, but they’re just so suspicious. None of the other animals are like that.”
 `,
 
-image: "images/example.png",
+image: "images/deer.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "ADH2" },
@@ -3859,7 +3890,7 @@ text: `“That’s a fundamental attribution error,” Alice blurts out.
 	Maurice leaps out of the plants, spitting something out of his mouth and then glaring at it. Alice has to fight to not start laughing.
 `,
 
-image: "images/example.png",
+image: "images/deer.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "ADH3" },
@@ -3879,7 +3910,7 @@ text: `“Did you eat a carrot?” Asher asks, peering at the patch of plants Ma
 	She decides to…
 `,
 
-image: "images/example.png",
+image: "images/deer.png",
 audio: "audio/filler.m4a",
 choices: [
   { label: "continue on with bluebell", next: "ADGJ" },
@@ -3899,7 +3930,7 @@ text: `“Actually, Bluebell,” Alice replies, “I think I should go home soon
 	Asher nods again. “Yes, it’s great to know I can help out.”
 `,
 
-image: "images/example.png",
+image: "images/deer.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "ADHK2" },
@@ -3918,7 +3949,7 @@ text: `“And we have a wonderful community because of it,” Colin adds. “I k
 	“I will,” Maurice answers, waving to her. Then he leaps back into some plants and vanishes.
 `,
 
-image: "images/example.png",
+image: "images/deer.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "ADHK3" },
@@ -3936,7 +3967,7 @@ text: `	Gina, Colin, and Asher wave as Alice and Bluebell head back toward the e
 	She picks up the pen with her paws and balances it with her tail. She needs to start with something psychology related, and she has to get everything absolutely right to make her humans proud. She thinks about what she learned from all the animals she met today, and one thing stands out—they’re all so similar to humans. Her family would be surprised.
 `,
 
-image: "images/example.png",
+image: "images/deer.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "ADHK4" },
@@ -3949,7 +3980,7 @@ text: `She can apply almost all the things she knows about psychology to the ani
 	She considers what she knows about nature versus nurture. Is it possible that any members of her cat family, wherever they are, have the same science-like curiosity as she does thanks to their shared genetics? Or did she only get that curiosity by watching her humans, because they have a need to learn that’s just as strong as her own? It must have come from…
 `,
 
-image: "images/example.png",
+image: "images/deer.png",
 audio: "audio/filler.m4a",
 choices: [
   { label: "only from her cat family", next: "ADHL" },
@@ -3969,7 +4000,7 @@ But for today, she heads to the living room, where she curls up in her favorite 
 THE END
 `,
 
-image: "images/example.png",
+image: "images/stay.png",
 audio: "audio/filler.m4a",
 choices: [
 ]
@@ -3982,7 +4013,7 @@ text: `Yes, that’s it.
 	She’s learned so, so much, and she can’t wait to share it with her family.
 `,
 
-image: "images/example.png",
+image: "images/home.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "epilogue" },
@@ -4003,7 +4034,7 @@ text: `“Yes, I’m ready!” Alice says. “Let’s go!”
 	“Yes, Alice is ready to go to the next place,” Bluebell tells him, and Alice thinks she’s fighting a laugh. “Let’s go.”
 `,
 
-image: "images/example.png",
+image: "images/BCEGwalk.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "ADGJ2" },
@@ -4022,7 +4053,7 @@ It happens so fast that Alice isn’t entirely sure what caused it, or really ev
 Alice and Bluebell race forward to see what fell. “Are you okay?” Bluebell calls out anxiously—she must have seen that it’s an animal.
 `,
 
-image: "images/example.png",
+image: "images/BCEGwalk.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "ADGJ3" },
@@ -4042,7 +4073,7 @@ Juniper smiles, but their smile still looks pained. “It’s nice to meet all o
 	“Sure!” says Alice.
 `,
 
-image: "images/example.png",
+image: "images/BCEGwalk.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "ADGJ4" },
@@ -4057,7 +4088,7 @@ text: `The group begins to move forward again, and Juniper joins them. As they w
 	“He’s right,” Bluebell warns when she hears Maurice. “There’s a hawk that likes to circle that field, and it might think you’re good prey.”
 `,
 
-image: "images/example.png",
+image: "images/BCEGwalk.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "ADGJ5" },
@@ -4072,7 +4103,7 @@ Should she stay and be safe, or should she go explore the field while no one is 
 She…
 `,
 
-image: "images/example.png",
+image: "images/BCEGwalk.png",
 audio: "audio/filler.m4a",
 choices: [
   { label: "stay with the others", next: "ADGJK" },
@@ -4090,7 +4121,7 @@ The mice crowd around the group, running underneath their feet and climbing up t
 Juniper is watching Bluebell as she speaks, and Maurice is looking into the distance, seeming upset, so none of them notice the instincts at war inside of Alice. Something within her is telling her to capture them, to pounce, but she mentally shakes herself. The mice are friends. Just because she’s never been outside her house before doesn’t mean she can act this way.
 `,
 
-image: "images/example.png",
+image: "images/BCEGIM2.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "ADGJK2" },
@@ -4108,7 +4139,7 @@ text: `She tries to distract herself by paying attention to what Bluebell is say
 It’s possible that they’re an example of groupthink, she realizes. Groupthink happens when all the members of a certain group try to think and act in the ways they believe they’re supposed to. If groupthink applies to the mice, maybe some of them act against their own beliefs to better be in their whole group. It’s very interesting for her to think about.
 `,
 
-image: "images/example.png",
+image: "images/BCEGIM2.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "ADGJK3" },
@@ -4127,7 +4158,7 @@ The other four rabbits turn around and spot Maurice there. At his name, Maurice 
 
 `,
 
-image: "images/example.png",
+image: "images/rabbit.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "ADGJK4" },
@@ -4140,7 +4171,7 @@ text: `All five rabbits fall over laughing. “What a weirdo! It’s no wonder n
 	Alice doesn’t know what’s going on, but she won’t let them bully Maurice any longer. These aren’t funny jokes—they’re clearly hurting him, and she’s not going to stand for it. She steps forward and says…
 `,
 
-image: "images/example.png",
+image: "images/rabbit.png",
 audio: "audio/filler.m4a",
 choices: [
   { label: "why are you talking to him like that", next: "ADHJLM" },
@@ -4156,7 +4187,7 @@ The smell is even stronger out here—lovely and sweet, just like she would expe
 Alice has made it about halfway around the field before there’s a deafening cry from the space above her. A blur swoops across the sky at the edge of her vision, and suddenly she feels sharp claws digging into her back.
 `,
 
-image: "images/example.png",
+image: "images/walk.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "ADGJL2" },
@@ -4172,7 +4203,7 @@ Bluebell steps between the two as Alice pulls herself to her feet. “Maurice—
 “It was a fight or flight response!” she replies indignantly. “Or, well, in my case, freeze, but—”
 `,
 
-image: "images/example.png",
+image: "images/hook.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "ADGJL3" },
@@ -4192,7 +4223,7 @@ It doesn’t take the group long to get to the mouse tree, but Alice feels so ba
 Surely it’s not the smell of the mice…right?
 `,
 
-image: "images/example.png",
+image: "images/BCEGIM2.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "ADGJL4" },
@@ -4210,7 +4241,7 @@ She tries to distract herself by paying attention to what Bluebell is saying.
 
 `,
 
-image: "images/example.png",
+image: "images/BCEGIM2.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "ADGJL5" },
@@ -4227,7 +4258,7 @@ Alice is about to ask the mice some questions, but then she notices Maurice look
 	Five rabbits emerge from a burrow nearby, and they start picking at the grass around the burrow and chatting with one another. Alice watches them in excitement—there’s more animals for her to talk to!
 `,
 
-image: "images/example.png",
+image: "images/BCEGIM2.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "ADGJL6" },
@@ -4243,7 +4274,7 @@ The other four rabbits turn around and spot Maurice there. At his name, Maurice 
 
 `,
 
-image: "images/example.png",
+image: "images/rabbit.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "ADGJL7" },
@@ -4257,7 +4288,7 @@ text: `“Stop it. Stop it now,” Maurice shouts, his ears beginning to smoke j
 	Alice doesn’t know what’s going on, but she won’t let them bully Maurice any longer. These aren’t funny jokes—they’re clearly hurting him, and she’s not going to stand for it. She steps forward and says…
 `,
 
-image: "images/example.png",
+image: "images/rabbit.png",
 audio: "audio/filler.m4a",
 choices: [
   { label: "why are you talking to him like that", next: "ADGJLM" },
@@ -4279,7 +4310,7 @@ text: `“Why are you talking to him like that?” Alice asks.
 	Then she chases him into the dark forest.
 `,
 
-image: "images/example.png",
+image: "images/rabbit.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "ADHJLM2" },
@@ -4296,8 +4327,8 @@ text: `“Maurice, wait,” Alice says desperately once she’s caught up to him
 	“We need to go!” Alice shouts. The heat is blazing, and she can feel it reaching for her fur already.
 `,
 
-image: "images/example.png",
-audio: "audio/filler.m4a",
+image: "images/fire.png",
+audio: "audio/fire.m4a",
 choices: [
   { image: "images/right.png", next: "ADHJLM3" },
 ]
@@ -4314,8 +4345,8 @@ text: `The two of them sprint back to the mouse tree as fast as they can. Junipe
 	Alice is working her brain as quickly as she can, and a crazy idea suddenly falls into place. She gasps. “There’s a fire hydrant by my house—some firefighters used it the other day and something came up so they left their hose there! We could bring the hose into the forest and use it to stop the fire!”
 `,
 
-image: "images/example.png",
-audio: "audio/filler.m4a",
+image: "images/fire.png",
+audio: "audio/fire.m4a",
 choices: [
   { image: "images/right.png", next: "ADHJLM4" },
 ]
@@ -4328,8 +4359,8 @@ text: `“Does anyone else have any other ideas?” Bluebell asks. Everyone shak
 	It’s so heavy that she drops it immediately.
 `,
 
-image: "images/example.png",
-audio: "audio/filler.m4a",
+image: "images/fire.png",
+audio: "audio/fire.m4a",
 choices: [
   { image: "images/right.png", next: "ADHJLM5" },
 ]
@@ -4341,11 +4372,11 @@ text: `“Okay, everyone,” she pants, “it looks like this will have to be a 
 	Alice peers toward the trees. She can’t tell where the fire is, exactly, but it’s big enough now that just about everywhere in the forest will be in danger. She hates to pick one place over another, but…some place has to be saved. And she knows what she most wants to protect.
 `,
 
-image: "images/example.png",
-audio: "audio/filler.m4a",
+image: "images/fire.png",
+audio: "audio/fire.m4a",
 choices: [
   { label: "the garden", next: "ADHJLMVX" },
-  { label: "the garden", next: "ADHJLMVY" },
+  { label: "the mouse tree", next: "ADHJLMVY" },
 ]
 },
 
@@ -4363,7 +4394,7 @@ text: `“Hey, it’s rude to make fun of others that way,” Alice says.
 	“Maurice, wait,” Alice says desperately once she’s caught up to him. “I’m sure they didn’t mean anything by it.”
 `,
 
-image: "images/example.png",
+image: "images/rabbit.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "ADHJLN2" },
@@ -4379,8 +4410,8 @@ text: `“DON’T!” Maurice shouts, whirling on her, sparks emitting from his 
 	“We need to go!” Alice shouts. The heat is blazing, and she can feel it reaching for her fur already.
 `,
 
-image: "images/example.png",
-audio: "audio/filler.m4a",
+image: "images/fire.png",
+audio: "audio/fire.m4a",
 choices: [
   { image: "images/right.png", next: "ADHJLN3" },
 ]
@@ -4397,8 +4428,8 @@ text: `The two of them sprint back to the mouse tree as fast as they can. Junipe
 	Alice is working her brain as quickly as she can, and a crazy idea suddenly falls into place. She gasps. “There’s a fire hydrant by my house—some firefighters used it the other day and something came up so they left their hose there! We could bring the hose into the forest and use it to stop the fire!”
 `,
 
-image: "images/example.png",
-audio: "audio/filler.m4a",
+image: "images/fire.png",
+audio: "audio/fire.m4a",
 choices: [
   { image: "images/right.png", next: "ADHJLN4" },
 ]
@@ -4411,8 +4442,8 @@ text: `“Does anyone else have any other ideas?” Bluebell asks. Everyone shak
 	It’s so heavy that she drops it immediately.
 `,
 
-image: "images/example.png",
-audio: "audio/filler.m4a",
+image: "images/fire.png",
+audio: "audio/fire.m4a",
 choices: [
   { image: "images/right.png", next: "ADHJLN5" },
 ]
@@ -4424,8 +4455,8 @@ text: `“Okay, everyone,” she pants, “it looks like this will have to be a 
 	Alice peers toward the trees. She can’t tell where the fire is, exactly, but it’s big enough now that just about everywhere in the forest will be in danger. She hates to pick one place over another, but…some place has to be saved. And she knows what she most wants to protect.
 `,
 
-image: "images/example.png",
-audio: "audio/filler.m4a",
+image: "images/fire.png",
+audio: "audio/fire.m4a",
 choices: [
   { label: "the garden", next: "ADHJLMVX" },
   { label: "the mouse tree", next: "ADHJLMVX" },
@@ -4446,7 +4477,7 @@ text: `“ALL OF YOU, STOP TALKING TO HIM LIKE THAT!” Alice yells.
 	“Your family treats you that way?” Juniper asks in horror.
 `,
 
-image: "images/example.png",
+image: "images/rabbit.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "ADHJLO2" },
@@ -4464,7 +4495,7 @@ text: `“I didn’t realize you had a family in the forest,” Alice says. “I
 	Then, after a little while, the clouds she saw earlier suddenly open up, and it begins to rain. Maurice shakes his head as the water hits him, but Alice looks to the sky in awe. She’s never been out in the rain before—it’s such a funny sensation, being pelted with water like this. She leaps for a few raindrops, then sticks out her tongue to try to catch them like she’s seen human children do. Soon, she’s bouncing in circles, letting the feeling of the rain soak through her.
 `,
 
-image: "images/example.png",
+image: "images/rabbit.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "ADHJLO3" },
@@ -4482,7 +4513,7 @@ text: `Maurice watches her for a moment, then glances toward the rabbit burrow. 
 	She sits contentedly for a little while longer, but then she sighs and stands up. “I think I should go. I don’t want to worry my humans any more than I probably already have,” she says.
 `,
 
-image: "images/example.png",
+image: "images/BCEGwalk.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "ADHJLO4" },
@@ -4500,7 +4531,7 @@ text: `Maurice, Bluebell, and Juniper frown when she says this, but they also st
 	When they finally reach her house, she leaps up onto the windowsill, then turns to face her friends one last time.
 `,
 
-image: "images/example.png",
+image: "images/BCEGwalk.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "ADHJLO5" },
@@ -4523,7 +4554,7 @@ text: `“I’m so happy I got to meet all of you,” she says with a sad smile.
 	Well, now is the time. She’s going to teach her humans like they’ve always taught her.
 `,
 
-image: "images/example.png",
+image: "images/BCEGwalk.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "ADHJLO6" },
@@ -4537,7 +4568,7 @@ She begins to explain what she’s learned to her humans and decides to tell the
 	She thinks for a moment. Would the forest animals all have the same prototypes as her, or would they be different? Do their backgrounds change them? Considering her knowledge on the topic, she decides…
 `,
 
-image: "images/example.png",
+image: "images/BCEGwalk.png",
 audio: "audio/filler.m4a",
 choices: [
   { label: "they all have the same prototypes", next: "sameproto" },
@@ -4557,8 +4588,8 @@ They hurry through the trees, and by the time they get to the tree, they’re al
 	Alice gasps in horror when she sees the fire. It’s massive, smoke billowing up in waves so strong she coughs even at her distance, and its heat is so strong she feels like she could be melting.
 `,
 
-image: "images/example.png",
-audio: "audio/filler.m4a",
+image: "images/fire.png",
+audio: "audio/fire.m4a",
 choices: [
   { image: "images/right.png", next: "ADHJLMVY2" },
 ]
@@ -4575,8 +4606,8 @@ text: `Then the mouse tree comes into view through the haze. Only the edges are 
 	Alice would smile at their success, but there’s still work to do. “Okay, everyone, great job!” she yells. “Now let’s get everything nearby!”
 `,
 
-image: "images/example.png",
-audio: "audio/filler.m4a",
+image: "images/fire.png",
+audio: "audio/fire.m4a",
 choices: [
   { image: "images/right.png", next: "ADHJLMVY3" },
 ]
@@ -4593,8 +4624,8 @@ The forest is safe. It’s really safe!
 	All the animals cheer when the fire is gone, and Alice runs to Maurice and tackles him with a hug.
 `,
 
-image: "images/example.png",
-audio: "audio/filler.m4a",
+image: "images/fire.png",
+audio: "audio/fire.m4a",
 choices: [
   { image: "images/right.png", next: "ADHJLMVY4" },
 ]
@@ -4613,8 +4644,8 @@ text: `“Everything is going to be okay!” she tells him.
 	So the four of them trek out of the forest. Alice sighs when she sees that one of her humans’ cars is in the driveway. They’re going to know by now that she’s gone.
 `,
 
-image: "images/example.png",
-audio: "audio/filler.m4a",
+image: "images/fire.png",
+audio: "audio/fire.m4a",
 choices: [
   { image: "images/right.png", next: "ADHJLMVY5" },
 ]
@@ -4636,7 +4667,7 @@ text: `She leads everyone to the open window she left through so long ago, and t
 	“Alice! Did you leave through that window?” her human father asks.
 `,
 
-image: "images/example.png",
+image: "images/hug.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "ADHJLMVY6" },
@@ -4651,7 +4682,7 @@ text: `Alice isn’t sure if her humans can read her expressions or not, so she 
 	She picks up the pen with her paws and balances it with her tail. She needs to start with something psychology related, and she has to get everything absolutely right to make her humans proud.
 `,
 
-image: "images/example.png",
+image: "images/hug.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "ADHJLMVY7" },
@@ -4665,7 +4696,7 @@ text: `She begins to explain what she’s learned to her humans and decides to t
 
 `,
 
-image: "images/example.png",
+image: "images/hug.png",
 audio: "audio/filler.m4a",
 choices: [
   { label: "they all have the same prototypes", next: "sameproto" },
@@ -4685,8 +4716,8 @@ text: `“Gina, Colin, Asher? We need to save the garden,” Alice yells.
 	Gina, Asher, and Colin don’t need to direct the forest inhabitants to the garden—everyone already knows the way. They hurry through the trees, and by the time they get there, they’re all breathing heavily and shaking.
 `,
 
-image: "images/example.png",
-audio: "audio/filler.m4a",
+image: "images/fire.png",
+audio: "audio/fire.m4a",
 choices: [
   { image: "images/right.png", next: "ADHJLMVX2" },
 ]
@@ -4703,8 +4734,8 @@ Alice thinks about it for a moment, then shouts back over the roaring of the fla
 	The hose writhes like a living snake as she speaks, and then a huge gush of water sprays out of its mouth. The deer hold it steady, and the flames on the trees vanish under the water, just like that.
 `,
 
-image: "images/example.png",
-audio: "audio/filler.m4a",
+image: "images/fire.png",
+audio: "audio/fire.m4a",
 choices: [
   { image: "images/right.png", next: "ADHJLMVX3" },
 ]
@@ -4722,8 +4753,8 @@ The forest is safe. It’s really safe!
 	All the animals cheer when the fire is gone, and Alice runs to Maurice and tackles him with a hug.
 `,
 
-image: "images/example.png",
-audio: "audio/filler.m4a",
+image: "images/fire.png",
+audio: "audio/fire.m4a",
 choices: [
   { image: "images/right.png", next: "ADHJLMVX4" },
 ]
@@ -4740,7 +4771,7 @@ text: `“Everything is going to be okay!” she tells him.
 	Then she leaps up in alarm. “I need to get home! It’s been hours—my humans must think I left forever!”
 `,
 
-image: "images/example.png",
+image: "images/hug.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "ADHJLMVX5" },
@@ -4764,7 +4795,7 @@ text: `“We’ll come with you,” Bluebell tells her. “Let’s go.”
 	Then they notice the open window.
 `,
 
-image: "images/example.png",
+image: "images/hug.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "ADHJLMVX6" },
@@ -4778,7 +4809,7 @@ text: `“Alice! Did you leave through that window?” her human father asks.
 	But that’s okay, because she has a project to work on that will keep her occupied. She goes to her human mother’s office and takes several sheets of paper and a pen, then sits on the desk and ponders what she wants to say. She knows how to read and write, but she hasn’t ever thought to use that knowledge before.
 `,
 
-image: "images/example.png",
+image: "images/hug.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "ADHJLMVX7" },
@@ -4793,7 +4824,7 @@ She begins to explain what she’s learned to her humans and decides to tell the
 	She thinks for a moment. Would the forest animals all have the same prototypes as her, or would they be different? Do their backgrounds change them? Considering her knowledge on the topic, she decides…
 `,
 
-image: "images/example.png",
+image: "images/hug.png",
 audio: "audio/filler.m4a",
 choices: [
   { label: "they all have the same prototypes", next: "sameproto" },
@@ -4820,7 +4851,7 @@ She hurries down the path Maurice left on and finds him chewing on some leaves i
 	Alice tilts her head at his change in words, but she doesn’t press him. Instead, she says, “Are you enjoying being in the forest too?”
 `,
 
-image: "images/example.png",
+image: "images/carrot.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "ACF2" },
@@ -4838,7 +4869,7 @@ text: `“Oh, yes. Aside from running from bees, it’s really nice to be here. 
 	“And what would you know about the forest?” Maurice grumbles.
 `,
 
-image: "images/example.png",
+image: "images/carrot.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "ACF3" },
@@ -4855,7 +4886,7 @@ text: `“He lives here,” Alice reminds him.
 	There are a few questions she can think to ask him, so she chooses one and says…
 `,
 
-image: "images/example.png",
+image: "images/carrot.png",
 audio: "audio/filler.m4a",
 choices: [
   { label: "what did you come here for in the past?", next: "ADFG" },
@@ -4878,7 +4909,7 @@ She watches Maurice reach for some vegetable that’s buried in the dirt, lift i
 	“Oh.”
 `,
 
-image: "images/example.png",
+image: "images/carrot.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "ADFI2" },
@@ -4898,7 +4929,7 @@ text: `“So I avoid the whole forest. They’re the animals in the deepest part
 	“Okay. I’ll try it, then.” He chomps a large bite out of the carrot, chews, and then immediately spits it onto the ground. “What is this—disgusting―blecchh! Whoever told you that rabbits like carrots was the worst liar I ever heard of!”
 `,
 
-image: "images/example.png",
+image: "images/carrot.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "ADFI3" },
@@ -4916,7 +4947,7 @@ Bluebell turns to Alice, and she also seems to be fighting not to laugh. “Woul
 	She decides to…
 `,
 
-image: "images/example.png",
+image: "images/carrot.png",
 audio: "audio/filler.m4a",
 choices: [
   { label: "continue on with bluebell", next: "ADFGJ" },
@@ -4937,7 +4968,7 @@ text: `“I was wondering, actually…why do your ears smoke?” Alice asks.
 	“So I avoid the whole forest. They’re the animals in the deepest part of the forest. I’m sorry. I just—don’t want to go there because of them, not because there’s dangerous animals there.”
 `,
 
-image: "images/example.png",
+image: "images/carrot.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "ADFH2" },
@@ -4958,7 +4989,7 @@ text: `“No, that makes sense,” Alice tells him. “You could have just said 
 	“Come on. We’re going back to one of the plants I liked, and I’m going to eat that to get this taste out of my mouth,” he says with a scowl.
 `,
 
-image: "images/example.png",
+image: "images/carrot.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "ADFH3" },
@@ -4974,7 +5005,7 @@ Bluebell turns to Alice, and she also seems to be fighting not to laugh. “Woul
 	She decides to…
 `,
 
-image: "images/example.png",
+image: "images/carrot.png",
 audio: "audio/filler.m4a",
 choices: [
   { label: "continue on with bluebell", next: "ADFGJ" },
@@ -4993,7 +5024,7 @@ text: `“So…what did you come here for in the past?” Alice asks Maurice.
 	“Oh.”
 `,
 
-image: "images/example.png",
+image: "images/carrot.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "ADFG2" },
@@ -5016,7 +5047,7 @@ text: `“So I avoid the whole forest. They’re the animals in the deepest part
 	“Come on. We’re going back to one of the plants I liked, and I’m going to eat that to get this taste out of my mouth,” he says with a scowl.
 `,
 
-image: "images/example.png",
+image: "images/carrot.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "ADFG3" },
@@ -5033,7 +5064,7 @@ Bluebell turns to Alice, and she also seems to be fighting not to laugh. “Woul
 	She decides to…
 `,
 
-image: "images/example.png",
+image: "images/carrot.png",
 audio: "audio/filler.m4a",
 choices: [
   { label: "continue on with bluebell", next: "ADFGJ" },
@@ -5056,7 +5087,7 @@ Alice looks at him in alarm. “That sounds horrible.”
 “You know what, I would love to see that. They’ve had it coming for a long time,” Maurice replies. “I think if you were loud and scary, they wouldn’t even try to stand up to you.”
 `,
 
-image: "images/example.png",
+image: "images/BCEGwalk.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "ADFGJ2" },
@@ -5079,7 +5110,7 @@ Juniper smiles, but their smile still looks pained. “It’s nice to meet all o
 	“Sure!” says Alice.
 `,
 
-image: "images/example.png",
+image: "images/BCEGwalk.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "ADFGJ3" },
@@ -5099,7 +5130,7 @@ Should she stay and be safe, or should she go explore the field while no one is 
 She…
 `,
 
-image: "images/example.png",
+image: "images/BCEGwalk.png",
 audio: "audio/filler.m4a",
 choices: [
   { label: "stays with the others", next: "ADFGKLN"},
@@ -5117,7 +5148,7 @@ text: `“Actually,” Alice says, “I think I should go home—I don’t want 
 	She’s already made up her mind, and she chose the safe option. But now Maurice is making her rethink it. Alice tells him…
 `,
 
-image: "images/example.png",
+image: "images/carrot.png",
 audio: "audio/filler.m4a",
 choices: [
   { label: "you know what-sure i'll stay", next: "ADFGKL" },
@@ -5142,7 +5173,7 @@ Alice looks at him in alarm. “That sounds horrible.”
 “You know what, I would love to see that. They’ve had it coming for a long time,” Maurice replies. “I think if you were loud and scary, they wouldn’t even try to stand up to you.”
 `,
 
-image: "images/example.png",
+image: "images/BCEGwalk.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "ADFGKL2" },
@@ -5160,7 +5191,7 @@ When Alice gets close enough, she sees that it’s a cat, who is now slowly stan
 “Yes, I’m fine.” The cat stretches out and licks their paw a time or two. “I have a tendency to be clumsy, so this is nothing new. I’ve never fallen out of a tree before, though. Oh—and my name is Juniper, by the way. Who are all of you?”
 `,
 
-image: "images/example.png",
+image: "images/BCEGwalk.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "ADFGKL3" },
@@ -5178,7 +5209,7 @@ Juniper smiles, but their smile still looks pained. “It’s nice to meet all o
 	Bluebell follows them curiously, and at that moment, Alice is hit by a familiar smell—something she recognizes from the dreams she’s been having. She looks around to see where it’s coming from and notices a large flower field a little ways away.
 `,
 
-image: "images/example.png",
+image: "images/BCEGwalk.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "ADFGKL4" },
@@ -5195,7 +5226,7 @@ Should she stay and be safe, or should she go explore the field while no one is 
 She…
 `,
 
-image: "images/example.png",
+image: "images/BCEGwalk.png",
 audio: "audio/filler.m4a",
 choices: [
   { label: "stays with the others", next: "ADFGKLN" },
@@ -5214,7 +5245,7 @@ Maurice, amused?
 Juniper is watching Bluebell as she speaks, so none of them notice the instincts at war inside of Alice. Something within her is telling her to capture them, to pounce, but she mentally shakes herself. The mice are friends. Just because she’s never been outside her house before doesn’t mean she can act this way.
 `,
 
-image: "images/example.png",
+image: "images/BCEGIM2.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "ADFGKLN2" },
@@ -5231,7 +5262,7 @@ text: `She tries to distract herself by paying attention to what Bluebell is say
 	It’s also very interesting that they speak and act together. Her mind is spinning with all the implications of their behavior—do they ever act individually from each other? How much time have they spent together to know how to act without cues?
 `,
 
-image: "images/example.png",
+image: "images/BCEGIM2.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "ADFGKLN3" },
@@ -5246,7 +5277,7 @@ Alice is about to ask the mice some questions, but then she notices Maurice look
 	“Look who it is,” shouts one of the rabbits, pointing. “Maurice!”
 `,
 
-image: "images/example.png",
+image: "images/rabbit.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "ADFGKLN4" },
@@ -5263,7 +5294,7 @@ text: `The other four rabbits turn around and spot Maurice there. At his name, M
 	Alice has been watching from the side, but enough is enough—she won’t let them bully Maurice any longer. She steps forward and says…
 `,
 
-image: "images/example.png",
+image: "images/rabbit.png",
 audio: "audio/filler.m4a",
 choices: [
   { label: "why are you talking to him like that", next: "ADFGKLOP" },
@@ -5280,7 +5311,7 @@ The smell is even stronger out here—lovely and sweet, just like she would expe
 Alice has made it about halfway around the field before there’s a deafening cry from the space above her. A blur swoops across the sky at the edge of her vision, and suddenly she feels sharp claws digging into her back.
 `,
 
-image: "images/example.png",
+image: "images/walk.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "ADFGKLO2" },
@@ -5300,7 +5331,7 @@ Bluebell places a paw on Alice’s shoulder and gives Maurice a stern look.
 Alice nods and stares at the ground.
 `,
 
-image: "images/example.png",
+image: "images/hook.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "ADFGKLO3" },
@@ -5316,7 +5347,7 @@ It doesn’t take the group long to get to the mouse tree, but Alice feels so ba
 Surely it’s not the smell of the mice…right?
 `,
 
-image: "images/example.png",
+image: "images/BCEGIM2.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "ADFGKLO4" },
@@ -5334,7 +5365,7 @@ She tries to distract herself by paying attention to what Bluebell is saying.
 	“Hello!” the two mice call together.
 `,
 
-image: "images/example.png",
+image: "images/BCEGIM2.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "ADFGKLO5" },
@@ -5353,7 +5384,7 @@ Alice is about to ask the mice some questions, but then she notices Maurice look
 	“Look who it is,” shouts one of the rabbits, pointing. “Maurice!”
 `,
 
-image: "images/example.png",
+image: "images/rabbit.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "ADFGKLO6" },
@@ -5370,7 +5401,7 @@ text: `The other four rabbits turn around and spot Maurice there. At his name, M
 	Alice has been watching from the side, but enough is enough—she won’t let them bully Maurice any longer. She steps forward and says…
 `,
 
-image: "images/example.png",
+image: "images/rabbit.png",
 audio: "audio/filler.m4a",
 choices: [
   { label: "why are you talking to him like that", next: "ADFGKLOP" },
@@ -5399,7 +5430,7 @@ text: `“ALL OF YOU, STOP TALKING TO HIM LIKE THAT!” Alice yells, just like s
 	The four of them sit together and watch the mice scurry around their tree. No one has anything to say, but nothing really needs to be said, either.
 `,
 
-image: "images/example.png",
+image: "images/rabbit.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "ADFGKLOR2" },
@@ -5415,7 +5446,7 @@ Maurice watches her for a moment, then glances toward the rabbit burrow, which h
 	“Not fair!” he yells, kicking even more mud at her than before.
 `,
 
-image: "images/example.png",
+image: "images/BCEGwalk.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "ADFGKLOR3" },
@@ -5438,7 +5469,7 @@ text: `Alice joins in, and so does Juniper, and before long they’re all covere
 	“We will!” the three of them reply.
 `,
 
-image: "images/example.png",
+image: "images/BCEGwalk.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "ADFGKLOR4" },
@@ -5458,7 +5489,7 @@ text: `“I’ll help protect your yard from dogs,” Maurice tells her.
 	But that’s okay, because she has a project to work on that will keep her occupied. She goes to her human mother’s office and takes several sheets of paper and a pen, then sits on the desk and ponders what she wants to say. She knows how to read and write, but she hasn’t ever thought to use that knowledge before.
 `,
 
-image: "images/example.png",
+image: "images/BCEGwalk.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "ADFGKLOR5" },
@@ -5474,7 +5505,7 @@ She begins to explain what she’s learned to her humans and decides to tell the
 
 `,
 
-image: "images/example.png",
+image: "images/BCEGwalk.png",
 audio: "audio/filler.m4a",
 choices: [
   { label: "they all have the same prototypes", next: "ADFGKLORA" },
@@ -5502,7 +5533,7 @@ text: `“Hey, it’s rude to make fun of others that way,” Alice says.
 	“We need to go!” Alice shouts. The heat is blazing, and she can feel it reaching for her fur already.
 `,
 
-image: "images/example.png",
+image: "images/rabbit.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "ADFGKLOQ2" },
@@ -5522,8 +5553,8 @@ text: `The two of them sprint back to the mouse tree as fast as they can. Junipe
 	“Does anyone else have any other ideas?” Bluebell asks. Everyone shakes their heads, so she says, “Okay, let’s go! Follow Alice!”
 `,
 
-image: "images/example.png",
-audio: "audio/filler.m4a",
+image: "images/fire.png",
+audio: "audio/fire.m4a",
 choices: [
   { image: "images/right.png", next: "ADFGKLOQ3" },
 
@@ -5539,8 +5570,8 @@ text: `	The four of them hightail their way to Alice’s house as the mice scatt
 	Alice peers toward the trees. She can’t tell where the fire is, exactly, but it’s big enough now that just about everywhere in the forest will be in danger. She hates to pick one place over another, but…some place has to be saved. And she knows what she most wants to protect.
 `,
 
-image: "images/example.png",
-audio: "audio/filler.m4a",
+image: "images/fire.png",
+audio: "audio/fire.m4a",
 choices: [
   { label: "the garden", next: "ADFGKLOPX" },
   { label: "the mouse tree", next: "ADFGKLOPY" },
@@ -5567,7 +5598,7 @@ text: `“Why are you talking to him like that?” Alice asks.
 	“We need to go!” Alice shouts. The heat is blazing, and she can feel it reaching for her fur already.
 `,
 
-image: "images/example.png",
+image: "images/rabbit.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "ADFGKLOP2" },
@@ -5586,8 +5617,8 @@ text: `The two of them sprint back to the mouse tree as fast as they can. Junipe
 	“Does anyone else have any other ideas?” Bluebell asks. Everyone shakes their heads, so she says, “Okay, let’s go! Follow Alice!”
 `,
 
-image: "images/example.png",
-audio: "audio/filler.m4a",
+image: "images/fire.png",
+audio: "audio/fire.m4a",
 choices: [
   { image: "images/right.png", next: "ADFGKLOP3" },
 ]
@@ -5602,8 +5633,8 @@ text: `The four of them hightail their way to Alice’s house as the mice scatte
 	Alice peers toward the trees. She can’t tell where the fire is, exactly, but it’s big enough now that just about everywhere in the forest will be in danger. She hates to pick one place over another, but…some place has to be saved. And she knows what she most wants to protect.
 `,
 
-image: "images/example.png",
-audio: "audio/filler.m4a",
+image: "images/fire.png",
+audio: "audio/fire.m4a",
 choices: [
   { label: "the garden", next: "ADFGKLOPX" },
   { label: "the mouse tree", next: "ADFGKLOPY" },
@@ -5622,8 +5653,8 @@ They hurry through the trees, and by the time they get there, they’re all brea
 	Alice gasps in horror when she sees the fire. It’s massive, smoke billowing up in waves so strong she coughs even at her distance, and its heat is so strong she feels like she could be melting.
 `,
 
-image: "images/example.png",
-audio: "audio/filler.m4a",
+image: "images/fire.png",
+audio: "audio/fire.m4a",
 choices: [
   { image: "images/right.png", next: "ADFGKLOPY2" },
 ]
@@ -5644,8 +5675,8 @@ text: `Then the mouse tree comes into view through the haze. Only the edges are 
 	Alice feels water on her own face. Oh, no, she’s crying too. But she can’t cry now—she has to focus! There’s still so much left to do!
 `,
 
-image: "images/example.png",
-audio: "audio/filler.m4a",
+image: "images/fire.png",
+audio: "audio/fire.m4a",
 choices: [
   { image: "images/right.png", next: "ADFGKLOPY3" },
 ]
@@ -5658,7 +5689,7 @@ The forest is safe. It’s really safe!
 	All the animals cheer when the fire is gone, and Alice runs to Maurice and tackles him with a hug.
 `,
 
-image: "images/example.png",
+image: "images/hug.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "ADFGKLOPY4" },
@@ -5677,7 +5708,7 @@ text: `“Everything is going to be okay!” she tells him.
 	“We’ll come with you,” Bluebell tells her. “Let’s go.”
 `,
 
-image: "images/example.png",
+image: "images/hug.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "ADFGKLOPY5" },
@@ -5702,7 +5733,7 @@ text: `So the four of them trek out of the forest. Alice sighs when she sees tha
 	Alice isn’t sure if her humans can read her expressions or not, so she tries not to look guilty. But she knows that she fails miserably because, the next morning, her family locks the house more securely than they ever have. They double check every window and even tape the kitchen window shut, because it’s always opened more easily than the other windows.
 `,
 
-image: "images/example.png",
+image: "images/hug.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "ADFGKLOPY6" },
@@ -5719,7 +5750,7 @@ She begins to explain what she’s learned to her humans and decides to tell the
 	She thinks for a moment. Would the forest animals all have the same prototypes as her, or would they be different? Do their backgrounds change them? Considering her knowledge on the topic, she decides…
 `,
 
-image: "images/example.png",
+image: "images/hug.png",
 audio: "audio/filler.m4a",
 choices: [  
   { label: "they all have the same prototypes", next: "ADFGKLORA" },
@@ -5739,8 +5770,8 @@ text: `	“Gina, Colin, Asher? We need to save the garden,” Alice yells.
 	Alice gasps in horror when she sees the fire. It’s massive, smoke billowing up in waves so strong she coughs even at her distance, and its heat is so strong she feels like she could be melting.
 `,
 
-image: "images/example.png",
-audio: "audio/filler.m4a",
+image: "images/fire.png",
+audio: "audio/fire.m4a",
 choices: [
   { image: "images/right.png", next: "ADFGKLOPX2" },
 ]
@@ -5759,8 +5790,8 @@ Alice thinks about it for a moment, then shouts back over the roaring of the fla
 	“There’s so much fire,” Maurice shouts. “Everywhere. It’s everywhere!”
 `,
 
-image: "images/example.png",
-audio: "audio/filler.m4a",
+image: "images/fire.png",
+audio: "audio/fire.m4a",
 choices: [
   { image: "images/right.png", next: "ADFGKLOPX3" },
 ]
@@ -5775,7 +5806,7 @@ The forest is safe. It’s really safe!
 	All the animals cheer when the fire is gone, and Alice runs to Maurice and tackles him with a hug.
 `,
 
-image: "images/example.png",
+image: "images/hug.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "ADFGKLOPX4" },
@@ -5793,7 +5824,7 @@ text: `“Maurice,” she says, “none of this is your fault. With psychology, 
 	So the four of them trek out of the forest. Alice sighs when she sees that one of her humans’ cars is in the driveway. They’re going to know by now that she’s gone.
 `,
 
-image: "images/example.png",
+image: "images/hug.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "ADFGKLOPX5" },
@@ -5817,7 +5848,7 @@ text: `She leads everyone to the open window she left through so long ago, and t
 	Alice isn’t sure if her humans can read her expressions or not, so she tries not to look guilty. But she knows that she fails miserably because, the next morning, her family locks the house more securely than they ever have. They double check every window and even tape the kitchen window shut, because it’s always opened more easily than the other windows.
 `,
 
-image: "images/example.png",
+image: "images/hug.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "ADFGKLOPX6" },
@@ -5834,7 +5865,7 @@ She begins to explain what she’s learned to her humans and decides to tell the
 	She thinks for a moment. Would the forest animals all have the same prototypes as her, or would they be different? Do their backgrounds change them? Considering her knowledge on the topic, she decides…
 `,
 
-image: "images/example.png",
+image: "images/hug.png",
 audio: "audio/filler.m4a",
 choices: [
   { label: "they all have the same prototypes", next: "ADFGKLORA" },
@@ -5857,7 +5888,7 @@ text: `“I’m sorry, but I have to go home.”
 THE END
 `,
 
-image: "images/example.png",
+image: "images/stay.png",
 audio: "audio/filler.m4a",
 choices: [
 ]
@@ -5873,7 +5904,7 @@ But for today, she heads to the living room, where she curls up in her favorite 
 THE END
 `,
 
-image: "images/example.png",
+image: "images/stay.png",
 audio: "audio/filler.m4a",
 choices: [
 ]
@@ -5886,7 +5917,7 @@ text: `Yes, that’s it.
 	She’s learned so, so much, and she can’t wait to share it with her family.
 `,
 
-image: "images/example.png",
+image: "images/stay.png",
 audio: "audio/filler.m4a",
 choices: [
   { image: "images/right.png", next: "epilogue" },
